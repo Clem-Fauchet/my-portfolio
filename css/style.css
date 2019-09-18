@@ -2,7 +2,9 @@
 font-family: 'Ubuntu', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
-
+/*************************************
+    		MOBILE FIRST 
+**************************************/
 .container-fluid {
 	padding-left: 5px;
 	padding-right: 5px;
@@ -11,4 +13,27 @@ font-family: 'Raleway', sans-serif;
 .row {
 	margin-left: 0px;
 	margin-right: 0px;
+}
+
+/*** SVG IMAGE ***/
+svg {
+	width: 40px;
+	height: 40px;
+}
+#arrow_nav g.square {
+	fill: none;
+	stroke: #000000;
+	stroke-width: 5.5;
+	stroke-miterlimit: 10;
+}
+
+#arrow_nav g.triangle {
+	fill: none;
+	stroke: #000000;
+	stroke-width: 4.5;
+	stroke-miterlimit: 10;
+}
+
+#arrow_nav:hover g.triangle {
+	fill: black;
 }
