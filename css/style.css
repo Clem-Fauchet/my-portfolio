@@ -8,6 +8,7 @@ font-family: 'Raleway', sans-serif;
 .container-fluid {
 	padding-left: 5px;
 	padding-right: 5px;
+	min-height: 100vh;
 }
 
 .row {
@@ -15,25 +16,28 @@ font-family: 'Raleway', sans-serif;
 	margin-right: 0px;
 }
 
-/*** SVG IMAGE ***/
+/***************** NAV ARROW SVG ****************/
 svg {
-	width: 40px;
-	height: 40px;
+	width: 2.7em;
+	height: 2.7em;
 }
-#arrow_nav g.square {
+
+g.square {
 	fill: none;
 	stroke: #000000;
 	stroke-width: 5.5;
 	stroke-miterlimit: 10;
 }
 
-#arrow_nav g.triangle {
+g.triangle {
 	fill: none;
 	stroke: #000000;
 	stroke-width: 4.5;
 	stroke-miterlimit: 10;
 }
 
-#arrow_nav:hover g.triangle {
-	fill: black;
+svg#arrow_nav:hover g.triangle {
+	fill: #000000;
 }
+
+

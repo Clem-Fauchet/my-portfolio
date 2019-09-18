@@ -8,7 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:500,600,800|Ubuntu:500,700&display=swap" rel="stylesheet">
 
 	<link rel='stylesheet' href='bootstrap/bootstrap-grid.min.css'>
-	<!--<link rel="stylesheet" href="css/reset.css">-->
+	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/Modernizr.js"></script>
 </head>
@@ -16,15 +16,18 @@
 
 <body>
 
-	<svg id='arrow_nav' viewBox="0 0 200 200" xml:space="preserve">
+	<!-- SVG symbol utilisée pour navigation arrows -->
+	<svg class='hidden' id='arrow_nav' viewBox="0 0 200 200" xml:space="preserve">
+		
 		<g class="square">
-			<path d="M53.7,157.6h86.8c6.6,0,12-5.4,12-12V60.8c0-6.6-5.4-12-12-12H53.7c-6.6,0-12,5.4-12,12v84.8
+			<path class="st0" d="M53.7,157.6h86.8c6.6,0,12-5.4,12-12V60.8c0-6.6-5.4-12-12-12H53.7c-6.6,0-12,5.4-12,12v84.8
 		C41.7,152.2,47.1,157.6,53.7,157.6z" />
 		</g>
 		<g class="triangle">
-			<path d="M65.9,117h61.8c2,0,3.1-2.4,1.7-3.9l-28.8-29.7c-2-2.1-5.4-2.1-7.5,0l-28.8,29.7C62.8,114.6,63.9,117,65.9,117
+			<path class="st1" d="M65.9,117h61.8c2,0,3.1-2.4,1.7-3.9l-28.8-29.7c-2-2.1-5.4-2.1-7.5,0l-28.8,29.7C62.8,114.6,63.9,117,65.9,117
 		z" />
-		</g>
+		</g>	 
+		
 	</svg>
 
 
@@ -71,11 +74,16 @@
 
 					</article>
 
-
 				</section>
+			</div>
+
+			<div class='page_nav'>
+				<!--Navigation page avec arrows-->
+				<nav>
+				
 
 
-
+				</nav>
 			</div>
 
 
@@ -90,11 +98,17 @@
 		</div>
 	</main>
 
-	<script src=""></script>
+
+
+
+
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
-
-
-
 
 
 </html>
