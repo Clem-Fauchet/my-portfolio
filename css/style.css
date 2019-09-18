@@ -1,0 +1,14 @@
+/*
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+.container-fluid {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
