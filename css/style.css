@@ -22,6 +22,7 @@ svg {
 	width: 2.7em;
 	height: 2.7em;
 	position: absolute;
+	stroke: black;
 }
 
 svg.hidden {
@@ -49,7 +50,6 @@ g.triangle {
 	top: 0.5em;
 	bottom: 0.5em;
 	z-index: 9999;
-	background-color: antiquewhite;
 }
 
 .no-js .page_nav {
@@ -74,4 +74,5 @@ g.triangle {
 	left: 48%;
 	transform: rotate(180deg);
 }
+
 
