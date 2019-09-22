@@ -9,7 +9,8 @@ font-family: 'Raleway', sans-serif;
 	padding-left: 5px;
 	padding-right: 5px;
 	min-height: 100vh;
-	background-color: #d7e5fa;
+	background-color: rgb(49,52,52);
+	overflow: hidden;
 }
 
 .row {
@@ -21,25 +22,25 @@ font-family: 'Raleway', sans-serif;
 svg {
 	width: 2.7em;
 	height: 2.7em;
-	position: absolute;
-	stroke: black;
+	stroke: ghostwhite;
 }
 
 svg.hidden {
 	display: none;
+	stroke-miterlimit: 10;
 }
 
 g.square {
 	fill: none;
-	stroke: #000000;
-	stroke-width: 5.5;
+	stroke: ghostwhite;
+	stroke-width: 6.5;
 	stroke-miterlimit: 10;
 }
 
 g.triangle {
 	fill: none;
-	stroke: #000000;
-	stroke-width: 4.5;
+	stroke: ghostwhite;
+	stroke-width: 5.5;
 	stroke-miterlimit: 10;
 }
 
@@ -56,23 +57,51 @@ g.triangle {
 	display: none;
 }
 
-.page_nav svg.icon-left {
+.pagenav_button {
+	border: 0;
+	background: none;
+	padding:0;
+	margin: 0;
+	width: 3.2em;
+	height: 3.2em;
+	cursor: pointer;
+	pointer-events: auto;
+	position: absolute;
+}
+
+.pagenav_button:focus {
+	outline: none;
+}
+
+.icon {
+	width: 100%;
+	height: 100%;
+}
+
+.pagenav_button.button_left {
 	top: 50%;
 	left: 1em;
 	transform: rotate(-90deg);
 }
 
-.page_nav svg.icon-right {
+.pagenav_button.button_right {
 	top: 50%;
 	right: 1em;
 	transform: rotate(90deg);
 }
 
-.page_nav svg.icon-bottom {
+.pagenav_button.button_bottom {
 	top: 95%;
 	bottom: 1em;
-	left: 48%;
+	left: 47%;
 	transform: rotate(180deg);
 }
+
+.pagenav_button:hover .icon {
+	stroke: #ff7200;
+	
+}
+
+
 
 
