@@ -110,7 +110,7 @@ $(document.body).ready(function () {
 		var strHTML = '';
 		for (var i = 0; i < this.options.nmbLayers; ++i) {
 			var bgcolor = typeof this.options.bgcolor === 'string' ? this.options.bgcolor : (this.options.bgcolor instanceof Array && this.options.bgcolor[i] ? this.options.bgcolor[i] : '#fff');
-			strHTML += '<div style="background:' + bgcolor + '" class="revealer_layer"></div>';
+			strHTML += '<div style="background:' + bgcolor + '" class="revealer-layer"></div>';
 		}
 		this.revealerWrapper.innerHTML = strHTML;
 		bodyEl.appendChild(this.revealerWrapper);
@@ -137,66 +137,64 @@ $(document.body).ready(function () {
 			widthVal = '100vh';
 			heightVal = '100vw';
 			transform = 'translate3d(-50%,-50%,0) rotate3d(0,0,1,90deg)';
-			
+
 		} else if (direction === 'right') {
 			widthVal = '100vh';
 			heightVal = '100vw';
 			transform = 'translate3d(-50%,-50%,0) rotate3d(0,0,1,-90deg)';
-			
+
 		} else if (direction === 'top' || direction === 'bottom') {
 			widthVal = '100vh';
 			heightVal = '100vw';
-			transform = direction === 'bottom' ? 'rotate3d(0,0,1,-180deg)' : 'none';
+			transform = direction === 'bottom' ? 'rotate3d(0,0,1,180deg)' : 'none';
 		}
 
 
+		this.revealerWrapper.style.width = widthVal;
+		this.revealerWrapper.style.height = heightVal;
+		this.revealerWrapper.style.WebkitTransform = this.revealerWrapper.style.transform = transform;
+		this.revealerWrapper.style.opacity = 1;
 
-	this.revealerWrapper.style.width = widthVal;
-	this.revealerWrapper.style.height = heightVal;
-	this.revealerWrapper.style.WebkitTransform = this.revealerWrapper.style.transform = transform;
-	this.revealerWrapper.style.opacity = 1;
+		// add direction and animate classes to parent
+		classie.add(this.revealerWrapper, 'revealer-' + direction);
+		classie.add(this.revealerWrapper, 'revealer-animate-');
 
-	// add direction and animate classes to parent
-	classie.add(this.revealerWrapper, 'revealer-' + direction);
-	classie.add(this.revealerWrapper, 'revealer-animate-');
+		// track the end of the animation for all layers
+		var self = this,
+			layerscomplete = 0;
+		this.layers.forEach(function (layer) {
+			onEndAnimation(layer, function () {
+				++layerscomplete;
+				if (layerscomplete === self.options.nmbLayers) {
+					classie.remove(self.revealerWrapper, 'revealer-' + direction);
+					classie.remove(self.revealerWrapper, 'revealer-animate-');
 
-	// track the end of the animation for all layers
-	var self = this,
-		layerscomplete = 0;
-	this.layers.forEach(function (layer) {
-		onEndAnimation(layer, function () {
-			++layerscomplete;
-			if (layerscomplete === self.options.nmbLayers) {
-				classie.remove(self.revealerWrapper, 'revealer-' + direction);
-				classie.remove(self.revealerWrapper, 'revealer-animate-');
+					self.revealerWrapper.style.opacity = 0;
+					self.isAnimating = false;
 
-				self.revealerWrapper.style.opacity = 0;
-				self.isAnimating = false;
-
-				// callback
-				self.options.onEnd(self.direction);
-			}
+					// callback
+					self.options.onEnd(self.direction);
+				}
+			});
 		});
-	});
 
-	// reveal fn callback
-	if (typeof callback === 'function') {
-		if (this.callbacktimeout) {
-			clearTimeout(this.callbacktimeout);
+		// reveal fn callback
+		if (typeof callback === 'function') {
+			if (this.callbacktimeout) {
+				clearTimeout(this.callbacktimeout);
+			}
+			this.callbacktimeout = setTimeout(callback, callbacktime);
 		}
-		this.callbacktimeout = setTimeout(callback, callbacktime);
-	}
-};
+	};
 
-/**
- * destroy method
- */
-Revealer.prototype.destroy = function () {
-	classie.remove(bodyEl, this.options.effect);
-	window.removeEventListener('resize', this.debounceResize);
-	bodyEl.removeChild(this.revealerWrapper);
-};
+	/**
+	 * destroy method
+	 */
+	Revealer.prototype.destroy = function () {
+		classie.remove(bodyEl, this.options.effect);
+		bodyEl.removeChild(this.revealerWrapper);
+	};
 
-window.Revealer = Revealer;
+	window.Revealer = Revealer;
 
 })
