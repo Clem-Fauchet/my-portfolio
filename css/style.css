@@ -9,7 +9,7 @@ font-family: 'Raleway', sans-serif;
 	padding-left: 5px;
 	padding-right: 5px;
 	min-height: 100vh;
-	background-color: rgb(49,52,52);
+	background-color: rgb(29,33,33);
 	overflow: hidden;
 }
 
@@ -81,11 +81,13 @@ svg.hidden {
 	transform: rotate(180deg);
 }
 
+/* HOVER POUR media query PC*/
+/*
 .pagenav_button:hover svg.icon{
 	opacity: 0.5;
 	stroke-dasharray: 430 30;	
 	stroke-dashoffset: 0;
 	transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease;
 }
-
+*/
 
