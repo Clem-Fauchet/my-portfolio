@@ -110,7 +110,7 @@ $(document.body).ready(function () {
 		var strHTML = '';
 		for (var i = 0; i < this.options.nmbLayers; ++i) {
 			var bgcolor = typeof this.options.bgcolor === 'string' ? this.options.bgcolor : (this.options.bgcolor instanceof Array && this.options.bgcolor[i] ? this.options.bgcolor[i] : '#fff');
-			strHTML += '<div style="background:' + bgcolor + '" class="revealer__layer"></div>';
+			strHTML += '<div style="background:' + bgcolor + '" class="revealer_layer"></div>';
 		}
 		this.revealerWrapper.innerHTML = strHTML;
 		bodyEl.appendChild(this.revealerWrapper);
@@ -118,8 +118,7 @@ $(document.body).ready(function () {
 
 	/**
 	 * reveal the layers
-	 * direction: right || left || top || bottom || cornertopleft || cornertopright || cornerbottomleft || cornerbottomright
-	 */
+	 * direction: right || left || top || bottom */
 	Revealer.prototype.reveal = function (direction, callbacktime, callback) {
 		// if animating return
 		if (this.isAnimating) {
@@ -137,15 +136,17 @@ $(document.body).ready(function () {
 		if (direction === 'left') {
 			widthVal = '100vh';
 			heightVal = '100vw';
-			transform = 'translate3d(-50%,-50%,0) rotate3d(0,0,1,' + (direction === 'left' ? 90 : -90) + 'deg) translate3d(0,100%,0)';
+			transform = 'translate3d(-50%,-50%,0) rotate3d(0,0,1,90deg)';
+			
 		} else if (direction === 'right') {
 			widthVal = '100vh';
 			heightVal = '100vw';
-			transform = 'translate3d(-50%,-50%,0) rotate3d(0,0,1,-95deg)';
+			transform = 'translate3d(-50%,-50%,0) rotate3d(0,0,1,-90deg)';
+			
 		} else if (direction === 'top' || direction === 'bottom') {
 			widthVal = '100vh';
 			heightVal = '100vw';
-			transform = direction === 'top' ? 'rotate3d(0,0,1,180deg)' : 'none';
+			transform = direction === 'bottom' ? 'rotate3d(0,0,1,-180deg)' : 'none';
 		}
 
 
@@ -156,8 +157,8 @@ $(document.body).ready(function () {
 	this.revealerWrapper.style.opacity = 1;
 
 	// add direction and animate classes to parent
-	classie.add(this.revealerWrapper, 'revealer-' + direction || 'revealer-right');
-	classie.add(this.revealerWrapper, 'revealer-animate');
+	classie.add(this.revealerWrapper, 'revealer-' + direction);
+	classie.add(this.revealerWrapper, 'revealer-animate-');
 
 	// track the end of the animation for all layers
 	var self = this,
@@ -166,8 +167,8 @@ $(document.body).ready(function () {
 		onEndAnimation(layer, function () {
 			++layerscomplete;
 			if (layerscomplete === self.options.nmbLayers) {
-				classie.remove(self.revealerWrapper, 'revealer-' + direction || 'revealer-right');
-				classie.remove(self.revealerWrapper, 'revealer-animate');
+				classie.remove(self.revealerWrapper, 'revealer-' + direction);
+				classie.remove(self.revealerWrapper, 'revealer-animate-');
 
 				self.revealerWrapper.style.opacity = 0;
 				self.isAnimating = false;

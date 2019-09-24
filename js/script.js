@@ -18,7 +18,7 @@ $(document.body).ready(function () {
 			onStart: function (direction) {
 				// next page gets class page-animate-[direction]
 				var nextPage = pages[currentPage === 0 ? 1 : 0];
-				classie.add(nextPage, 'page-animate' + direction);
+				classie.add(nextPage, 'page-animate-' + direction);
 			},
 			onEnd: function (direction) {
 				// remove class page-animate-[direction] from next page
@@ -50,31 +50,6 @@ $(document.body).ready(function () {
 			};
 
 		revealer.reveal(direction, callbackTime, callbackFn);
-	}
-
-
-	function changeEffect() {
-		revealer.destroy();
-		var revealerOpts = {
-			// the layers are the elements that move from the sides
-			nmbLayers: Number(this.options[this.selectedIndex].getAttribute('data-layers')),
-			// bg color of each layer
-			bgcolor: this.options[this.selectedIndex].getAttribute('data-colors').split(','),
-			// effect classname
-			effect: 'anim-' + this.value,
-			onStart: function (direction) {
-				// next page gets class page-animate-[direction]
-				var nextPage = pages[currentPage === 0 ? 1 : 0];
-				classie.add(nextPage, 'page-animate-' + direction);
-			},
-			onEnd: function (direction) {
-				// remove class page-animate-[direction] from next page
-				var nextPage = pages[currentPage === 0 ? 1 : 0];
-				nextPage.className = 'page';
-			}
-		};
-
-		revealer = new Revealer(revealerOpts);
 	}
 
 
