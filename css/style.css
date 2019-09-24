@@ -19,28 +19,8 @@ font-family: 'Raleway', sans-serif;
 }
 
 /***************** NAV ARROW SVG ****************/
-svg {
-	width: 2.7em;
-	height: 2.7em;
-	stroke: ghostwhite;
-}
-
 svg.hidden {
 	display: none;
-	stroke-miterlimit: 10;
-}
-
-g.square {
-	fill: none;
-	stroke: ghostwhite;
-	stroke-width: 6.5;
-	stroke-miterlimit: 10;
-}
-
-g.triangle {
-	fill: none;
-	stroke: ghostwhite;
-	stroke-width: 5.5;
 	stroke-miterlimit: 10;
 }
 
@@ -76,6 +56,10 @@ g.triangle {
 .icon {
 	width: 100%;
 	height: 100%;
+	opacity:1;
+	stroke-dasharray: 0;
+	stroke-dashoffset: 320;
+	
 }
 
 .pagenav_button.button_left {
@@ -97,11 +81,11 @@ g.triangle {
 	transform: rotate(180deg);
 }
 
-.pagenav_button:hover .icon {
-	stroke: #ff7200;
-	
+.pagenav_button:hover svg.icon{
+	opacity: 0.5;
+	stroke-dasharray: 430 30;	
+	stroke-dashoffset: 0;
+	transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease;
 }
-
-
 
 
