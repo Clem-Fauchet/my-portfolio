@@ -151,15 +151,15 @@ svg.hidden {
 /************ ANIMATION EFFECT 3 LAYERS *****/
 
 .animate-layer-3 .page:nth-child(2) {
-	background: #dd9800;
+	background: #dd6c00;
 }
 
 .animate-layer-3 .page:nth-child(3) {
-	background: #fa8b3e;
+	background: #f7e132;
 }
 
 .animate-layer-3 .page:nth-child(4) {
-	background: #fa6d3e;
+	background: #f1b021;
 }
 
 .animate-layer-3 .revealer-animate- .revealer-layer {
