@@ -47,6 +47,7 @@ $(document.body).ready(function () {
 				classie.remove(pages[currentPage], 'page-current');
 				currentPage = currentPage === 0 ? 1 : 0;
 				classie.add(pages[currentPage], 'page-current');
+				classie.add(pages[currentPage], 'row');
 			};
 
 		revealer.reveal(direction, callbackTime, callbackFn);

@@ -186,9 +186,13 @@ $(document.body).ready(function () {
 	 */
 	Revealer.prototype.destroy = function () {
 		classie.remove(bodyEl, this.options.effect);
-		bodyEl.removeChild(this.revealerWrapper);
+		bodyEl.removeChild(this.revealerWrapper);	
 	};
 
 	window.Revealer = Revealer;
+	
+
+
+
 
 })
