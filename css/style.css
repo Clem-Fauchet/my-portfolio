@@ -13,6 +13,11 @@ font-family: 'Raleway', sans-serif;
 	overflow: hidden;
 }
 
+body {
+	color: ghostwhite;
+	text-align: center;
+}
+
 /******* PAGES/PAGE HORMIS PAGE NAV  **********/
 .pages {
 	position: relative;
