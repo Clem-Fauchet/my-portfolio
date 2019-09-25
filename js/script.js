@@ -17,14 +17,15 @@ $(document.body).ready(function () {
 			effect: 'animate-layer-3', //CSS properties
 			onStart: function (direction) {
 				// next page gets class page-animate-[direction]
-				var nextPage = pages[currentPage === 0 ? 1 : 0];
+				var nextPage = pages[currentPage === 0 ? 0 : currentPage];
 				classie.add(nextPage, 'page-animate-' + direction);
 			},
 			onEnd: function (direction) {
 				// remove class page-animate-[direction] from next page
-				var nextPage = pages[currentPage === 0 ? 1 : 0];
+				var nextPage = pages[currentPage === 0 ? pages.length -1 : 0];
 				nextPage.className = 'page';
 			}
+			
 		};
 
 	revealer = new Revealer(revealerOpts);
@@ -45,7 +46,7 @@ $(document.body).ready(function () {
 		var callbackTime = 750,
 			callbackFn = function () {
 				classie.remove(pages[currentPage], 'page-current');
-				currentPage = currentPage === 0 ? 1 : 0;
+				currentPage = currentPage < pages.length -1 ? currentPage+1 : 0;
 				classie.add(pages[currentPage], 'page-current');
 				classie.add(pages[currentPage], 'row');
 			};

@@ -9,7 +9,7 @@ font-family: 'Raleway', sans-serif;
 	padding-left: 0px;
 	padding-right: 0px;
 	min-height: 100vh;
-	background: #dd9800;
+	background: #22292b;
 	overflow: hidden;
 }
 
@@ -145,13 +145,21 @@ svg.hidden {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: #ddd;
+	background: #ddd; /* background par defaut si layer ou*/
 }
 
 /************ ANIMATION EFFECT 3 LAYERS *****/
 
 .animate-layer-3 .page:nth-child(2) {
-	background: rgb(22, 66, 66);
+	background: #dd9800;
+}
+
+.animate-layer-3 .page:nth-child(3) {
+	background: #fa8b3e;
+}
+
+.animate-layer-3 .page:nth-child(4) {
+	background: #fa6d3e;
 }
 
 .animate-layer-3 .revealer-animate- .revealer-layer {
@@ -205,7 +213,7 @@ svg.hidden {
 		transform: translate3d(0, 0, 0);
 		animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
 	}
-	75%,
+	70%,
 	100% {
 		transform: translate3d(0, -200%, 0);
 	}

@@ -138,8 +138,8 @@ $(document.body).ready(function () {
 			heightVal = '100vw';
 			transform = 'translate3d(-50%,-50%,0) rotate3d(0,0,1,' + (direction === 'left' ? 90 : -90) + 'deg) translate3d(0,100%,0)';
 		} else if (direction === 'top' || direction === 'bottom') {
-			widthVal = '100vh';
-			heightVal = '100vw';
+			widthVal = '100%';
+			heightVal = '100%';
 			transform = direction === 'top' ? 'rotate3d(0,0,1,180deg)' : 'none';
 		}
 
