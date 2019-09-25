@@ -133,20 +133,14 @@ $(document.body).ready(function () {
 		// set the initial position for the layers´ parent
 		var widthVal, heightVal, transform;
 
-		if (direction === 'left') {
-			widthVal = '100vh';
+		if (direction === 'left' || direction === 'right') {
+			widthVal = '100vh'
 			heightVal = '100vw';
-			transform = 'translate3d(-50%,-50%,0) rotate3d(0,0,1,90deg)';
-
-		} else if (direction === 'right') {
-			widthVal = '100vh';
-			heightVal = '100vw';
-			transform = 'translate3d(-50%,-50%,0) rotate3d(0,0,1,-90deg)';
-
+			transform = 'translate3d(-50%,-50%,0) rotate3d(0,0,1,' + (direction === 'left' ? 90 : -90) + 'deg) translate3d(0,100%,0)';
 		} else if (direction === 'top' || direction === 'bottom') {
 			widthVal = '100vh';
 			heightVal = '100vw';
-			transform = direction === 'bottom' ? 'rotate3d(0,0,1,180deg)' : 'none';
+			transform = direction === 'top' ? 'rotate3d(0,0,1,180deg)' : 'none';
 		}
 
 
