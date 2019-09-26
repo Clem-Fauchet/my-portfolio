@@ -384,6 +384,7 @@ svg.hidden {
 
 #intro .skills div.detail {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
@@ -405,3 +406,21 @@ svg.hidden {
 
 
 /************************* MISE EN PAGE PAGE INTRO *************************/
+
+/************************* MISE EN PAGE WEB EXPERIENCE *************************/
+#computer .outils div.detail {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#computer .outils figure img {
+	width: 2.3em;
+	height: 2.3em;
+	background-size: contain;
+	margin: -2em 0 -1.5em 0;
+}
+
+
+
+/************************* MISE EN PAGE WEB EXPERIENCE *************************/
