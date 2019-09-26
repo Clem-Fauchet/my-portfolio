@@ -2,9 +2,9 @@
 font-family: 'Ubuntu', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
-/*************************************
-    		MOBILE FIRST 
-**************************************/
+/*********************************************************************************
+    								MOBILE FIRST 
+*************************************************************************************/
 .container-fluid {
 	padding-left: 0px;
 	padding-right: 0px;
@@ -51,8 +51,8 @@ svg.hidden {
 	pointer-events: none;
 	position: absolute;
 	left: 0;
-	top: 0.5em;
-	bottom: 0.5em;
+	top: 0.2em;
+	bottom: 0.2em;
 	z-index: 9999;
 }
 
@@ -63,7 +63,7 @@ svg.hidden {
 .pagenav_button {
 	border: 0;
 	background: none;
-	padding:0;
+	padding: 0;
 	margin: 0;
 	width: 3.2em;
 	height: 3.2em;
@@ -79,27 +79,27 @@ svg.hidden {
 .icon {
 	width: 100%;
 	height: 100%;
-	opacity:1;
+	opacity: 1;
 	stroke-dasharray: 0;
 	stroke-dashoffset: 320;
-	
+
 }
 
 .pagenav_button.button_left {
 	top: 50%;
-	left: 1em;
+	left: 0.5em;
 	transform: rotate(-90deg);
 }
 
 .pagenav_button.button_right {
 	top: 50%;
-	right: 1em;
+	right: 0.5em;
 	transform: rotate(90deg);
 }
 
 .pagenav_button.button_bottom {
 	top: 95%;
-	bottom: 1em;
+	bottom: 0.5em;
 	left: 47%;
 	transform: rotate(180deg);
 }
@@ -113,7 +113,6 @@ svg.hidden {
 	transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease;
 }
 */
-
 
 /***************** REVEALER  ****************/
 
@@ -138,6 +137,7 @@ svg.hidden {
 	left: 0;
 	top: 100%;
 }
+
 /*
 .revealer-top {
 	left: 0;
@@ -150,7 +150,8 @@ svg.hidden {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: #ddd; /* background par defaut si layer ou*/
+	background: #ddd;
+	/* background par defaut si layer ou*/
 }
 
 /************ ANIMATION EFFECT 3 LAYERS *****/
@@ -184,11 +185,13 @@ svg.hidden {
 	0% {
 		transform: translate3d(0, 0, 0);
 	}
+
 	25%,
-	75% { 
+	75% {
 		transform: translate3d(0, -100%, 0);
 		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 	}
+
 	100% {
 		transform: translate3d(0, -200%, 0);
 	}
@@ -196,15 +199,18 @@ svg.hidden {
 
 
 @keyframes anim-effect-3-2 {
+
 	0%,
 	12.5% {
 		transform: translate3d(0, 0, 0);
 	}
+
 	37.5%,
 	62.5% {
 		transform: translate3d(0, -100%, 0);
 		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 	}
+
 	87.5%,
 	100% {
 		transform: translate3d(0, -200%, 0);
@@ -213,15 +219,49 @@ svg.hidden {
 
 
 @keyframes anim-effect-3-3 {
+
 	0%,
 	25% {
 		transform: translate3d(0, 0, 0);
 		animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
 	}
+
 	70%,
 	100% {
 		transform: translate3d(0, -200%, 0);
 	}
 }
 
+/************************* MISE EN PAGE PAGE INTRO *************************/
+#intro section {
+	padding: 0 3em;
+}
 
+#intro section.name {
+	height: 27%;
+	border: 6px double #ffb64a;
+}
+
+#intro .name h1 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 4.5em;
+	text-decoration: underline ghostwhite;
+	margin-right: 10%;
+}
+
+#intro .name h2 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #db7c12;
+}
+
+#intro .name .junior {
+	color: #f4c200;
+}
+
+
+
+/************************* MISE EN PAGE PAGE INTRO *************************/

@@ -5,11 +5,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<title>Mon Portfolio Web</title>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:500,600,800|Ubuntu:500,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css family=Raleway:500,600,800|Ubuntu:500,700&display=swap">
 
 	<link rel='stylesheet' href='bootstrap/bootstrap-grid.min.css'>
+
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+	<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+
 	<script src="js/Modernizr.js"></script>
 </head>
 
@@ -34,10 +39,10 @@
 	<main class='container-fluid'>
 		<div class='pages'>
 
-			<div class='row page page-current'>
+			<div id='intro'  class='row page page-current'>
 				<!--Intro page-->
 				<section class='col-12 col-md-10 name'>
-					<p>Clémence Fauchet <br> Front End Developpeur Junior</p>
+					<h1>Clemence Fauchet</h1> <h2 data-splitting class='ghost'>Front End Developpeur <span date-splitting class='junior ghostfade'>Junior</span></h2>
 
 
 				</section>
@@ -161,9 +166,12 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/revealer-script.js"></script>
 	<script src="js/script.js"></script>
+
+
 </body>
 
 
