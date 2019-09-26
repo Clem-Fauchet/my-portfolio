@@ -3,7 +3,7 @@ $(document.body).ready(function () {
 	var windowWidth = $(window).width();
 	
 	 Splitting();
-
+	
 	/************* PAGE LAYERS ***************/
 
 

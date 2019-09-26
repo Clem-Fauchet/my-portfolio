@@ -1,7 +1,3 @@
-/*
-font-family: 'Ubuntu', sans-serif;
-font-family: 'Raleway', sans-serif;
-*/
 /*********************************************************************************
     								MOBILE FIRST 
 *************************************************************************************/
@@ -238,7 +234,7 @@ svg.hidden {
 }
 
 #intro section.name {
-	height: 27%;
+	height: 24%;
 	border: 6px double #ffb64a;
 }
 
@@ -246,7 +242,7 @@ svg.hidden {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 500;
 	text-transform: uppercase;
-	line-height: 4.5em;
+	line-height: 3.0em;
 	text-decoration: underline ghostwhite;
 	margin-right: 10%;
 }
@@ -255,13 +251,118 @@ svg.hidden {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
+	color: #ff9115;
+}
+
+#intro h2.ghost.words .char {
+	animation: ghost 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	animation-delay: calc(var(--distance-percent) * 0.125s);
+	transform-origin: 50% 100%;
+}
+
+#intro h2.ghost.words .junior .char {
+	animation: ghostj 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+	animation-delay: calc(var(--distance-percent) * 0.125s);
+	transform-origin: 50% 100%;
+}
+
+#intro h2.ghost.words .junior .char:after {
+		animation: ghostfade 3s ease-in 1.2s;
+		content: attr(data-char);
+		opacity: 0.5;
+		transform-origin: 100% 50%;
+		visibility: visible;
+}
+
+
+@keyframes ghost {
+	40% {
+		transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+	}
+	50% {
+		transform: translateY(6%);
+	}
+	55% {
+		transform: translateY(-4%);
+	}
+	60% {
+		transform: translateY(2%);
+	}
+	65% {
+		transform: translateY(-1%);
+	}
+	70% {
+		transform: translateY(0%);
+	}
+}
+
+@keyframes ghostj {
+	35% {
+		color: #db7c12;
+	}
+	40% {
+		transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+	}
+	50% {
+		transform: translateY(6%);
+		
+	}
+	55% {
+		transform: translateY(-4%);
+	}
+	60% {
+		transform: translateY(2%);
+		color: #f4c200;
+	}
+	65% {
+		transform: translateY(-1%);
+	}
+	70% {
+		transform: translateY(0%);
+	}
+	100% {
+		color: #fdcd13;
+	}
+}
+
+ @keyframes ghostfade {
+    8% {
+      opacity: 0;
+      transform: translateY(0);
+		color: #fad092;
+    }
+    40% {
+      opacity: 0.6;
+      transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg)); 
+    }
+    60%, 100% {
+      opacity: 0;
+      transform: translateY(-200%);
+    }
+  }
+
+#intro section.skills {
+	height: 73%;
+}
+
+#intro .skills h2 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
 	color: #db7c12;
 }
 
-#intro .name .junior {
-	color: #f4c200;
+#intro .skills h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: #e0b81e;
+	text-align: left;
+    line-height: 3em;
+    margin-left: 5%;
 }
 
-
-
+#intro .skills div.detail {
+	display: flex;
+	justify-content: space-around;
+}
 /************************* MISE EN PAGE PAGE INTRO *************************/
