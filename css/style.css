@@ -408,17 +408,84 @@ svg.hidden {
 /************************* MISE EN PAGE PAGE INTRO *************************/
 
 /************************* MISE EN PAGE WEB EXPERIENCE *************************/
+#computer h2 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #e5f957;
+	margin: auto;
+	line-height: 2.6em;
+	border: 6px double #ffb64a;
+}
+
+
+.page-current section#computer h2.flip.words .char {
+	animation: flip 6s ease forwards;
+	animation-delay: calc(var(--char-index) * 0.075s);
+	transform-origin: 50% 60%;
+}
+
+@keyframes flip {
+	5% {
+		transform: rotateX(1turn);
+	}
+
+	10% {
+		transform: rotateX(2turn);
+		color: #e5f957;
+	}
+
+	20% {
+		transform: rotateX(3turn);
+	}
+
+	40% {
+		transform: rotateX(4turn);
+	}
+
+	70%, 100% {
+		transform: rotateX(4turn);
+		color: #f78200;
+	}
+}
+
+#computer article h3  {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 700;
+	font-size: 1.4em;
+	color: #ff9333;
+	text-align: left;
+	line-height: 1.5em;
+	margin-left: 5%;
+	margin-bottom: 3%;
+}
+#computer .experience {
+	text-align: left;
+	margin-left: 5%;
+	
+}
+#computer .experiences .fa-terminal {
+	padding: 0 0.5em;
+	color: #484025cc;
+}
+
+
 #computer .outils div.detail {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
+#computer .outils figure {
+	padding: 0.8em 1.0em;
+	margin: 0.5em;
+}
+
 #computer .outils figure img {
-	width: 2.3em;
-	height: 2.3em;
+	width: 3.2em;
+	height: 3.2em;
 	background-size: contain;
-	margin: -2em 0 -1.5em 0;
+	box-shadow: 1px 1px 2px #db7c12;
 }
 
 
