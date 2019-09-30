@@ -1,10 +1,10 @@
 $(document.body).ready(function () {
-	
+
 	var windowWidth = $(window).width();
-	
-	 Splitting();
-	
-	/************* PAGE LAYERS ***************/
+
+	Splitting();
+
+	/************* PAGE LAYERS ***********************/
 
 
 	var pages = [].slice.call(document.querySelectorAll('.pages > .page')),
@@ -87,6 +87,17 @@ $(document.body).ready(function () {
 
 		revealer.reveal(direction, callbackTime, callbackFn);
 	}
+
+
+	/************* ANIMATION SVG ***********************/
+
+	var logo = document.getElementById('logo');
+
+	logo.addEventListener('click', {
+		handleEvent: function () {
+			$('.crea1').toggleClass('on');
+		}
+	})
 
 
 })

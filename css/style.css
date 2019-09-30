@@ -410,8 +410,8 @@ svg.hidden {
 /************************* MISE EN PAGE WEB EXPERIENCE *************************/
 #computer {
 	min-height: 100vh;
-    height: 100%;
-    overflow-y: scroll;
+	height: 100%;
+	overflow-y: scroll;
 }
 
 #computer h2 {
@@ -449,13 +449,14 @@ svg.hidden {
 		transform: rotateX(4turn);
 	}
 
-	70%, 100% {
+	70%,
+	100% {
 		transform: rotateX(4turn);
 		color: #f78200;
 	}
 }
 
-#computer article h3  {
+#computer article h3 {
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 700;
 	font-size: 1.4em;
@@ -475,18 +476,19 @@ svg.hidden {
 	text-align: left;
 	margin-left: 5%;
 	font-family: 'Ubuntu', sans-serif;
-    font-weight: 800;
-    font-size: 0.85em;
-    line-height: 1.75em;
-    color: #484025
+	font-weight: 800;
+	font-size: 0.85em;
+	line-height: 1.75em;
+	color: #484025
 }
 
 #computer .experience ul {
 	margin-bottom: 1em;
-    color: #70612c;
+	color: #70612c;
 }
 
-#computer .experience a, #computer .experience:focus {
+#computer .experience a,
+#computer .experience:focus {
 	text-decoration: none;
 	outline: none;
 	color: #ff5722;
@@ -515,6 +517,52 @@ svg.hidden {
 	transform: translateY(6px);
 }
 
+#computer .creations {
+	margin-bottom: 5em;
+}
 
+#computer .creations svg {
+	width: 5em;
+	height: 5em;
+}
+
+/*** LOGO MASK ANIME SVG **/
+svg#logo {
+	fill: none;
+	stroke:#22292b;
+	stroke-width: 2px;
+	transform-origin: 50% 50%;
+}
+
+svg#logo #circle {
+	stroke: rgba(45, 52, 54, 0.97);
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 3.75px;
+}
+
+svg#logo #circle .big_circle {
+	stroke-dasharray: 166, 10, 166, 10;
+	transition: 2.8s ease-in-out, stroke 3s linear;
+}
+
+svg#logo #circle .small_circle {
+	stroke-dasharray: 90, 40, 90, 40, 90, 296;
+	transition: 2.5s linear, stroke 3.2s linear;
+}
+
+svg#logo #mask .cape {
+	stroke: rgba(158, 11, 11, 0.95);
+	stroke-width: 3px;
+	fill: rgba(132, 10, 10, 0.95);
+	perspective: 1000px;
+}
+
+svg#logo #mask .left_eye,
+svg#logo #mask .right_eye {
+	stroke: rgba(158, 11, 11, 0.95);
+	fill: rgba(95, 1, 1, 0.95);
+	transition: opacity 1.5s ease-in;
+}
 
 /************************* MISE EN PAGE WEB EXPERIENCE *************************/
