@@ -248,6 +248,13 @@ svg.hidden {
 	margin-right: 10%;
 }
 
+#intro .name h3 {
+	font-style: italic;
+	font-family: 'Vibes', cursive;
+	font-size: 0.8em;
+	color: #777777;
+}
+
 #intro .name h2 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
@@ -414,45 +421,130 @@ svg.hidden {
 	overflow-y: scroll;
 }
 
-#computer h2 {
+#computer h2#glitch {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
 	text-transform: uppercase;
-	color: #e5f957;
+	color: ghostwhite;
 	margin: auto;
 	line-height: 2.6em;
+	position: relative;
+}
+
+#computer .border {
 	border: 6px double #ffb64a;
 }
 
 
-.page-current section#computer h2.flip.words .char {
-	animation: flip 6s ease forwards;
-	animation-delay: calc(var(--char-index) * 0.075s);
-	transform-origin: 50% 60%;
+.page-current #computer h2#glitch::before {
+	content: attr(data-text);
+	position: absolute;
+	text-shadow: 1px 0px #fc339d;
+	color: ghostwhite;
+	overflow: hidden;
+	clip: rect(0,900px,0,0);
+	animation: noise-anim 2.1s 4 linear alternate-reverse backwards;
 }
 
-@keyframes flip {
+.page-current #computer h2#glitch::after {
+	content: attr(data-text);
+	position: absolute;
+	right: 0em;
+	width: 100%;
+	text-shadow: -1px 0px #251cfc;
+	color: ghostwhite;
+	overflow: hidden;
+	clip: rect(0,900px,0,0);
+	animation: noise-anim 2s 4 linear alternate-reverse backwards;
+	animation-delay: 0.3s;
+}
+
+@keyframes noise-anim {
+	0% {
+		clip: rect(0,900px,0,0)
+	}
+	1% {
+		clip: rect(89px, 9999px, 100px, 0)
+	}
+
 	5% {
-		transform: rotateX(1turn);
+		clip: rect(4px, 9999px, 62px, 0)
 	}
 
 	10% {
-		transform: rotateX(2turn);
-		color: #e5f957;
+		clip: rect(43px, 9999px, 16px, 0)
+	}
+
+	15% {
+		clip: rect(2px, 9999px, 68px, 0)
 	}
 
 	20% {
-		transform: rotateX(3turn);
+		clip: rect(12px, 9999px, 6px, 0)
+	}
+
+	25% {
+		clip: rect(89px, 9999px, 25px, 0)
+	}
+
+	30% {
+		clip: rect(15px, 9999px, 38px, 0)
+	}
+
+	35% {
+		clip: rect(57px, 9999px, 97px, 0)
 	}
 
 	40% {
-		transform: rotateX(4turn);
+		clip: rect(24px, 9999px, 72px, 0)
 	}
 
-	70%,
+	45% {
+		clip: rect(81px, 9999px, 3px, 0)
+	}
+
+	50% {
+		clip: rect(93px, 9999px, 26px, 0)
+	}
+
+	55% {
+		clip: rect(68px, 9999px, 85px, 0)
+	}
+
+	60% {
+		clip: rect(43px, 9999px, 28px, 0)
+	}
+
+	65% {
+		clip: rect(44px, 9999px, 11px, 0)
+	}
+
+	70% {
+		clip: rect(17px, 9999px, 33px, 0)
+	}
+
+	75% {
+		clip: rect(74px, 9999px, 66px, 0)
+	}
+
+	80% {
+		clip: rect(100px, 9999px, 4px, 0)
+	}
+
+	85% {
+		clip: rect(92px, 9999px, 31px, 0)
+	}
+
+	90% {
+		clip: rect(93px, 9999px, 98px, 0)
+	}
+
+	95% {
+		clip: rect(23px, 9999px, 77px, 0)
+	}
+
 	100% {
-		transform: rotateX(4turn);
-		color: #f78200;
+		clip: rect(92px, 9999px, 8px, 0)
 	}
 }
 
@@ -506,7 +598,6 @@ svg.hidden {
 	background-size: contain;
 	border-radius: 10px;
 	box-shadow: 1px 1px 2px #db7c12;
-	filter: grayscale(0.65);
 }
 
 #computer .outils figure figcaption {
@@ -529,7 +620,7 @@ svg.hidden {
 /*** LOGO MASK ANIME SVG **/
 svg#logo {
 	fill: none;
-	stroke:#22292b;
+	stroke: #22292b;
 	stroke-width: 2px;
 	transform-origin: 50% 50%;
 }
