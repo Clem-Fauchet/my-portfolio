@@ -421,20 +421,22 @@ svg.hidden {
 	overflow-y: scroll;
 }
 
+#computer .border {
+	border: 6px double #ffb64a;
+	display: flex;
+}
+
+
 #computer h2#glitch {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
 	text-transform: uppercase;
 	color: ghostwhite;
+	width: 80%;
 	margin: auto;
 	line-height: 2.6em;
 	position: relative;
 }
-
-#computer .border {
-	border: 6px double #ffb64a;
-}
-
 
 .page-current #computer h2#glitch::before {
 	content: attr(data-text);
@@ -442,7 +444,7 @@ svg.hidden {
 	text-shadow: 1px 0px #fc339d;
 	color: ghostwhite;
 	overflow: hidden;
-	clip: rect(0,900px,0,0);
+	clip: rect(0, 900px, 0, 0);
 	animation: noise-anim 2.1s 4 linear alternate-reverse backwards;
 }
 
@@ -454,15 +456,16 @@ svg.hidden {
 	text-shadow: -1px 0px #251cfc;
 	color: ghostwhite;
 	overflow: hidden;
-	clip: rect(0,900px,0,0);
+	clip: rect(0, 900px, 0, 0);
 	animation: noise-anim 2s 4 linear alternate-reverse backwards;
 	animation-delay: 0.3s;
 }
 
 @keyframes noise-anim {
 	0% {
-		clip: rect(0,900px,0,0)
+		clip: rect(0, 900px, 0, 0)
 	}
+
 	1% {
 		clip: rect(89px, 9999px, 100px, 0)
 	}
@@ -546,6 +549,13 @@ svg.hidden {
 	100% {
 		clip: rect(92px, 9999px, 8px, 0)
 	}
+}
+
+#computer .border .fa-laptop-code {
+	width: 20%;
+	margin: auto;
+	font-size: 1.5em;
+	color: #22292b;
 }
 
 #computer article h3 {
