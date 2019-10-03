@@ -89,7 +89,15 @@ $(document.body).ready(function () {
 	}
 
 
-	/************* ANIMATION SVG ***********************/
+	/************* ANIMATION SUR PAGE INTRO ***********************/
+	var chococard = document.getElementsByClassName('chococard');
+
+	$('.chococard').click(function() {
+		$('.chococard').toggleClass('on');
+	});
+
+
+	/************* ANIMATION SUR PAGE WEB ***********************/
 
 	var logo = document.getElementById('logo');
 

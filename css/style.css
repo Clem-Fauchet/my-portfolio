@@ -35,6 +35,9 @@ body {
 .page-current {
 	visibility: visible;
 	position: relative;
+	min-height: 100vh;
+	height: 100%;
+	overflow-y: scroll;
 }
 
 /***************** NAV ARROW SVG **************/
@@ -236,6 +239,8 @@ svg.hidden {
 #intro section.name {
 	height: 24%;
 	border: 6px double #ffb64a;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 #intro .name h1 {
@@ -243,16 +248,62 @@ svg.hidden {
 	font-weight: 600;
 	text-transform: uppercase;
 	line-height: 3.0em;
+	font-size: 1.45em;
 	text-decoration: underline ghostwhite;
-	opacity: 0.75;
-	margin-right: 10%;
+}
+
+#intro .name .chococard {
+	background: url('img/ClemChococardWeb.png') no-repeat;
+	background-size: contain;
+	height: 6em;
+	margin-top: 1em;
+	transition: background 0.4s ease-in;
+}
+
+.page-current#intro .name .chococard {
+	animation: choco-flip 3.0s ease-out 3.3s;
+}
+
+@keyframes choco-flip {
+	0% {
+		background: url('img/ClemChococardWeb.png') no-repeat;
+		background-size: contain;
+		transform-origin: 50% 50%;
+		perspective: 1000px;
+	}
+
+	50% {
+		background: url('img/ClemChocobackWeb.png') no-repeat;
+		background-size: contain;
+	}
+
+	68% {
+		background: url('img/ClemChocobackWeb.png') no-repeat;
+		background-size: contain;
+		opacity: 0.8;
+	}
+
+	100% {
+		background: url('img/ClemChococardWeb.png') no-repeat;
+		background-size: contain;
+		transform: rotateY(5turn);
+		opacity: 1;
+	}
+}
+
+.page-current#intro .name .chococard.on {
+	background: url('img/ClemChocobackWeb.png') no-repeat;
+	background-size: contain;
+	transition: background 0.4s ease-in;
 }
 
 #intro .name h3 {
 	font-style: italic;
 	font-family: 'Vibes', cursive;
 	font-size: 0.8em;
-	color: #777777;
+	color: ghostwhite;
+	margin: auto;
+	opacity: 0.8;
 }
 
 #intro .name h2 {
@@ -260,6 +311,7 @@ svg.hidden {
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #ff9115;
+	margin: auto;
 }
 
 #intro h2.ghost.words .char {
@@ -415,12 +467,6 @@ svg.hidden {
 /************************* MISE EN PAGE PAGE INTRO *************************/
 
 /************************* MISE EN PAGE WEB EXPERIENCE *************************/
-#computer {
-	min-height: 100vh;
-	height: 100%;
-	overflow-y: scroll;
-}
-
 #computer .border {
 	border: 6px double #ffb64a;
 	display: flex;
@@ -584,10 +630,7 @@ svg.hidden {
 	color: #484025
 }
 
-#computer .experience ul {
-	margin-bottom: 1em;
-	color: #70612c;
-}
+
 
 #computer .experience a,
 #computer .experience:focus {
