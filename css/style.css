@@ -447,8 +447,9 @@ svg.hidden {
 
 #intro .presentation .welcome {
 	font-size: 1.65em;
-	color: efe3c6;
+	color: #d9d490;
 }
+
 #intro section.skills {
 	margin-bottom: 3em;
 }
@@ -460,7 +461,7 @@ svg.hidden {
 	font-size: 1.4em;
 	text-transform: capitalize;
 	color: #db7c12;
-	text-align: left
+	text-align: left;
 }
 
 #intro .skills h3 {
@@ -480,7 +481,8 @@ svg.hidden {
 
 #intro .skills-d .detail {
 	display: inline-flex;
-	flex-wrap: wrap;	
+	flex-wrap: wrap;
+	margin-bottom: 2em;
 }
 
 
@@ -489,25 +491,15 @@ svg.hidden {
 	height: 4.5em;
 	background-size: contain;
 }
-/*s
-#intro .skills figure.js, #intro .skills figure.jq {
-	border-top: 2px double #ffb64a;
-}
-
-#intro .skills figure.css, #intro .skills figure.jq {
-	border-left: 2px double #ffb64a;
-}
-*/
 
 #intro .skills figure figcaption {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
 	color: #efe3c6;
 	letter-spacing: 0.05em;
-	font-size: 0.6em;
-	
-}
+	font-size: 0.7em;
 
+}
 
 /************************* MISE EN PAGE PAGE INTRO *************************/
 
@@ -650,14 +642,14 @@ svg.hidden {
 }
 
 #computer article h3 {
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: 700;
-	font-size: 1.4em;
-	color: #ff9333;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	font-size: 1.28em;
+	text-transform: capitalize;
+	color: #ff7900;
 	text-align: left;
-	line-height: 1.5em;
-	margin-left: 5%;
-	margin-bottom: 3%;
+
 }
 
 #computer .experiences .fa-terminal {
@@ -666,23 +658,43 @@ svg.hidden {
 }
 
 #computer .experience {
-	text-align: left;
-	margin-left: 5%;
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: 800;
-	font-size: 0.85em;
-	line-height: 1.75em;
-	color: #484025
+	font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.88em;
+    color: #5e3917;
+    line-height: 1.54em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: left;
+    letter-spacing: 0.1em;
 }
 
+#computer .experience .date {
+	font-weight: bolder;
+	font-size: 0.89em;
+    color: #a15918;
+}
 
-
-#computer .experience a,
-#computer .experience:focus {
-	text-decoration: none;
+#computer .experience .detail figure {
+	margin: 1em 0;
+}
+#computer .experience .detail a, #computer .experience .detail a:hover  {
 	outline: none;
-	color: #ff5722;
-	padding: 0.5em;
+	text-decoration: none;
+}
+
+#computer .experience .detail figure img {
+	background-size: contain;
+	width: 100%;
+	height: auto;
+	border-radius:3em;
+	position: relative;
+}
+
+#computer .experience .detail figcaption {
+	position:absolute;
+	top:0;
+	color: ghostwhite;
 }
 
 #computer .outils figure {
@@ -694,17 +706,9 @@ svg.hidden {
 	width: 3.2em;
 	height: 3.2em;
 	background-size: contain;
-	border-radius: 10px;
-	box-shadow: 1px 1px 2px #db7c12;
+
 }
 
-#computer .outils figure figcaption {
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: 700;
-	font-size: 0.68em;
-	color: #80725f;
-	transform: translateY(6px);
-}
 
 #computer .creations {
 	margin-bottom: 5em;
