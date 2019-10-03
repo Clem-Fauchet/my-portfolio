@@ -256,8 +256,9 @@ svg.hidden {
 	background: url('img/ClemChococardWeb.png') no-repeat;
 	background-size: contain;
 	height: 6em;
+	width: 3em;
 	margin-top: 1em;
-	transition: background 0.4s ease-in;
+	transition: background 0.4s ease-in, transform 0.4s linear;
 }
 
 .page-current#intro .name .chococard {
@@ -294,13 +295,16 @@ svg.hidden {
 .page-current#intro .name .chococard.on {
 	background: url('img/ClemChocobackWeb.png') no-repeat;
 	background-size: contain;
-	transition: background 0.4s ease-in;
+	transform: rotateY(360deg);
+	transition: background 0.4s ease-in, transform 0.4s linear;
 }
 
 #intro .name h3 {
 	font-style: italic;
-	font-family: 'Vibes', cursive;
-	font-size: 0.8em;
+	font-family: 'Josefin Sans', sans-serif;
+	;
+	font-weight: 700;
+	font-size: 0.70em;
 	color: ghostwhite;
 	margin: auto;
 	opacity: 0.8;
@@ -416,51 +420,92 @@ svg.hidden {
 	}
 }
 
-#intro section.skills {
-	height: 75%;
+#intro .presentation {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+	font-size: 0.85em;
+	color: #efe3c6;
+	line-height: 1.54em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	letter-spacing: 0.1em;
 }
 
-#intro section.skills article {
-	margin-top: -2.5em;
+#intro .presentation p {
+	width: 88%;
+	margin: auto;
+}
+
+#intro .presentation a,
+#intro .presentation a:hover,
+#intro .presentation a:focus {
+	text-decoration: underline;
+	text-decoration-color: ghostwhite;
+	outline: none;
+	color: #efe3c6;
+}
+
+#intro .presentation .welcome {
+	font-size: 1.65em;
+	color: efe3c6;
+}
+#intro section.skills {
+	margin-bottom: 3em;
 }
 
 #intro .skills h2 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
-	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 1.4em;
+	text-transform: capitalize;
 	color: #db7c12;
-	margin: 2% 0;
+	text-align: left
 }
 
 #intro .skills h3 {
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: 700;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	font-size: 1.2em;
 	color: #e0b81e;
-	text-align: left;
-	line-height: 3em;
-	margin-left: 5%;
+	text-align: center;
 }
 
-#intro .skills div.detail {
-	display: flex;
+#intro .skills .skills-d {
+	display: inline-flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 }
+
+#intro .skills-d .detail {
+	display: inline-flex;
+	flex-wrap: wrap;	
+}
+
 
 #intro .skills figure img {
 	width: 4.5em;
 	height: 4.5em;
 	background-size: contain;
-	margin: -2em 0 -1.5em 0;
-	box-shadow: 2px 4px 0px #000;
+}
+/*s
+#intro .skills figure.js, #intro .skills figure.jq {
+	border-top: 2px double #ffb64a;
 }
 
+#intro .skills figure.css, #intro .skills figure.jq {
+	border-left: 2px double #ffb64a;
+}
+*/
+
 #intro .skills figure figcaption {
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: 700;
-	font-size: 0.7em;
-	color: #80725f;
-	transform: translateY(8px);
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	color: #efe3c6;
+	letter-spacing: 0.05em;
+	font-size: 0.6em;
+	
 }
 
 
