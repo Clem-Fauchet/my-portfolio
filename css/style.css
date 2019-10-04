@@ -1,3 +1,10 @@
+html {
+	scroll-behavior: smooth;
+	scrollbar-color: #ff9115 #f4c200 #22292b;
+	scrollbar-width: 0.5em;
+}
+
+
 /*********************************************************************************
     								MOBILE FIRST 
 *************************************************************************************/
@@ -37,8 +44,10 @@ body {
 	position: relative;
 	min-height: 100vh;
 	height: 100%;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
+
+
 
 /***************** NAV ARROW SVG **************/
 svg.hidden {
@@ -92,7 +101,7 @@ svg.hidden {
 
 .pagenav_button.button_right {
 	top: 50%;
-	right: 0.5em;
+	right: 1.0em;
 	transform: rotate(90deg);
 }
 
@@ -137,12 +146,6 @@ svg.hidden {
 	top: 100%;
 }
 
-/*
-.revealer-top {
-	left: 0;
-	bottom: 100%;
-}
-*/
 .revealer-layer {
 	position: absolute;
 	width: 100%;
@@ -150,7 +153,7 @@ svg.hidden {
 	top: 0;
 	left: 0;
 	background: #ddd;
-	/* background par defaut si layer ou*/
+	/* background par defaut si layer out*/
 }
 
 /************ ANIMATION EFFECT 3 LAYERS *****/
@@ -237,10 +240,10 @@ svg.hidden {
 }
 
 #intro section.name {
-	height: 24%;
 	border: 6px double #ffb64a;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 #intro .name h1 {
@@ -255,8 +258,9 @@ svg.hidden {
 #intro .name .chococard {
 	background: url('img/ClemChococardWeb.png') no-repeat;
 	background-size: contain;
-	height: 6em;
-	width: 3em;
+	transform-origin: 50% 50%;
+	width: 100px;
+	height: 100px;
 	margin-top: 1em;
 	transition: background 0.4s ease-in, transform 0.4s linear;
 }
@@ -269,7 +273,6 @@ svg.hidden {
 	0% {
 		background: url('img/ClemChococardWeb.png') no-repeat;
 		background-size: contain;
-		transform-origin: 50% 50%;
 		perspective: 1000px;
 	}
 
@@ -295,6 +298,9 @@ svg.hidden {
 .page-current#intro .name .chococard.on {
 	background: url('img/ClemChocobackWeb.png') no-repeat;
 	background-size: contain;
+	transform-origin: 50% 50%;
+	width: 100px;
+	height: 100px;
 	transform: rotateY(360deg);
 	transition: background 0.4s ease-in, transform 0.4s linear;
 }
@@ -302,11 +308,9 @@ svg.hidden {
 #intro .name h3 {
 	font-style: italic;
 	font-family: 'Josefin Sans', sans-serif;
-	;
 	font-weight: 700;
 	font-size: 0.70em;
 	color: ghostwhite;
-	margin: auto;
 	opacity: 0.8;
 }
 
@@ -659,42 +663,80 @@ svg.hidden {
 
 #computer .experience {
 	font-family: 'Josefin Sans', sans-serif;
-    font-weight: 700;
-    font-size: 0.88em;
-    color: #5e3917;
-    line-height: 1.54em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    text-align: left;
-    letter-spacing: 0.1em;
+	font-weight: 700;
+	font-size: 0.88em;
+	color: #5e3917;
+	line-height: 1.54em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: left;
+	letter-spacing: 0.1em;
 }
 
 #computer .experience .date {
 	font-weight: bolder;
 	font-size: 0.89em;
-    color: #a15918;
+	color: #a15918;
 }
 
 #computer .experience .detail figure {
 	margin: 1em 0;
-}
-#computer .experience .detail a, #computer .experience .detail a:hover  {
-	outline: none;
-	text-decoration: none;
+	position: relative;
 }
 
 #computer .experience .detail figure img {
 	background-size: contain;
 	width: 100%;
 	height: auto;
-	border-radius:3em;
-	position: relative;
+	border-radius: 2.2em;
+
 }
 
 #computer .experience .detail figcaption {
-	position:absolute;
-	top:0;
+	position: absolute;
+	text-align: right;
 	color: ghostwhite;
+	font-size: 0.72em;
+	line-height: 1.3em;
+	top: 1em;
+	right: 2em;
+}
+
+#computer .experience .detail button.website {
+	background: none;
+	position: absolute;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+	font-size: 0.70em;
+	border: 1px solid #FFA500;
+	border-radius: 15px;
+	padding: 5px;
+	bottom: 40%;
+	right: 10%;
+}
+
+#computer .experience .detail button.website a,
+#computer .experience .detail button.website a:hover,
+#computer .experience .detail button.website a:focus {
+	outline: none;
+	text-decoration: none;
+	color: ghostwhite;
+}
+
+#computer .experience .detail .descript {
+	margin: 0.5em 0;
+	font-size: 0.92em;
+}
+
+
+#computer .experience .partners h4 {
+	text-align: center;
+	color: #a15920;
+}
+
+#computer .experience .partners figure img {
+	width: 6em;
+	height: 6em;
 }
 
 #computer .outils figure {
@@ -715,8 +757,8 @@ svg.hidden {
 }
 
 #computer .creations svg {
-	width: 5em;
-	height: 5em;
+	width: 6em;
+	height: 6em;
 }
 
 /*** LOGO MASK ANIME SVG **/
