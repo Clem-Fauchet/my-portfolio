@@ -1,9 +1,6 @@
 html {
 	scroll-behavior: smooth;
-	scrollbar-color: #ff9115 #f4c200 #22292b;
-	scrollbar-width: 0.5em;
 }
-
 
 /*********************************************************************************
     								MOBILE FIRST 
@@ -101,7 +98,8 @@ svg.hidden {
 
 .pagenav_button.button_right {
 	top: 50%;
-	right: 1.0em;
+	right: 0.5em;
+	/*right: 1.0zm for pc media queries*/
 	transform: rotate(90deg);
 }
 
@@ -734,21 +732,45 @@ svg.hidden {
 	color: #a15920;
 }
 
-#computer .experience .partners figure img {
-	width: 6em;
-	height: 6em;
+#computer .experience .partners figure {
+	padding:0;
 }
 
-#computer .outils figure {
-	padding: 0.2em 2.5em;
-	margin: 0.5em;
+#computer .experience .partners figure img {
+	width: 8em;
+	height: 8em;
 }
+
+#computer .outils .adobe {
+	display: inline-flex;
+	flex-wrap: wrap;
+	margin-bottom: 2em;
+	margin-left: 1em;
+}
+
 
 #computer .outils figure img {
-	width: 3.2em;
-	height: 3.2em;
+	width: 3.8em;
+	height: 3.8em;
 	background-size: contain;
+	margin-left: 1em;
+	margin-bottom: 0.5em
+}
 
+#computer .outils .other figure img {
+	width: 4.2em;
+	height: 4.2em;
+	margin-bottom: 0;
+	margin-left: -1em;
+}
+
+#computer .outils figure figcaption {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	color: #efe3c6;
+	letter-spacing: 0.05em;
+	font-size: 0.7em;
+	visibility: hidden;
 }
 
 
