@@ -92,7 +92,7 @@ $(document.body).ready(function () {
 	/************* ANIMATION SUR PAGE INTRO ***********************/
 	var chococard = document.getElementsByClassName('chococard');
 
-	$('.chococard').click(function() {
+	$('.chococard').click(function () {
 		$('.chococard').toggleClass('on');
 	});
 
@@ -106,6 +106,20 @@ $(document.body).ready(function () {
 			$('.crea1').toggleClass('on');
 		}
 	})
+
+	var norms = document.getElementsByClassName('norms');
+
+	$('.norms').click(function () {
+		$('.crea2').toggleClass('on');
+	});
+
+
+	var chococardCrea = document.getElementsByClassName('chococard-c');
+
+	$('.chococard-c').click(function () {
+		$('.crea3').toggleClass('on');
+	});
+
 
 
 })

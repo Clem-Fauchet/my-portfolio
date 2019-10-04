@@ -733,7 +733,7 @@ svg.hidden {
 }
 
 #computer .experience .partners figure {
-	padding:0;
+	padding: 0;
 }
 
 #computer .experience .partners figure img {
@@ -744,22 +744,21 @@ svg.hidden {
 #computer .outils .adobe {
 	display: inline-flex;
 	flex-wrap: wrap;
-	margin-bottom: 2em;
 	margin-left: 1em;
 }
 
 
 #computer .outils figure img {
-	width: 3.8em;
-	height: 3.8em;
+	width: 3.0em;
+	height: 3.0em;
 	background-size: contain;
 	margin-left: 1em;
 	margin-bottom: 0.5em
 }
 
 #computer .outils .other figure img {
-	width: 4.2em;
-	height: 4.2em;
+	width: 3.8em;
+	height: 3.8em;
 	margin-bottom: 0;
 	margin-left: -1em;
 }
@@ -773,26 +772,24 @@ svg.hidden {
 	visibility: hidden;
 }
 
-
 #computer .creations {
 	margin-bottom: 5em;
 }
 
-#computer .creations svg {
+#computer .creations svg, #computer .creations .norms, #computer .creations .chococard-c {
 	width: 6em;
 	height: 6em;
+	transform-origin: 50% 50%;
 }
 
 /*** LOGO MASK ANIME SVG **/
 svg#logo {
 	fill: none;
-	stroke: #22292b;
 	stroke-width: 2px;
-	transform-origin: 50% 50%;
 }
 
 svg#logo #circle {
-	stroke: rgba(45, 52, 54, 0.97);
+	stroke: ghostwhite;
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	stroke-width: 3.75px;
@@ -803,23 +800,110 @@ svg#logo #circle .big_circle {
 	transition: 2.8s ease-in-out, stroke 3s linear;
 }
 
+.on svg#logo #circle .big_circle {
+	stroke-dasharray: 166, 0, 166, 0;
+	stroke-dashoffset: -200;
+	stroke: #530f0f;
+	transition: 2.8s ease-in-out, stroke 3s linear;
+}
+
 svg#logo #circle .small_circle {
 	stroke-dasharray: 90, 40, 90, 40, 90, 296;
 	transition: 2.5s linear, stroke 3.2s linear;
 }
 
+.on svg#logo #circle .small_circle {
+	stroke: #530f0f;
+	stroke-dasharray: 90, 0, 90, 0, 90, 0;
+	stroke-dashoffset: -230;
+	transition: 2.5s linear, stroke 3.2s linear;
+}
+
+svg#logo #mask {
+	opacity: 1;
+	transform: rotate(0deg);
+	transition: 1.8s ease;
+	transform-origin: 50% 50%;
+}
+
+.on svg#logo #mask {
+	opacity: 0.92;
+	transform: rotate(720deg);
+	transition: 1.8s ease;
+	transform-origin: 50% 50%;
+}
+
+
 svg#logo #mask .cape {
-	stroke: rgba(158, 11, 11, 0.95);
+	stroke: #9e0b0b;
 	stroke-width: 3px;
-	fill: rgba(132, 10, 10, 0.95);
+	fill: #840a0a;
+	perspective: 1000px;
+}
+
+.on svg#logo #mask .cape {
+	stroke: #800000;
+	stroke-width: 3px;
+	fill: #900e0e;
 	perspective: 1000px;
 }
 
 svg#logo #mask .left_eye,
 svg#logo #mask .right_eye {
-	stroke: rgba(158, 11, 11, 0.95);
-	fill: rgba(95, 1, 1, 0.95);
+	stroke: #9e0b0b;
+	fill: #5f0101;
 	transition: opacity 1.5s ease-in;
 }
 
+.on svg#logo #mask .left_eye,
+.on svg#logo #mask .right_eye {
+	stroke: #820505;
+	fill: #550101;
+	opacity: 0;
+	transition: opacity 1.5s ease-in;
+}
+
+/*** LOGO Norms **/
+
+#computer .creations .norms {
+	background: url('img/NormsJardinage-web.png') no-repeat;
+	background-size: contain;
+	transition: background 0.4s ease-in;
+}
+
+#computer .creations .on .norms {
+	background: url('img/NormsComptable-web.png') no-repeat;
+	background-size: contain;
+	transition: background 0.4s ease-in;
+}
+
+/*** LOGO Chococard **/
+
+#computer .creations .chococard-c {
+	background: url('img/ClemChococardWeb.png') no-repeat;
+	background-size: contain;
+	transform-origin: 50% 50%;
+	transform: rotateY(0deg);
+	perspective: 1000px;
+	transition: background 0.4s ease-in, transform 0.4s linear;
+}
+
+#computer .creations .on .chococard-c {
+	background: url('img/ClemChocobackWeb.png') no-repeat;
+	background-size: contain;
+	transform-origin: 50% 50%;
+	transform: rotateY(360deg);
+	perspective: 1000px;
+	transition: background 0.4s ease-in, transform 0.4s linear;
+}
+
+
 /************************* MISE EN PAGE WEB EXPERIENCE *************************/
+
+/************************* MISE EN PAGE CHIMISTE *************************/
+
+
+
+
+
+/************************* MISE EN PAGE CHIMISTE *************************/
