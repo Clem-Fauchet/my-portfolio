@@ -453,7 +453,7 @@ svg.hidden {
 }
 
 #intro section.skills {
-	margin-bottom: 3em;
+	margin-bottom: 2em;
 }
 
 #intro .skills h2 {
@@ -928,7 +928,6 @@ svg#logo #mask .right_eye {
 /************************* MISE EN PAGE CHIMISTE *************************/
 #chemist .border {
 	border: 6px double #f0d773;
-	;
 	display: flex;
 }
 
@@ -949,6 +948,103 @@ svg#logo #mask .right_eye {
 	font-size: 1.5em;
 	color: #22292b;
 }
+
+.page-current #chemist .break .char {
+	content: attr(data-char);
+	animation: break-drop 2s ease 0.4s forwards;
+	color: transparent;
+	overflow: visible;
+	line-height: 1.0em;
+}
+
+.page-current #chemist .break .char::before {
+	animation: break-left 2s linear 0.4s forwards;
+	color: ghostwhite;
+	visibility: visible;
+	clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0);
+	transform-origin: 0 100%;
+}
+
+.page-current #chemist .break .char::after {
+	animation: break-right 2s linear 0.4s forwards;
+	color: ghostwhite;
+	visibility: visible;
+	clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%);
+	transform-origin: 100% 100%;
+}
+
+@keyframes break-drop {
+	0%, 20% {
+		transform: translateY(-150%);
+		opacity:0;
+	}
+
+	22% {
+		transform: translateY(10%);
+		opacity:1;
+	}
+
+	25% {
+		transform: translateY(-5%);
+	}
+
+	30%, 100% {
+		transform: translateY(0);
+		opacity:1;
+	}
+}
+
+@keyframes break-left {
+	0%, 22% {
+		transform: rotate(0);
+		box-shadow: none;
+	}
+
+	25% {
+		transform: rotate(-8deg)
+	}
+
+	28% {
+		transform: rotate(-10deg)
+			
+	}
+
+	30% {
+		transform: rotate(-0deg);
+		box-shadow: 0px 3px 6px #8e650b;
+	}
+	
+	40% {
+		box-shadow: none;
+		transform: rotate(-7deg);
+	}
+	100% {
+		transform: rotate(-7deg);
+	}
+}
+
+@keyframes break-right {
+	0%, 22% {
+		transform: rotate(0)
+	}
+
+	25% {
+		transform: rotate(5deg);
+	}
+
+	28% {
+		transform: rotate(10deg) translateY(10%)
+	}
+
+	30%{
+		transform: rotate(5deg) translateY(5%);
+	}
+	
+	100% {
+		transform: rotate(5deg) translateY(5%)
+	}
+}
+
 
 #chemist p {
 	width: 95%;
@@ -996,29 +1092,6 @@ svg#logo #mask .right_eye {
 	color: #a15918;
 }
 
-#chemist .experience .detail figure {
-	margin: 1em 0;
-	position: relative;
-}
-
-#chemist .experience .detail figure img {
-	background-size: contain;
-	width: 100%;
-	height: auto;
-	border-radius: 2.2em;
-
-}
-
-#chemist .experience .detail figcaption {
-	position: absolute;
-	text-align: right;
-	color: ghostwhite;
-	font-size: 0.72em;
-	line-height: 1.3em;
-	top: 1em;
-	right: 2em;
-}
-
 #chemist .experience .detail .publi li {
 	margin: 1em;
 }
@@ -1036,12 +1109,12 @@ svg#logo #mask .right_eye {
 	font-size: 0.92em;
 }
 
-
 #chemist .experience .company h4,
 #chemist .experience .publi h4 {
 	text-align: center;
 	color: #a15920;
 }
+
 
 #chemist .experience .company figure {
 	padding: 0;
@@ -1052,5 +1125,25 @@ svg#logo #mask .right_eye {
 	height: 8em;
 }
 
+#chemist .experience .descript .subject {
+	margin: 1em 0;
+}
+
+#chemist .experience .descript .subject .mars {
+	font-style: italic;
+	color: #bc0f0f;
+}
+
+#chemist .experience .descript figure img {
+	width: 10em;
+	height: 10em;
+	opacity: 0.75;
+}
 
 /************************* MISE EN PAGE CHIMISTE *************************/
+
+/************************* MISE EN PAGE PERSONNAL *************************/
+
+
+
+/************************* MISE EN PAGE PERSONNAL *************************/
