@@ -514,6 +514,7 @@ section#computer {
 */
 #computer .border {
 	border: 6px double #ffb64a;
+	height: 6em;
 	display: flex;
 }
 
@@ -940,6 +941,7 @@ section#chemist {
 */
 #chemist .border {
 	border: 6px double #f0d773;
+	height: 6em;
 	display: flex;
 }
 
@@ -1171,6 +1173,7 @@ section#personnal {
 */
 #personnal .border {
 	border: 6px double #f0d773;
+	height: 6em;
 	display: flex;
 }
 
@@ -1297,6 +1300,12 @@ section#personnal {
 	height: 3.5em;
 	background-size: contain;
 	margin: 1em 0;
+}
+
+#personnal .scroll ul {
+	margin: 1.5em 0 2.2em 0;
+	color: #310505;
+	text-align: justify;
 }
 
 
