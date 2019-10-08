@@ -506,6 +506,12 @@ svg.hidden {
 /************************* MISE EN PAGE PAGE INTRO *************************/
 
 /************************* MISE EN PAGE WEB EXPERIENCE *************************/
+/* queri computer
+section#computer {
+	padding-right: 0;
+	padding-left: 0;
+}
+*/
 #computer .border {
 	border: 6px double #ffb64a;
 	display: flex;
@@ -926,6 +932,12 @@ svg#logo #mask .right_eye {
 /************************* MISE EN PAGE WEB EXPERIENCE *************************/
 
 /************************* MISE EN PAGE CHIMISTE *************************/
+/* queri computer
+section#chemist {
+	padding-right: 0;
+	padding-left: 0;
+} 
+*/
 #chemist .border {
 	border: 6px double #f0d773;
 	display: flex;
@@ -1078,6 +1090,7 @@ svg#logo #mask .right_eye {
 
 #chemist .experiences .fa-viall {
 	padding-left: 0.5em;
+	font-size: 1.2em;
 	color: #484025cc;
 }
 
@@ -1150,6 +1163,12 @@ svg#logo #mask .right_eye {
 /************************* MISE EN PAGE CHIMISTE *************************/
 
 /************************* MISE EN PAGE PERSONNAL *************************/
+/* queri computer
+section#personnal {
+	padding-right: 0;
+	padding-left: 0;
+} 
+*/
 #personnal .border {
 	border: 6px double #f0d773;
 	display: flex;
@@ -1173,61 +1192,111 @@ svg#logo #mask .right_eye {
 	color: #22292b;
 }
 
-.page-current #personnal .hide .word::after {
-	animation: hide-cover 1.5s ease-out 1.5s forwards;
-	border-top: 1vmin solid ghostwhite;
-	content: attr(data-char);
-	height: 150%;
-	left: 0;
-	position: absolute;
-	top: 70%;
-	width: 100%;
-	z-index: 2;
+#personnal .bounce .word {
+	transform: translateX(-200%);
+	opacity: 0;
 }
 
-
-.page-current #personnal .hide .char {
-	animation: hide-jump 3s cubic-bezier(0.215, 0.61, 0.355, 1);
-	transform-origin: 50% 100%;
+.page-current #personnal .bounce .word {
+	transform: translateX(0%);
+	opacity: 1;
+	transition: transform 1.5s ease, opacity 0.5s ease;
 }
 
-@keyframes hide-jump {
-
-	0% {
-		transform: translateY(150%),
-		opacity: 0;
-	}
-
-	40% {
-		opacity: 0
-	}
-
-	45% {
-		transform: translateY(-35%),
-			opacity: 0.5;
-
-	}
-
-	100% {
-		transform: translateY(0%),
-			opacity: 1;
-
-	}
+.page-current #personnal .bounce .char {
+	color: transparent;
+	overflow: visible;
+	animation: bounce 1.5s ease;
+	animation-delay: calc(var(--char-index) * -0.125s)
 }
 
-@keyframes hide-cover {
+.page-current #personnal .bounce .char::after {
+	animation: tumble 1.5s linear 0.3s;
+	color: ghostwhite;
+	visibility: visible;
+	z-index: 95;
+}
 
-	0% {
-		transform: scaleX(1)
+@keyframes bounce {
+	25% {
+		transform: translateY(-35%)
 	}
 
 	50% {
-		transform: scaleX(1)
+		transform: translateY(0)
+	}
+
+	75% {
+		transform: translateY(-45%)
+	}
+}
+
+@keyframes tumble {
+	60% {
+		transform: rotate(180deg)
 	}
 
 	100% {
-		transform: scaleX(0)
+		transform: rotate(360deg)
 	}
+}
+
+#personnal p {
+	width: 95%;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+	font-size: 0.85em;
+	color: #ffbd21;
+	line-height: 1.54em;
+	letter-spacing: 0.1em;
+	padding-top: 2em;
+	margin: auto;
+}
+
+#personnal .descript {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+	font-size: 0.78em;
+	color: #5e3917;
+	line-height: 1.54em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: left;
+	letter-spacing: 0.1em;
+}
+
+#personnal article.descript h3 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	font-size: 1.28em;
+	text-transform: capitalize;
+	color: #e6c40e;
+	text-align: left;
+}
+
+#personnal .puzzle .fa-puzzle-piece,
+#personnal .magic .fa-hat-wizard,
+#personnal .scroll .fa-scroll,
+#personnal .magic .fa-globe-americas {
+	padding-left: 0.5em;
+	font-size: 1.2em;
+	color: #7b0b0bde;
+}
+
+#personnal .piece {
+	text-align: justify;
+}
+
+#personnal .magic .hobbies {
+	margin: 0.8em 1em;
+}
+
+#personnal .magic .hobbies img {
+	width: 3.5em;
+	height: 3.5em;
+	background-size: contain;
+	margin: 1em 0;
 }
 
 
