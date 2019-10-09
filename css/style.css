@@ -87,7 +87,6 @@ svg.hidden {
 	opacity: 1;
 	stroke-dasharray: 0;
 	stroke-dashoffset: 320;
-
 }
 
 .pagenav_button.button_left {
@@ -99,7 +98,6 @@ svg.hidden {
 .pagenav_button.button_right {
 	top: 50%;
 	right: 0.5em;
-	/*right: 1.0zm for pc media queries*/
 	transform: rotate(90deg);
 }
 
@@ -120,6 +118,7 @@ svg.hidden {
 }
 */
 
+
 /***************** REVEALER  ****************/
 
 /* Revealers */
@@ -131,7 +130,6 @@ svg.hidden {
 	z-index: 1000;
 	pointer-events: none;
 }
-
 
 .revealer-right,
 .revealer-left {
@@ -478,13 +476,13 @@ svg.hidden {
 #intro .skills .skills-d {
 	display: inline-flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 }
 
 #intro .skills-d .detail {
-	display: inline-flex;
+	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 2em;
+	justify-content: center;
 }
 
 
@@ -503,22 +501,166 @@ svg.hidden {
 
 }
 
+@media screen and (min-width: 576px) {
+	.pagenav_button {
+		width: 3.8em;
+		height: 3.8em;
+	}
+	
+	#intro {
+		display: flex;
+		justify-content: center;
+	}
+
+	#intro .name h1 {
+		font-size: 1.58em;
+	}
+
+	#intro .name .chococard,
+	.page-current#intro .name .chococard.on {
+		width: 120px;
+		height: 120px;
+	}
+
+	#intro .name h3 {
+		font-size: 0.76em;
+	}
+
+	#intro .presentation {
+		font-size: 0.95em;
+	}
+
+	#intro .presentation p {
+		width: 90%;
+	}
+
+	#intro .skills h2 {
+		font-size: 1.52em;
+	}
+
+	#intro .skills h3 {
+		font-size: 1.26em;
+	}
+
+	#intro .skills figure img {
+		width: 4.8em;
+		height: 4.8em;
+	}
+
+	#intro .skills figure figcaption {
+		font-size: 0.80em;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.pagenav_button {
+		width: 4.2em;
+		height: 4.2em;
+	}
+
+	#intro .name h1 {
+		font-size: 1.75em;
+		line-height: 4em;
+	}
+
+	#intro .name .chococard,
+	.page-current#intro .name .chococard.on {
+		width: 145px;
+		height: 145px;
+	}
+
+	#intro .name h2 {
+		font-size: 1.59em;
+		margin-top: -1em;
+		text-align: center;
+	}
+
+	#intro .presentation {
+		font-size: 0.99em;
+	}
+
+	#intro .skills h2 {
+		font-size: 1.55em;
+	}
+
+	#intro .skills h3 {
+		font-size: 1.32em;
+	}
+
+	#intro .skills figure img {
+		width: 5.5em;
+		height: 5.5em;
+	}
+
+	#intro .skills figure figcaption {
+		font-size: 0.8em;
+	}
+}
+
+@media screen and (min-width: 992px) { 
+	.pagenav_button {
+		width: 4.5em;
+		height: 4.5em;
+	}
+
+	#intro .name h1 {
+		font-size: 1.95em;
+		line-height: 4em;
+		margin-right:0;
+	}
+
+	#intro .name .chococard,
+	.page-current#intro .name .chococard.on {
+		width: 155px;
+		height: 155px;
+		margin-left: 4em;
+	}
+
+	#intro .name h2 {
+		font-size: 1.95em;
+	}
+
+	#intro .name h3 {
+		font-size: 0.95em;
+	}
+	
+	#intro .presentation {
+		font-size: 1.2em;
+	}
+
+	#intro .skills h2 {
+		font-size: 1.62em;
+		text-align: center;
+	}
+
+	#intro .skills h3 {
+		font-size: 1.42em;
+	}
+
+	#intro .skills figure img {
+		width: 6.2em;
+		height: 6.2em;
+	}
+
+	#intro .skills figure figcaption {
+		font-size: 1.0em;
+	}
+}
+
 /************************* MISE EN PAGE PAGE INTRO *************************/
 
 /************************* MISE EN PAGE WEB EXPERIENCE *************************/
-/* queri computer
-section#computer {
-	padding-right: 0;
-	padding-left: 0;
+#computer section {
+	padding: 0 2.2em;
 }
-*/
+
 #computer .border {
 	border: 6px double #ffb64a;
 	height: 6em;
 	display: flex;
 }
 
-#computer h2#glitch {
+#computer .title h2#glitch {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -529,7 +671,7 @@ section#computer {
 	position: relative;
 }
 
-.page-current #computer h2#glitch::before {
+.page-current .title h2#glitch::before {
 	content: attr(data-text);
 	position: absolute;
 	text-shadow: 1px 0px #fc339d;
@@ -539,7 +681,7 @@ section#computer {
 	animation: noise-anim 2.1s 4 linear alternate-reverse backwards;
 }
 
-.page-current #computer h2#glitch::after {
+.page-current .title h2#::after {
 	content: attr(data-text);
 	position: absolute;
 	right: 0em;
@@ -649,7 +791,7 @@ section#computer {
 	color: #22292b;
 }
 
-#computer p {
+#computer .presentation p {
 	width: 95%;
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 700;
@@ -661,22 +803,22 @@ section#computer {
 	margin: auto;
 }
 
-#computer article h3 {
+#computer h3 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
 	letter-spacing: 0.1em;
-	font-size: 1.28em;
+	font-size: 1.18em;
 	text-transform: capitalize;
 	color: #ff7900;
 	text-align: left;
 }
 
-#computer .experiences .fa-terminal {
+#computer .experiences .experience .fa-terminal {
 	padding-left: 0.5em;
 	color: #484025cc;
 }
 
-#computer .experience {
+#computer .experiences .experience {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 700;
 	font-size: 0.88em;
@@ -688,18 +830,18 @@ section#computer {
 	letter-spacing: 0.1em;
 }
 
-#computer .experience .date {
+#computer .experiences .experience .date {
 	font-weight: bolder;
 	font-size: 0.89em;
 	color: #a15918;
 }
 
-#computer .experience .detail figure {
+#computer .experiences .experience .detail figure {
 	margin: 1em 0;
 	position: relative;
 }
 
-#computer .experience .detail figure img {
+#computer .experiences .experience .detail figure img {
 	background-size: contain;
 	width: 100%;
 	height: auto;
@@ -707,7 +849,7 @@ section#computer {
 
 }
 
-#computer .experience .detail figcaption {
+#computer .experiences .experience .detail figcaption {
 	position: absolute;
 	text-align: right;
 	color: ghostwhite;
@@ -717,7 +859,7 @@ section#computer {
 	right: 2em;
 }
 
-#computer .experience .detail button.website {
+#computer .experiences .experience .detail button.website {
 	background: none;
 	position: absolute;
 	font-family: 'Josefin Sans', sans-serif;
@@ -730,30 +872,30 @@ section#computer {
 	right: 10%;
 }
 
-#computer .experience .detail button.website a,
-#computer .experience .detail button.website a:hover,
-#computer .experience .detail button.website a:focus {
+#computer .experiences .experience .detail button.website a,
+#computer .experiences .experience .detail button.website a:hover,
+#computer .experiences .experience .detail button.website a:focus {
 	outline: none;
 	text-decoration: none;
 	color: ghostwhite;
 }
 
-#computer .experience .detail .descript {
+#computer .experiences .experience .detail .descript {
 	margin: 0.5em 0;
 	font-size: 0.92em;
 }
 
 
-#computer .experience .partners h4 {
+#computer .experiences .experience .partners h4 {
 	text-align: center;
 	color: #a15920;
 }
 
-#computer .experience .partners figure {
+#computer .experiences .experience .partners figure {
 	padding: 0;
 }
 
-#computer .experience .partners figure img {
+#computer .experiences .experience .partners figure img {
 	width: 8em;
 	height: 8em;
 }
@@ -928,6 +1070,67 @@ svg#logo #mask .right_eye {
 	transition: background 0.4s ease-in, transform 0.4s linear;
 }
 
+
+@media screen and (min-width: 576px) {
+	.pagenav_button {
+		width: 3.8em;
+		height: 3.8em;
+	}
+	/* INTRO */
+	#intro {
+		display: flex;
+		justify-content: center;
+	}
+
+	#intro .name h1 {
+		font-size: 1.58em;
+	}
+
+	#intro .name .chococard,
+	.page-current#intro .name .chococard.on {
+		width: 120px;
+		height: 120px;
+	}
+
+	#intro .name h3 {
+		font-size: 0.76em;
+	}
+
+	#intro .presentation {
+		font-size: 0.95em;
+	}
+
+	#intro .presentation p {
+		width: 90%;
+	}
+
+	#intro .skills h2 {
+		font-size: 1.52em;
+	}
+
+	#intro .skills h3 {
+		font-size: 1.26em;
+	}
+
+	#intro .skills figure img {
+		width: 4.8em;
+		height: 4.8em;
+	}
+
+	#intro .skills figure figcaption {
+		font-size: 0.80em;
+	}
+	/* WEB */
+	#computer {
+		display: flex;
+		justify-content: center;
+	}
+
+	#computer .border h1 {
+		font-size: 1.58em;
+	}
+
+}
 
 
 /************************* MISE EN PAGE WEB EXPERIENCE *************************/
