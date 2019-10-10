@@ -1174,27 +1174,27 @@ svg#logo #mask .right_eye {
 	}
 
 	/* WEB */
-	#computer .border h2 {
+	#computer .border h2, #chemist .border h2 {
 		font-size: 1.95em;
 	}
 	
-	#computer .border .fa-laptop-code {
+	#computer .border .fa-laptop-code, #chemist .border .fa-flask {
 		font-size: 1.95em;
 	}
 
-	#computer .presentation p {
+	#computer .presentation p, #chemist .presentation p {
 		font-size: 1.02em;
 	}
 
-	#computer section h3 {
+	#computer section h3, #chemist section h3 {
 		font-size: 1.62em;
 	}
 
-	#computer section h4 {
+	#computer section h4, #chemist section h4 {
 		font-size: 1.42em;
 	}
 
-	#computer article {
+	#computer article, #chemist article {
 		font-size: 1em;
 	}
 
@@ -1246,13 +1246,17 @@ svg#logo #mask .right_eye {
 /************************* MISE EN PAGE WEB EXPERIENCE *************************/
 
 /************************* MISE EN PAGE CHIMISTE *************************/
+#chemist section {
+	padding: 0 2.2em;
+}
+
 #chemist .border {
 	border: 6px double #f0d773;
 	height: 6em;
 	display: flex;
 }
 
-#chemist h2#atom {
+#chemist .border h2#atom {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -1270,7 +1274,7 @@ svg#logo #mask .right_eye {
 	color: #22292b;
 }
 
-.page-current #chemist .break .char {
+#chemist.page-current h2 .break .char {
 	content: attr(data-char);
 	animation: break-drop 2s ease 0.4s forwards;
 	color: transparent;
@@ -1278,7 +1282,7 @@ svg#logo #mask .right_eye {
 	line-height: 1.0em;
 }
 
-.page-current #chemist .break .char::before {
+#chemist.page-current h2 .break .char::before {
 	animation: break-left 2s linear 0.4s forwards;
 	color: ghostwhite;
 	visibility: visible;
@@ -1286,7 +1290,7 @@ svg#logo #mask .right_eye {
 	transform-origin: 0 100%;
 }
 
-.page-current #chemist .break .char::after {
+#chemist.page-current h2 .break .char::after {
 	animation: break-right 2s linear 0.4s forwards;
 	color: ghostwhite;
 	visibility: visible;
@@ -1387,7 +1391,7 @@ svg#logo #mask .right_eye {
 }
 
 
-#chemist article h3 {
+#chemist h3 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
 	letter-spacing: 0.1em;
@@ -1438,8 +1442,7 @@ svg#logo #mask .right_eye {
 	font-size: 0.92em;
 }
 
-#chemist .experience .company h4,
-#chemist .experience .publi h4 {
+#chemist h4 {
 	text-align: center;
 	color: #a15920;
 }
