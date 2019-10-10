@@ -108,17 +108,6 @@ svg.hidden {
 	transform: rotate(180deg);
 }
 
-/* HOVER POUR media query PC*/
-/*
-.pagenav_button:hover svg.icon{
-	opacity: 0.5;
-	stroke-dasharray: 430 30;	
-	stroke-dashoffset: 0;
-	transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease;
-}
-*/
-
-
 /***************** REVEALER  ****************/
 
 /* Revealers */
@@ -501,151 +490,6 @@ svg.hidden {
 
 }
 
-@media screen and (min-width: 576px) {
-	.pagenav_button {
-		width: 3.8em;
-		height: 3.8em;
-	}
-	
-	#intro {
-		display: flex;
-		justify-content: center;
-	}
-
-	#intro .name h1 {
-		font-size: 1.58em;
-	}
-
-	#intro .name .chococard,
-	.page-current#intro .name .chococard.on {
-		width: 120px;
-		height: 120px;
-	}
-
-	#intro .name h3 {
-		font-size: 0.76em;
-	}
-
-	#intro .presentation {
-		font-size: 0.95em;
-	}
-
-	#intro .presentation p {
-		width: 90%;
-	}
-
-	#intro .skills h2 {
-		font-size: 1.52em;
-	}
-
-	#intro .skills h3 {
-		font-size: 1.26em;
-	}
-
-	#intro .skills figure img {
-		width: 4.8em;
-		height: 4.8em;
-	}
-
-	#intro .skills figure figcaption {
-		font-size: 0.80em;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.pagenav_button {
-		width: 4.2em;
-		height: 4.2em;
-	}
-
-	#intro .name h1 {
-		font-size: 1.75em;
-		line-height: 4em;
-	}
-
-	#intro .name .chococard,
-	.page-current#intro .name .chococard.on {
-		width: 145px;
-		height: 145px;
-	}
-
-	#intro .name h2 {
-		font-size: 1.59em;
-		margin-top: -1em;
-		text-align: center;
-	}
-
-	#intro .presentation {
-		font-size: 0.99em;
-	}
-
-	#intro .skills h2 {
-		font-size: 1.55em;
-	}
-
-	#intro .skills h3 {
-		font-size: 1.32em;
-	}
-
-	#intro .skills figure img {
-		width: 5.5em;
-		height: 5.5em;
-	}
-
-	#intro .skills figure figcaption {
-		font-size: 0.8em;
-	}
-}
-
-@media screen and (min-width: 992px) { 
-	.pagenav_button {
-		width: 4.5em;
-		height: 4.5em;
-	}
-
-	#intro .name h1 {
-		font-size: 1.95em;
-		line-height: 4em;
-		margin-right:0;
-	}
-
-	#intro .name .chococard,
-	.page-current#intro .name .chococard.on {
-		width: 155px;
-		height: 155px;
-		margin-left: 4em;
-	}
-
-	#intro .name h2 {
-		font-size: 1.95em;
-	}
-
-	#intro .name h3 {
-		font-size: 0.95em;
-	}
-	
-	#intro .presentation {
-		font-size: 1.2em;
-	}
-
-	#intro .skills h2 {
-		font-size: 1.62em;
-		text-align: center;
-	}
-
-	#intro .skills h3 {
-		font-size: 1.42em;
-	}
-
-	#intro .skills figure img {
-		width: 6.2em;
-		height: 6.2em;
-	}
-
-	#intro .skills figure figcaption {
-		font-size: 1.0em;
-	}
-}
 
 /************************* MISE EN PAGE PAGE INTRO *************************/
 
@@ -792,7 +636,7 @@ svg.hidden {
 }
 
 #computer .presentation p {
-	width: 95%;
+	width: 88%;
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 700;
 	font-size: 0.85em;
@@ -800,6 +644,7 @@ svg.hidden {
 	line-height: 1.54em;
 	letter-spacing: 0.1em;
 	padding-top: 2em;
+	padding-bottom: 2em;
 	margin: auto;
 }
 
@@ -818,7 +663,7 @@ svg.hidden {
 	color: #484025cc;
 }
 
-#computer .experiences .experience {
+#computer article {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 700;
 	font-size: 0.88em;
@@ -828,6 +673,11 @@ svg.hidden {
 	margin-bottom: 2em;
 	text-align: left;
 	letter-spacing: 0.1em;
+}
+
+#computer h4 {
+	text-align: center;
+	color: #a15920;
 }
 
 #computer .experiences .experience .date {
@@ -885,12 +735,6 @@ svg.hidden {
 	font-size: 0.92em;
 }
 
-
-#computer .experiences .experience .partners h4 {
-	text-align: center;
-	color: #a15920;
-}
-
 #computer .experiences .experience .partners figure {
 	padding: 0;
 }
@@ -899,6 +743,11 @@ svg.hidden {
 	width: 8em;
 	height: 8em;
 }
+
+#computer .outils .tools {
+	text-align: center;
+}
+
 
 #computer .outils .adobe {
 	display: inline-flex;
@@ -935,24 +784,19 @@ svg.hidden {
 	margin-bottom: 5em;
 }
 
+#computer .creations .crea1,
+#computer .creations .crea2,
+#computer .creations .crea3 {
+	text-align: center;
+}
+
+
 #computer .creations svg,
 #computer .creations .norms,
 #computer .creations .chococard-c {
 	width: 6em;
 	height: 6em;
 	transform-origin: 50% 50%;
-}
-
-#computer .creations h4 {
-	text-align: center;
-	color: #a15920;
-	font-family: 'Josefin Sans', sans-serif;
-	font-weight: 700;
-	font-size: 0.88em;
-	letter-spacing: 0.1em;
-	line-height: 1.54em;
-	margin-top: 2em;
-	margin-bottom: 2em;
 }
 
 /*** LOGO MASK ANIME SVG **/
@@ -1076,6 +920,7 @@ svg#logo #mask .right_eye {
 		width: 3.8em;
 		height: 3.8em;
 	}
+
 	/* INTRO */
 	#intro {
 		display: flex;
@@ -1120,28 +965,287 @@ svg#logo #mask .right_eye {
 	#intro .skills figure figcaption {
 		font-size: 0.80em;
 	}
+
 	/* WEB */
 	#computer {
 		display: flex;
 		justify-content: center;
 	}
 
-	#computer .border h1 {
-		font-size: 1.58em;
+	#computer .border .fa-laptop-code {
+		font-size: 1.65em;
 	}
 
+	#computer .border h2 {
+		font-size: 1.65em;
+	}
+
+	#computer .presentation p {
+		width: 90%;
+		font-size: 0.95em;
+	}
+
+	#computer section h3 {
+		font-size: 1.52em;
+	}
+
+	#computer section h4 {
+		font-size: 1.26em;
+	}
+
+	#computer .experiences .experience .date {
+		font-size: 1.0em;
+	}
+
+	#computer .experiences .experience .detail figcaption {
+		font-size: 0.80em;
+	}
+
+	#computer .experiences .experience .detail button.website {
+		font-size: 0.82em;
+		border: 2px solid #FFA500;
+	}
+
+	#computer .experiences .experience .partners figure img {
+		width: 10em;
+		height: 10em;
+	}
+
+	#computer .outils figure img {
+		width: 4.0em;
+		height: 4.0em;
+	}
+
+	#computer .outils .other figure img {
+		width: 4.5em;
+		height: 4.5em;
+	}
+
+	#computer .experiences .experience .detail .descript {
+		margin: 2.5em 0;
+		font-size: 0.98em;
+	}
+
+	#computer .creations svg,
+	#computer .creations .norms,
+	#computer .creations .chococard-c {
+		width: 10em;
+		height: 10em;
+		transform-origin: 50% 50%;
+	}
 }
 
+@media screen and (min-width: 768px) {
+	.pagenav_button {
+		width: 4.2em;
+		height: 4.2em;
+	}
+
+	/* INTRO */
+	#intro .name h1 {
+		font-size: 1.75em;
+		line-height: 4em;
+	}
+
+	#intro .name .chococard,
+	.page-current#intro .name .chococard.on {
+		width: 145px;
+		height: 145px;
+	}
+
+	#intro .name h2 {
+		font-size: 1.59em;
+		margin-top: -1em;
+		text-align: center;
+	}
+
+	#intro .presentation {
+		font-size: 0.99em;
+	}
+
+	#intro .skills h2 {
+		font-size: 1.55em;
+	}
+
+	#intro .skills h3 {
+		font-size: 1.32em;
+	}
+
+	#intro .skills figure img {
+		width: 5.5em;
+		height: 5.5em;
+	}
+
+	#intro .skills figure figcaption {
+		font-size: 0.8em;
+	}
+
+	/* WEB */
+	#computer .border h2 {
+		font-size: 1.85em;
+		line-height: 3em;
+	}
+	
+	#computer .border .fa-laptop-code {
+		font-size: 1.85em;
+	}
+
+	#computer .presentation p {
+		font-size: 1.05em;
+	}
+
+	#computer section h3 {
+		font-size: 1.59em;
+	}
+
+	#computer section h4 {
+		font-size: 1.32em;
+	}
+
+	#computer article {
+		font-size: 1em;
+	}
+}
+
+
+@media screen and (min-width: 992px) {
+	.pagenav_button {
+		width: 4.5em;
+		height: 4.5em;
+	}
+
+	.pagenav_button:hover svg.icon {
+		opacity: 0.5;
+		stroke-dasharray: 430 30;
+		stroke-dashoffset: 0;
+		transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease;
+	}
+
+	/* INTRO */
+	#intro .name h1 {
+		font-size: 1.95em;
+		line-height: 4em;
+		margin-right: 0;
+	}
+
+	#intro .name .chococard,
+	.page-current#intro .name .chococard.on {
+		width: 155px;
+		height: 155px;
+		margin-left: 4em;
+		pointer-events: stroke;
+		cursor: grab;
+	}
+
+	#intro .name .chococard:hover,
+	.page-current#intro .name .chococard.on:hover {
+		transform: translate(5px, 5px);
+		transition: background 0.4s ease-in, transform 0.4s linear;
+	}
+
+	#intro .name h2 {
+		font-size: 1.95em;
+	}
+
+	#intro .name h3 {
+		font-size: 0.95em;
+	}
+
+	#intro .presentation {
+		font-size: 1.2em;
+	}
+
+	#intro .skills h2 {
+		font-size: 1.62em;
+		text-align: center;
+	}
+
+	#intro .skills h3 {
+		font-size: 1.42em;
+	}
+
+	#intro .skills figure img {
+		width: 6.2em;
+		height: 6.2em;
+	}
+
+	#intro .skills figure figcaption {
+		font-size: 1.0em;
+	}
+
+	/* WEB */
+	#computer .border h2 {
+		font-size: 1.95em;
+	}
+	
+	#computer .border .fa-laptop-code {
+		font-size: 1.95em;
+	}
+
+	#computer .presentation p {
+		font-size: 1.02em;
+	}
+
+	#computer section h3 {
+		font-size: 1.62em;
+	}
+
+	#computer section h4 {
+		font-size: 1.42em;
+	}
+
+	#computer article {
+		font-size: 1em;
+	}
+
+	#computer .experiences .experience .detail figcaption {
+		font-size: 0.99em;
+		line-height: 1.4em;
+		letter-spacing: 0.2em;
+	}
+
+	#computer .experiences .experience .detail button.website {
+		font-size: 0.99em;
+		border: 3px solid #FFA500;
+		padding: 0.7em;
+	}
+
+	#computer .experiences .experience .partners figure img {
+		width: 13.5em;
+		height: 13.5em;
+	}
+
+	#computer .outils .other {
+		display: inline-flex;
+		flex-wrap: wrap;
+	}
+
+	#computer .outils .other figure img {
+		width: 5.2em;
+		height: 5.2em;
+	}
+
+	#computer .creations .crea1,
+	#computer .creations .crea2,
+	#computer .creations .crea3 {
+		text-align: left;
+	}
+
+	#computer .creations svg,
+	#computer .creations .norms,
+	#computer .creations .chococard-c {
+		cursor: pointer;
+	}
+
+	#computer .creations .chococard-c {
+		width: 11em;
+		height: 11em;
+	}
+}
 
 /************************* MISE EN PAGE WEB EXPERIENCE *************************/
 
 /************************* MISE EN PAGE CHIMISTE *************************/
-/* queri computer
-section#chemist {
-	padding-right: 0;
-	padding-left: 0;
-} 
-*/
 #chemist .border {
 	border: 6px double #f0d773;
 	height: 6em;
