@@ -65,7 +65,8 @@ svg.hidden {
 	display: none;
 }
 
-.pagenav_button {
+.pagenav_button,
+.link {
 	border: 0;
 	background: none;
 	padding: 0;
@@ -92,20 +93,33 @@ svg.hidden {
 .pagenav_button.button_left {
 	top: 50%;
 	left: 0.5em;
-	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
 }
 
 .pagenav_button.button_right {
 	top: 50%;
 	right: 0.5em;
-	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	        transform: rotate(90deg);
 }
 
 .pagenav_button.button_bottom {
 	top: 95%;
 	bottom: 0.5em;
 	left: 47%;
-	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	        transform: rotate(180deg);
+}
+
+.link {
+	top: 93.5%;
+	right: 1.3em;
+}
+
+.page_nav img {
+	height: 3.4em;
+	opacity: 0.85;
 }
 
 /***************** REVEALER  ****************/
@@ -156,31 +170,83 @@ svg.hidden {
 }
 
 .animate-layer-3 .revealer-animate- .revealer-layer {
-	animation: anim-effect-3-1 1.5s cubic-bezier(0.550, 0.055, 0.675, 0.190) forwards;
+	-webkit-animation: anim-effect-3-1 1.5s cubic-bezier(0.550, 0.055, 0.675, 0.190) forwards;
+	        animation: anim-effect-3-1 1.5s cubic-bezier(0.550, 0.055, 0.675, 0.190) forwards;
 }
 
 .animate-layer-3 .revealer-animate- .revealer-layer:nth-child(2) {
-	animation-name: anim-effect-3-2;
+	-webkit-animation-name: anim-effect-3-2;
+	        animation-name: anim-effect-3-2;
 }
 
 .animate-layer-3 .revealer-animate- .revealer-layer:nth-child(3) {
-	animation-name: anim-effect-3-3;
+	-webkit-animation-name: anim-effect-3-3;
+	        animation-name: anim-effect-3-3;
+}
+
+
+@-webkit-keyframes anim-effect-3-1 {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
+	}
+
+	25%,
+	75% {
+		-webkit-transform: translate3d(0, -100%, 0);
+		        transform: translate3d(0, -100%, 0);
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	100% {
+		-webkit-transform: translate3d(0, -200%, 0);
+		        transform: translate3d(0, -200%, 0);
+	}
 }
 
 
 @keyframes anim-effect-3-1 {
 	0% {
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 
 	25%,
 	75% {
-		transform: translate3d(0, -100%, 0);
-		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		-webkit-transform: translate3d(0, -100%, 0);
+		        transform: translate3d(0, -100%, 0);
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 	}
 
 	100% {
-		transform: translate3d(0, -200%, 0);
+		-webkit-transform: translate3d(0, -200%, 0);
+		        transform: translate3d(0, -200%, 0);
+	}
+}
+
+
+@-webkit-keyframes anim-effect-3-2 {
+
+	0%,
+	12.5% {
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
+	}
+
+	37.5%,
+	62.5% {
+		-webkit-transform: translate3d(0, -100%, 0);
+		        transform: translate3d(0, -100%, 0);
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	87.5%,
+	100% {
+		-webkit-transform: translate3d(0, -200%, 0);
+		        transform: translate3d(0, -200%, 0);
 	}
 }
 
@@ -189,18 +255,40 @@ svg.hidden {
 
 	0%,
 	12.5% {
-		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
 	}
 
 	37.5%,
 	62.5% {
-		transform: translate3d(0, -100%, 0);
-		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		-webkit-transform: translate3d(0, -100%, 0);
+		        transform: translate3d(0, -100%, 0);
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 	}
 
 	87.5%,
 	100% {
-		transform: translate3d(0, -200%, 0);
+		-webkit-transform: translate3d(0, -200%, 0);
+		        transform: translate3d(0, -200%, 0);
+	}
+}
+
+
+@-webkit-keyframes anim-effect-3-3 {
+
+	0%,
+	25% {
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
+		-webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		        animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	}
+
+	70%,
+	100% {
+		-webkit-transform: translate3d(0, -200%, 0);
+		        transform: translate3d(0, -200%, 0);
 	}
 }
 
@@ -209,13 +297,16 @@ svg.hidden {
 
 	0%,
 	25% {
-		transform: translate3d(0, 0, 0);
-		animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		-webkit-transform: translate3d(0, 0, 0);
+		        transform: translate3d(0, 0, 0);
+		-webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		        animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
 	}
 
 	70%,
 	100% {
-		transform: translate3d(0, -200%, 0);
+		-webkit-transform: translate3d(0, -200%, 0);
+		        transform: translate3d(0, -200%, 0);
 	}
 }
 
@@ -226,9 +317,14 @@ svg.hidden {
 
 #intro section.name {
 	border: 6px double #ffb64a;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 #intro .name h1 {
@@ -237,28 +333,35 @@ svg.hidden {
 	text-transform: uppercase;
 	line-height: 3.0em;
 	font-size: 1.45em;
-	text-decoration: underline ghostwhite;
+	-webkit-text-decoration: underline ghostwhite;
+	        text-decoration: underline ghostwhite;
 }
 
 #intro .name .chococard {
 	background: url('img/ClemChococardWeb.png') no-repeat;
 	background-size: contain;
-	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
 	width: 100px;
 	height: 100px;
 	margin-top: 1em;
+	-webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
+	transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
 	transition: background 0.4s ease-in, transform 0.4s linear;
+	transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear;
 }
 
 .page-current#intro .name .chococard {
-	animation: choco-flip 3.0s ease-out 3.3s;
+	-webkit-animation: choco-flip 3.0s ease-out 3.3s;
+	        animation: choco-flip 3.0s ease-out 3.3s;
 }
 
-@keyframes choco-flip {
+@-webkit-keyframes choco-flip {
 	0% {
 		background: url('img/ClemChococardWeb.png') no-repeat;
 		background-size: contain;
-		perspective: 1000px;
+		-webkit-perspective: 1000px;
+		        perspective: 1000px;
 	}
 
 	50% {
@@ -275,7 +378,36 @@ svg.hidden {
 	100% {
 		background: url('img/ClemChococardWeb.png') no-repeat;
 		background-size: contain;
-		transform: rotateY(5turn);
+		-webkit-transform: rotateY(5turn);
+		        transform: rotateY(5turn);
+		opacity: 1;
+	}
+}
+
+@keyframes choco-flip {
+	0% {
+		background: url('img/ClemChococardWeb.png') no-repeat;
+		background-size: contain;
+		-webkit-perspective: 1000px;
+		        perspective: 1000px;
+	}
+
+	50% {
+		background: url('img/ClemChocobackWeb.png') no-repeat;
+		background-size: contain;
+	}
+
+	68% {
+		background: url('img/ClemChocobackWeb.png') no-repeat;
+		background-size: contain;
+		opacity: 0.8;
+	}
+
+	100% {
+		background: url('img/ClemChococardWeb.png') no-repeat;
+		background-size: contain;
+		-webkit-transform: rotateY(5turn);
+		        transform: rotateY(5turn);
 		opacity: 1;
 	}
 }
@@ -283,11 +415,16 @@ svg.hidden {
 .page-current#intro .name .chococard.on {
 	background: url('img/ClemChocobackWeb.png') no-repeat;
 	background-size: contain;
-	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
 	width: 100px;
 	height: 100px;
-	transform: rotateY(360deg);
+	-webkit-transform: rotateY(360deg);
+	        transform: rotateY(360deg);
+	-webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
+	transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
 	transition: background 0.4s ease-in, transform 0.4s linear;
+	transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear;
 }
 
 #intro .name h3 {
@@ -308,49 +445,138 @@ svg.hidden {
 }
 
 #intro h2.ghost.words .char {
-	animation: ghost 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-	animation-delay: calc(var(--distance-percent) * 0.125s);
-	transform-origin: 50% 100%;
+	-webkit-animation: ghost 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	        animation: ghost 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	-webkit-animation-delay: calc(var(--distance-percent) * 0.125s);
+	        animation-delay: calc(var(--distance-percent) * 0.125s);
+	-webkit-transform-origin: 50% 100%;
+	        transform-origin: 50% 100%;
 }
 
 #intro h2.ghost.words .junior .char {
-	animation: ghostj 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-	animation-delay: calc(var(--distance-percent) * 0.125s);
-	transform-origin: 50% 100%;
+	-webkit-animation: ghostj 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+	        animation: ghostj 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+	-webkit-animation-delay: calc(var(--distance-percent) * 0.125s);
+	        animation-delay: calc(var(--distance-percent) * 0.125s);
+	-webkit-transform-origin: 50% 100%;
+	        transform-origin: 50% 100%;
 }
 
 #intro h2.ghost.words .junior .char:after {
-	animation: ghostfade 3s ease-in 1.2s;
+	-webkit-animation: ghostfade 3s ease-in 1.2s;
+	        animation: ghostfade 3s ease-in 1.2s;
 	content: attr(data-char);
 	opacity: 0.5;
-	transform-origin: 100% 50%;
+	-webkit-transform-origin: 100% 50%;
+	        transform-origin: 100% 50%;
 	visibility: visible;
+}
+
+
+@-webkit-keyframes ghost {
+	40% {
+		-webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+		        transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+	}
+
+	50% {
+		-webkit-transform: translateY(6%);
+		        transform: translateY(6%);
+	}
+
+	55% {
+		-webkit-transform: translateY(-4%);
+		        transform: translateY(-4%);
+	}
+
+	60% {
+		-webkit-transform: translateY(2%);
+		        transform: translateY(2%);
+	}
+
+	65% {
+		-webkit-transform: translateY(-1%);
+		        transform: translateY(-1%);
+	}
+
+	70% {
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%);
+	}
 }
 
 
 @keyframes ghost {
 	40% {
-		transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+		-webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+		        transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
 	}
 
 	50% {
-		transform: translateY(6%);
+		-webkit-transform: translateY(6%);
+		        transform: translateY(6%);
 	}
 
 	55% {
-		transform: translateY(-4%);
+		-webkit-transform: translateY(-4%);
+		        transform: translateY(-4%);
 	}
 
 	60% {
-		transform: translateY(2%);
+		-webkit-transform: translateY(2%);
+		        transform: translateY(2%);
 	}
 
 	65% {
-		transform: translateY(-1%);
+		-webkit-transform: translateY(-1%);
+		        transform: translateY(-1%);
 	}
 
 	70% {
-		transform: translateY(0%);
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%);
+	}
+}
+
+@-webkit-keyframes ghostj {
+	35% {
+		color: #db7c12;
+	}
+
+	40% {
+		-webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+		        transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+	}
+
+	50% {
+		-webkit-transform: translateY(6%);
+		        transform: translateY(6%);
+
+	}
+
+	55% {
+		-webkit-transform: translateY(-4%);
+		        transform: translateY(-4%);
+	}
+
+	60% {
+		-webkit-transform: translateY(2%);
+		        transform: translateY(2%);
+		color: #f4c200;
+	}
+
+	65% {
+		-webkit-transform: translateY(-1%);
+		        transform: translateY(-1%);
+	}
+
+	70% {
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%);
+	}
+
+	100% {
+		color: #fdcd13;
 	}
 }
 
@@ -360,29 +586,35 @@ svg.hidden {
 	}
 
 	40% {
-		transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+		-webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+		        transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
 	}
 
 	50% {
-		transform: translateY(6%);
+		-webkit-transform: translateY(6%);
+		        transform: translateY(6%);
 
 	}
 
 	55% {
-		transform: translateY(-4%);
+		-webkit-transform: translateY(-4%);
+		        transform: translateY(-4%);
 	}
 
 	60% {
-		transform: translateY(2%);
+		-webkit-transform: translateY(2%);
+		        transform: translateY(2%);
 		color: #f4c200;
 	}
 
 	65% {
-		transform: translateY(-1%);
+		-webkit-transform: translateY(-1%);
+		        transform: translateY(-1%);
 	}
 
 	70% {
-		transform: translateY(0%);
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%);
 	}
 
 	100% {
@@ -390,22 +622,47 @@ svg.hidden {
 	}
 }
 
-@keyframes ghostfade {
+@-webkit-keyframes ghostfade {
 	8% {
 		opacity: 0;
-		transform: translateY(0);
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
 		color: #fad092;
 	}
 
 	40% {
 		opacity: 0.6;
-		transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
+		-webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
+		        transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
 	}
 
 	60%,
 	100% {
 		opacity: 0;
-		transform: translateY(-200%);
+		-webkit-transform: translateY(-200%);
+		        transform: translateY(-200%);
+	}
+}
+
+@keyframes ghostfade {
+	8% {
+		opacity: 0;
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+		color: #fad092;
+	}
+
+	40% {
+		opacity: 0.6;
+		-webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
+		        transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
+	}
+
+	60%,
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(-200%);
+		        transform: translateY(-200%);
 	}
 }
 
@@ -429,7 +686,8 @@ svg.hidden {
 #intro .presentation a:hover,
 #intro .presentation a:focus {
 	text-decoration: underline;
-	text-decoration-color: ghostwhite;
+	-webkit-text-decoration-color: ghostwhite;
+	        text-decoration-color: ghostwhite;
 	outline: none;
 	color: #efe3c6;
 }
@@ -463,15 +721,23 @@ svg.hidden {
 }
 
 #intro .skills .skills-d {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 #intro .skills-d .detail {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	margin-bottom: 2em;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 
@@ -501,6 +767,8 @@ svg.hidden {
 #computer .border {
 	border: 6px double #ffb64a;
 	height: 6em;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -522,7 +790,8 @@ svg.hidden {
 	color: ghostwhite;
 	overflow: hidden;
 	clip: rect(0, 900px, 0, 0);
-	animation: noise-anim 2.1s 4 linear alternate-reverse backwards;
+	-webkit-animation: noise-anim 2.1s 4 linear alternate-reverse backwards;
+	        animation: noise-anim 2.1s 4 linear alternate-reverse backwards;
 }
 
 .page-current .title h2#::after {
@@ -534,8 +803,100 @@ svg.hidden {
 	color: ghostwhite;
 	overflow: hidden;
 	clip: rect(0, 900px, 0, 0);
-	animation: noise-anim 2s 4 linear alternate-reverse backwards;
-	animation-delay: 0.3s;
+	-webkit-animation: noise-anim 2s 4 linear alternate-reverse backwards;
+	        animation: noise-anim 2s 4 linear alternate-reverse backwards;
+	-webkit-animation-delay: 0.3s;
+	        animation-delay: 0.3s;
+}
+
+@-webkit-keyframes noise-anim {
+	0% {
+		clip: rect(0, 900px, 0, 0)
+	}
+
+	1% {
+		clip: rect(89px, 9999px, 100px, 0)
+	}
+
+	5% {
+		clip: rect(4px, 9999px, 62px, 0)
+	}
+
+	10% {
+		clip: rect(43px, 9999px, 16px, 0)
+	}
+
+	15% {
+		clip: rect(2px, 9999px, 68px, 0)
+	}
+
+	20% {
+		clip: rect(12px, 9999px, 6px, 0)
+	}
+
+	25% {
+		clip: rect(89px, 9999px, 25px, 0)
+	}
+
+	30% {
+		clip: rect(15px, 9999px, 38px, 0)
+	}
+
+	35% {
+		clip: rect(57px, 9999px, 97px, 0)
+	}
+
+	40% {
+		clip: rect(24px, 9999px, 72px, 0)
+	}
+
+	45% {
+		clip: rect(81px, 9999px, 3px, 0)
+	}
+
+	50% {
+		clip: rect(93px, 9999px, 26px, 0)
+	}
+
+	55% {
+		clip: rect(68px, 9999px, 85px, 0)
+	}
+
+	60% {
+		clip: rect(43px, 9999px, 28px, 0)
+	}
+
+	65% {
+		clip: rect(44px, 9999px, 11px, 0)
+	}
+
+	70% {
+		clip: rect(17px, 9999px, 33px, 0)
+	}
+
+	75% {
+		clip: rect(74px, 9999px, 66px, 0)
+	}
+
+	80% {
+		clip: rect(100px, 9999px, 4px, 0)
+	}
+
+	85% {
+		clip: rect(92px, 9999px, 31px, 0)
+	}
+
+	90% {
+		clip: rect(93px, 9999px, 98px, 0)
+	}
+
+	95% {
+		clip: rect(23px, 9999px, 77px, 0)
+	}
+
+	100% {
+		clip: rect(92px, 9999px, 8px, 0)
+	}
 }
 
 @keyframes noise-anim {
@@ -750,8 +1111,11 @@ svg.hidden {
 
 
 #computer .outils .adobe {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	margin-left: 1em;
 }
 
@@ -796,7 +1160,8 @@ svg.hidden {
 #computer .creations .chococard-c {
 	width: 6em;
 	height: 6em;
-	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
 }
 
 /*** LOGO MASK ANIME SVG **/
@@ -814,6 +1179,7 @@ svg#logo #circle {
 
 svg#logo #circle .big_circle {
 	stroke-dasharray: 166, 10, 166, 10;
+	-webkit-transition: 2.8s ease-in-out, stroke 3s linear;
 	transition: 2.8s ease-in-out, stroke 3s linear;
 }
 
@@ -821,11 +1187,13 @@ svg#logo #circle .big_circle {
 	stroke-dasharray: 166, 0, 166, 0;
 	stroke-dashoffset: -200;
 	stroke: #530f0f;
+	-webkit-transition: 2.8s ease-in-out, stroke 3s linear;
 	transition: 2.8s ease-in-out, stroke 3s linear;
 }
 
 svg#logo #circle .small_circle {
 	stroke-dasharray: 90, 40, 90, 40, 90, 296;
+	-webkit-transition: 2.5s linear, stroke 3.2s linear;
 	transition: 2.5s linear, stroke 3.2s linear;
 }
 
@@ -833,21 +1201,28 @@ svg#logo #circle .small_circle {
 	stroke: #530f0f;
 	stroke-dasharray: 90, 0, 90, 0, 90, 0;
 	stroke-dashoffset: -230;
+	-webkit-transition: 2.5s linear, stroke 3.2s linear;
 	transition: 2.5s linear, stroke 3.2s linear;
 }
 
 svg#logo #mask {
 	opacity: 1;
-	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	        transform: rotate(0deg);
+	-webkit-transition: 1.8s ease;
 	transition: 1.8s ease;
-	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
 }
 
 .on svg#logo #mask {
 	opacity: 0.92;
-	transform: rotate(720deg);
+	-webkit-transform: rotate(720deg);
+	        transform: rotate(720deg);
+	-webkit-transition: 1.8s ease;
 	transition: 1.8s ease;
-	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
 }
 
 
@@ -855,20 +1230,23 @@ svg#logo #mask .cape {
 	stroke: #9e0b0b;
 	stroke-width: 3px;
 	fill: #840a0a;
-	perspective: 1000px;
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
 }
 
 .on svg#logo #mask .cape {
 	stroke: #800000;
 	stroke-width: 3px;
 	fill: #900e0e;
-	perspective: 1000px;
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
 }
 
 svg#logo #mask .left_eye,
 svg#logo #mask .right_eye {
 	stroke: #9e0b0b;
 	fill: #5f0101;
+	-webkit-transition: opacity 1.5s ease-in;
 	transition: opacity 1.5s ease-in;
 }
 
@@ -877,6 +1255,7 @@ svg#logo #mask .right_eye {
 	stroke: #820505;
 	fill: #550101;
 	opacity: 0;
+	-webkit-transition: opacity 1.5s ease-in;
 	transition: opacity 1.5s ease-in;
 }
 
@@ -885,12 +1264,14 @@ svg#logo #mask .right_eye {
 #computer .creations .norms {
 	background: url('img/NormsJardinage-web.png') no-repeat;
 	background-size: contain;
+	-webkit-transition: background 0.4s ease-in;
 	transition: background 0.4s ease-in;
 }
 
 #computer .creations .on .norms {
 	background: url('img/NormsComptable-web.png') no-repeat;
 	background-size: contain;
+	-webkit-transition: background 0.4s ease-in;
 	transition: background 0.4s ease-in;
 }
 
@@ -899,348 +1280,31 @@ svg#logo #mask .right_eye {
 #computer .creations .chococard-c {
 	background: url('img/ClemChococardWeb.png') no-repeat;
 	background-size: contain;
-	transform-origin: 50% 50%;
-	transform: rotateY(0deg);
-	perspective: 1000px;
+	-webkit-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
+	-webkit-transform: rotateY(0deg);
+	        transform: rotateY(0deg);
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
+	-webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
+	transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
 	transition: background 0.4s ease-in, transform 0.4s linear;
+	transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear;
 }
 
 #computer .creations .on .chococard-c {
 	background: url('img/ClemChocobackWeb.png') no-repeat;
 	background-size: contain;
-	transform-origin: 50% 50%;
-	transform: rotateY(360deg);
-	perspective: 1000px;
+	-webkit-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
+	-webkit-transform: rotateY(360deg);
+	        transform: rotateY(360deg);
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
+	-webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
+	transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
 	transition: background 0.4s ease-in, transform 0.4s linear;
-}
-
-
-@media screen and (min-width: 576px) {
-	.pagenav_button {
-		width: 3.8em;
-		height: 3.8em;
-	}
-
-	/* INTRO */
-	#intro {
-		display: flex;
-		justify-content: center;
-	}
-
-	#intro .name h1 {
-		font-size: 1.58em;
-	}
-
-	#intro .name .chococard,
-	.page-current#intro .name .chococard.on {
-		width: 120px;
-		height: 120px;
-	}
-
-	#intro .name h3 {
-		font-size: 0.76em;
-	}
-
-	#intro .presentation {
-		font-size: 0.95em;
-	}
-
-	#intro .presentation p {
-		width: 90%;
-	}
-
-	#intro .skills h2 {
-		font-size: 1.52em;
-	}
-
-	#intro .skills h3 {
-		font-size: 1.26em;
-	}
-
-	#intro .skills figure img {
-		width: 4.8em;
-		height: 4.8em;
-	}
-
-	#intro .skills figure figcaption {
-		font-size: 0.80em;
-	}
-
-	/* WEB */
-	#computer {
-		display: flex;
-		justify-content: center;
-	}
-
-	#computer .border .fa-laptop-code {
-		font-size: 1.65em;
-	}
-
-	#computer .border h2 {
-		font-size: 1.65em;
-	}
-
-	#computer .presentation p {
-		width: 90%;
-		font-size: 0.95em;
-	}
-
-	#computer section h3 {
-		font-size: 1.52em;
-	}
-
-	#computer section h4 {
-		font-size: 1.26em;
-	}
-
-	#computer .experiences .experience .date {
-		font-size: 1.0em;
-	}
-
-	#computer .experiences .experience .detail figcaption {
-		font-size: 0.80em;
-	}
-
-	#computer .experiences .experience .detail button.website {
-		font-size: 0.82em;
-		border: 2px solid #FFA500;
-	}
-
-	#computer .experiences .experience .partners figure img {
-		width: 10em;
-		height: 10em;
-	}
-
-	#computer .outils figure img {
-		width: 4.0em;
-		height: 4.0em;
-	}
-
-	#computer .outils .other figure img {
-		width: 4.5em;
-		height: 4.5em;
-	}
-
-	#computer .experiences .experience .detail .descript {
-		margin: 2.5em 0;
-		font-size: 0.98em;
-	}
-
-	#computer .creations svg,
-	#computer .creations .norms,
-	#computer .creations .chococard-c {
-		width: 10em;
-		height: 10em;
-		transform-origin: 50% 50%;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.pagenav_button {
-		width: 4.2em;
-		height: 4.2em;
-	}
-
-	/* INTRO */
-	#intro .name h1 {
-		font-size: 1.75em;
-		line-height: 4em;
-	}
-
-	#intro .name .chococard,
-	.page-current#intro .name .chococard.on {
-		width: 145px;
-		height: 145px;
-	}
-
-	#intro .name h2 {
-		font-size: 1.59em;
-		margin-top: -1em;
-		text-align: center;
-	}
-
-	#intro .presentation {
-		font-size: 0.99em;
-	}
-
-	#intro .skills h2 {
-		font-size: 1.55em;
-	}
-
-	#intro .skills h3 {
-		font-size: 1.32em;
-	}
-
-	#intro .skills figure img {
-		width: 5.5em;
-		height: 5.5em;
-	}
-
-	#intro .skills figure figcaption {
-		font-size: 0.8em;
-	}
-
-	/* WEB */
-	#computer .border h2 {
-		font-size: 1.85em;
-		line-height: 3em;
-	}
-	
-	#computer .border .fa-laptop-code {
-		font-size: 1.85em;
-	}
-
-	#computer .presentation p {
-		font-size: 1.05em;
-	}
-
-	#computer section h3 {
-		font-size: 1.59em;
-	}
-
-	#computer section h4 {
-		font-size: 1.32em;
-	}
-
-	#computer article {
-		font-size: 1em;
-	}
-}
-
-
-@media screen and (min-width: 992px) {
-	.pagenav_button {
-		width: 4.5em;
-		height: 4.5em;
-	}
-
-	.pagenav_button:hover svg.icon {
-		opacity: 0.5;
-		stroke-dasharray: 430 30;
-		stroke-dashoffset: 0;
-		transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease;
-	}
-
-	/* INTRO */
-	#intro .name h1 {
-		font-size: 1.95em;
-		line-height: 4em;
-		margin-right: 0;
-	}
-
-	#intro .name .chococard,
-	.page-current#intro .name .chococard.on {
-		width: 155px;
-		height: 155px;
-		margin-left: 4em;
-		pointer-events: stroke;
-		cursor: grab;
-	}
-
-	#intro .name .chococard:hover,
-	.page-current#intro .name .chococard.on:hover {
-		transform: translate(5px, 5px);
-		transition: background 0.4s ease-in, transform 0.4s linear;
-	}
-
-	#intro .name h2 {
-		font-size: 1.95em;
-	}
-
-	#intro .name h3 {
-		font-size: 0.95em;
-	}
-
-	#intro .presentation {
-		font-size: 1.2em;
-	}
-
-	#intro .skills h2 {
-		font-size: 1.62em;
-		text-align: center;
-	}
-
-	#intro .skills h3 {
-		font-size: 1.42em;
-	}
-
-	#intro .skills figure img {
-		width: 6.2em;
-		height: 6.2em;
-	}
-
-	#intro .skills figure figcaption {
-		font-size: 1.0em;
-	}
-
-	/* WEB */
-	#computer .border h2, #chemist .border h2 {
-		font-size: 1.95em;
-	}
-	
-	#computer .border .fa-laptop-code, #chemist .border .fa-flask {
-		font-size: 1.95em;
-	}
-
-	#computer .presentation p, #chemist .presentation p {
-		font-size: 1.02em;
-	}
-
-	#computer section h3, #chemist section h3 {
-		font-size: 1.62em;
-	}
-
-	#computer section h4, #chemist section h4 {
-		font-size: 1.42em;
-	}
-
-	#computer article, #chemist article {
-		font-size: 1em;
-	}
-
-	#computer .experiences .experience .detail figcaption {
-		font-size: 0.99em;
-		line-height: 1.4em;
-		letter-spacing: 0.2em;
-	}
-
-	#computer .experiences .experience .detail button.website {
-		font-size: 0.99em;
-		border: 3px solid #FFA500;
-		padding: 0.7em;
-	}
-
-	#computer .experiences .experience .partners figure img {
-		width: 13.5em;
-		height: 13.5em;
-	}
-
-	#computer .outils .other {
-		display: inline-flex;
-		flex-wrap: wrap;
-	}
-
-	#computer .outils .other figure img {
-		width: 5.2em;
-		height: 5.2em;
-	}
-
-	#computer .creations .crea1,
-	#computer .creations .crea2,
-	#computer .creations .crea3 {
-		text-align: left;
-	}
-
-	#computer .creations svg,
-	#computer .creations .norms,
-	#computer .creations .chococard-c {
-		cursor: pointer;
-	}
-
-	#computer .creations .chococard-c {
-		width: 11em;
-		height: 11em;
-	}
+	transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear;
 }
 
 /************************* MISE EN PAGE WEB EXPERIENCE *************************/
@@ -1253,10 +1317,12 @@ svg#logo #mask .right_eye {
 #chemist .border {
 	border: 6px double #f0d773;
 	height: 6em;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
-#chemist .border h2#atom {
+#chemist .border h2 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -1276,49 +1342,128 @@ svg#logo #mask .right_eye {
 
 #chemist.page-current h2 .break .char {
 	content: attr(data-char);
-	animation: break-drop 2s ease 0.4s forwards;
+	-webkit-animation: break-drop 2s ease 0.4s forwards;
+	        animation: break-drop 2s ease 0.4s forwards;
 	color: transparent;
 	overflow: visible;
 	line-height: 1.0em;
 }
 
 #chemist.page-current h2 .break .char::before {
-	animation: break-left 2s linear 0.4s forwards;
+	-webkit-animation: break-left 2s linear 0.4s forwards;
+	        animation: break-left 2s linear 0.4s forwards;
 	color: ghostwhite;
 	visibility: visible;
-	clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0);
-	transform-origin: 0 100%;
+	-webkit-clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0);
+	        clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0);
+	-webkit-transform-origin: 0 100%;
+	        transform-origin: 0 100%;
 }
 
 #chemist.page-current h2 .break .char::after {
-	animation: break-right 2s linear 0.4s forwards;
+	-webkit-animation: break-right 2s linear 0.4s forwards;
+	        animation: break-right 2s linear 0.4s forwards;
 	color: ghostwhite;
 	visibility: visible;
-	clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%);
-	transform-origin: 100% 100%;
+	-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%);
+	        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%);
+	-webkit-transform-origin: 100% 100%;
+	        transform-origin: 100% 100%;
+}
+
+@-webkit-keyframes break-drop {
+
+	0%,
+	20% {
+		-webkit-transform: translateY(-150%);
+		        transform: translateY(-150%);
+		opacity: 0;
+	}
+
+	22% {
+		-webkit-transform: translateY(10%);
+		        transform: translateY(10%);
+		opacity: 1;
+	}
+
+	25% {
+		-webkit-transform: translateY(-5%);
+		        transform: translateY(-5%);
+	}
+
+	30%,
+	100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 @keyframes break-drop {
 
 	0%,
 	20% {
-		transform: translateY(-150%);
+		-webkit-transform: translateY(-150%);
+		        transform: translateY(-150%);
 		opacity: 0;
 	}
 
 	22% {
-		transform: translateY(10%);
+		-webkit-transform: translateY(10%);
+		        transform: translateY(10%);
 		opacity: 1;
 	}
 
 	25% {
-		transform: translateY(-5%);
+		-webkit-transform: translateY(-5%);
+		        transform: translateY(-5%);
 	}
 
 	30%,
 	100% {
-		transform: translateY(0);
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
 		opacity: 1;
+	}
+}
+
+@-webkit-keyframes break-left {
+
+	0%,
+	22% {
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+	}
+
+	25% {
+		-webkit-transform: rotate(-8deg);
+		        transform: rotate(-8deg)
+	}
+
+	28% {
+		-webkit-transform: rotate(-10deg);
+		        transform: rotate(-10deg)
+	}
+
+	30% {
+		-webkit-transform: rotate(-0deg);
+		        transform: rotate(-0deg);
+		-webkit-box-shadow: 0px 3px 6px #8e650b;
+		        box-shadow: 0px 3px 6px #8e650b;
+	}
+
+	40% {
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+		-webkit-transform: rotate(-7deg);
+		        transform: rotate(-7deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(-7deg);
+		        transform: rotate(-7deg);
 	}
 }
 
@@ -1326,30 +1471,68 @@ svg#logo #mask .right_eye {
 
 	0%,
 	22% {
-		transform: rotate(0);
-		box-shadow: none;
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
+		-webkit-box-shadow: none;
+		        box-shadow: none;
 	}
 
 	25% {
-		transform: rotate(-8deg)
+		-webkit-transform: rotate(-8deg);
+		        transform: rotate(-8deg)
 	}
 
 	28% {
-		transform: rotate(-10deg)
+		-webkit-transform: rotate(-10deg);
+		        transform: rotate(-10deg)
 	}
 
 	30% {
-		transform: rotate(-0deg);
-		box-shadow: 0px 3px 6px #8e650b;
+		-webkit-transform: rotate(-0deg);
+		        transform: rotate(-0deg);
+		-webkit-box-shadow: 0px 3px 6px #8e650b;
+		        box-shadow: 0px 3px 6px #8e650b;
 	}
 
 	40% {
-		box-shadow: none;
-		transform: rotate(-7deg);
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+		-webkit-transform: rotate(-7deg);
+		        transform: rotate(-7deg);
 	}
 
 	100% {
-		transform: rotate(-7deg);
+		-webkit-transform: rotate(-7deg);
+		        transform: rotate(-7deg);
+	}
+}
+
+@-webkit-keyframes break-right {
+
+	0%,
+	22% {
+		-webkit-transform: rotate(0);
+		        transform: rotate(0)
+	}
+
+	25% {
+		-webkit-transform: rotate(5deg);
+		        transform: rotate(5deg);
+	}
+
+	28% {
+		-webkit-transform: rotate(10deg) translateY(10%);
+		        transform: rotate(10deg) translateY(10%)
+	}
+
+	30% {
+		-webkit-transform: rotate(5deg) translateY(5%);
+		        transform: rotate(5deg) translateY(5%);
+	}
+
+	100% {
+		-webkit-transform: rotate(5deg) translateY(5%);
+		        transform: rotate(5deg) translateY(5%)
 	}
 }
 
@@ -1357,23 +1540,28 @@ svg#logo #mask .right_eye {
 
 	0%,
 	22% {
-		transform: rotate(0)
+		-webkit-transform: rotate(0);
+		        transform: rotate(0)
 	}
 
 	25% {
-		transform: rotate(5deg);
+		-webkit-transform: rotate(5deg);
+		        transform: rotate(5deg);
 	}
 
 	28% {
-		transform: rotate(10deg) translateY(10%)
+		-webkit-transform: rotate(10deg) translateY(10%);
+		        transform: rotate(10deg) translateY(10%)
 	}
 
 	30% {
-		transform: rotate(5deg) translateY(5%);
+		-webkit-transform: rotate(5deg) translateY(5%);
+		        transform: rotate(5deg) translateY(5%);
 	}
 
 	100% {
-		transform: rotate(5deg) translateY(5%)
+		-webkit-transform: rotate(5deg) translateY(5%);
+		        transform: rotate(5deg) translateY(5%)
 	}
 }
 
@@ -1407,7 +1595,7 @@ svg#logo #mask .right_eye {
 	color: #484025cc;
 }
 
-#chemist .experience {
+#chemist article {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 700;
 	font-size: 0.88em;
@@ -1475,19 +1663,19 @@ svg#logo #mask .right_eye {
 /************************* MISE EN PAGE CHIMISTE *************************/
 
 /************************* MISE EN PAGE PERSONNAL *************************/
-/* queri computer
-section#personnal {
-	padding-right: 0;
-	padding-left: 0;
-} 
-*/
+#personnal section {
+	padding: 0 2.2em;
+}
+
 #personnal .border {
 	border: 6px double #f0d773;
 	height: 6em;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
-#personnal h2#perso {
+#personnal .border h2 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -1506,55 +1694,98 @@ section#personnal {
 }
 
 #personnal .bounce .word {
-	transform: translateX(-200%);
+	-webkit-transform: translateX(-200%);
+	        transform: translateX(-200%);
 	opacity: 0;
 }
 
-.page-current #personnal .bounce .word {
-	transform: translateX(0%);
+#personnal.page-current .bounce .word {
+	-webkit-transform: translateX(0%);
+	        transform: translateX(0%);
 	opacity: 1;
+	-webkit-transition: opacity 0.5s ease, -webkit-transform 1.5s ease;
+	transition: opacity 0.5s ease, -webkit-transform 1.5s ease;
 	transition: transform 1.5s ease, opacity 0.5s ease;
+	transition: transform 1.5s ease, opacity 0.5s ease, -webkit-transform 1.5s ease;
 }
 
-.page-current #personnal .bounce .char {
+#personnal.page-current .bounce .char {
 	color: transparent;
 	overflow: visible;
-	animation: bounce 1.5s ease;
-	animation-delay: calc(var(--char-index) * -0.125s)
+	-webkit-animation: bounce 1.5s ease;
+	        animation: bounce 1.5s ease;
+	-webkit-animation-delay: calc(var(--char-index) * -0.125s);
+	        animation-delay: calc(var(--char-index) * -0.125s)
 }
 
-.page-current #personnal .bounce .char::after {
-	animation: tumble 1.5s linear 0.3s;
+#personnal.page-current .bounce .char::after {
+	-webkit-animation: tumble 1.5s linear 0.3s;
+	        animation: tumble 1.5s linear 0.3s;
 	color: ghostwhite;
 	visibility: visible;
 	z-index: 95;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
 	25% {
-		transform: translateY(-35%)
+		-webkit-transform: translateY(-35%);
+		        transform: translateY(-35%)
 	}
 
 	50% {
-		transform: translateY(0)
+		-webkit-transform: translateY(0);
+		        transform: translateY(0)
 	}
 
 	75% {
-		transform: translateY(-45%)
+		-webkit-transform: translateY(-45%);
+		        transform: translateY(-45%)
+	}
+}
+
+@keyframes bounce {
+	25% {
+		-webkit-transform: translateY(-35%);
+		        transform: translateY(-35%)
+	}
+
+	50% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0)
+	}
+
+	75% {
+		-webkit-transform: translateY(-45%);
+		        transform: translateY(-45%)
+	}
+}
+
+@-webkit-keyframes tumble {
+	60% {
+		-webkit-transform: rotate(180deg);
+		        transform: rotate(180deg)
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg)
 	}
 }
 
 @keyframes tumble {
 	60% {
-		transform: rotate(180deg)
+		-webkit-transform: rotate(180deg);
+		        transform: rotate(180deg)
 	}
 
 	100% {
-		transform: rotate(360deg)
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg)
 	}
 }
 
-#personnal p {
+
+#personnal .presentation p {
 	width: 95%;
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 700;
@@ -1566,7 +1797,8 @@ section#personnal {
 	margin: auto;
 }
 
-#personnal .descript {
+
+#personnal article {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 700;
 	font-size: 0.78em;
@@ -1578,7 +1810,7 @@ section#personnal {
 	letter-spacing: 0.1em;
 }
 
-#personnal article.descript h3 {
+#personnal section h3 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
 	letter-spacing: 0.1em;
@@ -1586,6 +1818,7 @@ section#personnal {
 	text-transform: capitalize;
 	color: #e6c40e;
 	text-align: left;
+	margin-bottom: 1.5em;
 }
 
 #personnal .puzzle .fa-puzzle-piece,
@@ -1618,5 +1851,477 @@ section#personnal {
 	text-align: justify;
 }
 
+@media screen and (min-width: 576px) {
+	.pagenav_button {
+		width: 3.8em;
+		height: 3.8em;
+	}
+
+	.link {
+		top: 92%;
+		right: 1.8em;
+	}
+
+	.page_nav img {
+		height: 4.0em;
+	}
+
+	/* INTRO */
+	#intro {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+
+	#intro .name h1 {
+		font-size: 1.58em;
+	}
+
+	#intro .name .chococard,
+	.page-current#intro .name .chococard.on {
+		width: 120px;
+		height: 120px;
+	}
+
+	#intro .name h3 {
+		font-size: 0.76em;
+	}
+
+	#intro .presentation {
+		font-size: 0.95em;
+	}
+
+	#intro .presentation p {
+		width: 90%;
+	}
+
+	#intro .skills h2 {
+		font-size: 1.52em;
+	}
+
+	#intro .skills h3 {
+		font-size: 1.26em;
+	}
+
+	#intro .skills figure img {
+		width: 4.8em;
+		height: 4.8em;
+	}
+
+	#intro .skills figure figcaption {
+		font-size: 0.80em;
+	}
+
+	/* WEB */
+	#computer,
+	#chemist,
+	#personnal {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+
+	#computer .border .fa-laptop-code,
+	#chemist .border .fa-flask,
+	#personnal .border .fa-user-edit {
+		font-size: 1.65em;
+	}
+
+	#computer .border h2 {
+		font-size: 1.65em;
+	}
+
+	#computer .presentation p,
+	#chemist .presentation p,
+	#personnal .presentation p {
+		width: 90%;
+		font-size: 0.95em;
+	}
+
+	#computer section h3,
+	#chemist section h3,
+	#personnal section h3 {
+		font-size: 1.52em;
+	}
+
+	#computer section h4,
+	#chemist section h4 {
+		font-size: 1.26em;
+	}
+
+	#computer .experiences .experience .date,
+	#chemist .experiences .experience .date {
+		font-size: 1.0em;
+	}
+
+	#computer .experiences .experience .detail figcaption {
+		font-size: 0.80em;
+	}
+
+	#computer .experiences .experience .detail button.website {
+		font-size: 0.82em;
+		border: 2px solid #FFA500;
+	}
+
+	#computer .experiences .experience .partners figure img,
+	#chemist .experiences .experience .company figure img {
+		width: 10em;
+		height: 10em;
+	}
+
+	#computer .outils figure img {
+		width: 4.0em;
+		height: 4.0em;
+	}
+
+	#computer .outils .other figure img,
+	#personnal .magic .hobbies img {
+		width: 4.5em;
+		height: 4.5em;
+	}
+
+	#computer .experiences .experience .detail .descript,
+	#chemist .experiences .experience .detail .descript {
+		margin: 2.5em 0;
+		font-size: 0.98em;
+	}
+
+	#computer .creations svg,
+	#computer .creations .norms,
+	#computer .creations .chococard-c {
+		width: 10em;
+		height: 10em;
+		-webkit-transform-origin: 50% 50%;
+		        transform-origin: 50% 50%;
+	}
+
+	/* CHEMIST */
+	#chemist .border h2,
+	#personnal .border h2 {
+		font-size: 1.65em;
+		line-height: 1.8em;
+	}
+
+	/* PERSONNAL */
+	#personnal article {
+		font-size: 0.88em;
+	}
+
+	#personnal .puzzle .fa-puzzle-piece,
+	#personnal .magic .fa-hat-wizard,
+	#personnal .scroll .fa-scroll,
+	#personnal .magic .fa-globe-americas {
+		font-size: 1.35em;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.pagenav_button {
+		width: 4.2em;
+		height: 4.2em;
+	}
+
+	.page_nav img {
+		height: 4.5em;
+	}
+
+	.link {
+		top: 92%;
+		right: 2.3em;
+	}
+
+	/* INTRO */
+	#intro .name h1 {
+		font-size: 1.75em;
+		line-height: 4em;
+	}
+
+	#intro .name .chococard,
+	.page-current#intro .name .chococard.on {
+		width: 145px;
+		height: 145px;
+	}
+
+	#intro .name h2 {
+		font-size: 1.59em;
+		margin-top: -1em;
+		text-align: center;
+	}
+
+	#intro .presentation {
+		font-size: 0.99em;
+	}
+
+	#intro .skills h2 {
+		font-size: 1.55em;
+	}
+
+	#intro .skills h3 {
+		font-size: 1.32em;
+	}
+
+	#intro .skills figure img {
+		width: 5.5em;
+		height: 5.5em;
+	}
+
+	#intro .skills figure figcaption {
+		font-size: 0.8em;
+	}
+
+	/* WEB */
+	#computer .border h2 {
+		font-size: 1.85em;
+		line-height: 3em;
+	}
+
+	#computer .border .fa-laptop-code,
+	#chemist .border .fa-flask,
+	#personnal .border .fa-user-edit {
+		font-size: 1.85em;
+	}
+
+	#computer .presentation p,
+	#chemist .presentation p,
+	#personnal .presentation p {
+		font-size: 1.05em;
+	}
+
+	#computer section h3,
+	#chemist section h3,
+	#personnal section h3 {
+		font-size: 1.59em;
+	}
+
+	#computer section h4,
+	#chemist section h4 {
+		font-size: 1.32em;
+	}
+
+	#computer article,
+	#chemist article,
+	#personnal article {
+		font-size: 1em;
+	}
+
+	/* CHEMIST */
+	#chemist .border h2,
+	#personnal .border h2 {
+		line-height: 1.2em;
+		font-size: 1.85em;
+	}
+
+	#chemist .experiences .fa-viall {
+		font-size: 1.2em;
+	}
+
+	/* PERSONNAL */
+	#personnal .puzzle .fa-puzzle-piece,
+	#personnal .magic .fa-hat-wizard,
+	#personnal .scroll .fa-scroll,
+	#personnal .magic .fa-globe-americas {
+		font-size: 1.45em;
+	}
+}
+
+
+@media screen and (min-width: 992px) {
+	.pagenav_button {
+		width: 4.5em;
+		height: 4.5em;
+	}
+
+	.link {
+		top: 93%;
+		right: 5em;
+	}
+
+	.page_nav img {
+		height: 4.8em;
+	}
+
+	.pagenav_button:hover svg.icon {
+		opacity: 0.5;
+		stroke-dasharray: 430 30;
+		stroke-dashoffset: 0;
+		-webkit-transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease;
+		transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease;
+	}
+
+	/* INTRO */
+	#intro .name h1 {
+		font-size: 1.95em;
+		line-height: 4em;
+		margin-right: 0;
+	}
+
+	#intro .name .chococard,
+	.page-current#intro .name .chococard.on {
+		width: 155px;
+		height: 155px;
+		margin-left: 4em;
+		pointer-events: stroke;
+		cursor: -webkit-grab;
+		cursor: grab;
+	}
+
+	#intro .name .chococard:hover,
+	.page-current#intro .name .chococard.on:hover {
+		-webkit-transform: translate(5px, 5px);
+		        transform: translate(5px, 5px);
+		-webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
+		transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
+		transition: background 0.4s ease-in, transform 0.4s linear;
+		transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear;
+	}
+
+	#intro .name h2 {
+		font-size: 1.95em;
+	}
+
+	#intro .name h3 {
+		font-size: 0.95em;
+	}
+
+	#intro .presentation {
+		font-size: 1.2em;
+	}
+
+	#intro .skills h2 {
+		font-size: 1.62em;
+		text-align: center;
+	}
+
+	#intro .skills h3 {
+		font-size: 1.42em;
+	}
+
+	#intro .skills figure img {
+		width: 6.2em;
+		height: 6.2em;
+	}
+
+	#intro .skills figure figcaption {
+		font-size: 1.0em;
+	}
+
+	/* WEB */
+	#computer .border h2,
+	#chemist .border h2,
+	#personnal .border h2 {
+		font-size: 1.95em;
+	}
+
+	#computer .border .fa-laptop-code,
+	#chemist .border .fa-flask,
+	#personnal .border .fa-user-edit {
+		font-size: 1.95em;
+	}
+
+	#computer .presentation p,
+	#chemist .presentation p,
+	#personnal .presentation p {
+		font-size: 1.02em;
+	}
+
+	#computer section h3,
+	#chemist section h3,
+	#personnal section h3 {
+		font-size: 1.62em;
+	}
+
+	#computer section h4,
+	#chemist section h4 {
+		font-size: 1.42em;
+	}
+
+	#computer article,
+	#chemist article,
+	#personnal article {
+		font-size: 1em;
+	}
+
+	#computer .experiences .experience .detail figcaption {
+		font-size: 0.99em;
+		line-height: 1.4em;
+		letter-spacing: 0.2em;
+	}
+
+	#computer .experiences .experience .detail button.website {
+		font-size: 0.99em;
+		border: 3px solid #FFA500;
+		padding: 0.7em;
+	}
+
+	#computer .experiences .experience .partners figure img,
+	#chemist .experiences .experience .company figure img {
+		width: 13.5em;
+		height: 13.5em;
+	}
+
+	#computer .outils .other {
+		display: -webkit-inline-box;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+
+	#computer .outils .other figure img {
+		width: 5.2em;
+		height: 5.2em;
+	}
+
+	#computer .creations .crea1,
+	#computer .creations .crea2,
+	#computer .creations .crea3 {
+		text-align: left;
+	}
+
+	#computer .creations svg,
+	#computer .creations .norms,
+	#computer .creations .chococard-c {
+		cursor: pointer;
+	}
+
+	#computer .creations .chococard-c {
+		width: 11em;
+		height: 11em;
+	}
+
+	/* CHEMIST */
+	#chemist .experience .descript figure img {
+		width: 14em;
+		height: 14em;
+		margin-left: 2em;
+	}
+
+	#chemist .experience .descript figcaption {
+		margin-left: 3em;
+	}
+
+	/* PERSONNAL */
+	#personnal .puzzle .fa-puzzle-piece,
+	#personnal .magic .fa-hat-wizard,
+	#personnal .scroll .fa-scroll,
+	#personnal .magic .fa-globe-americas {
+		font-size: 1.75em;
+
+	}
+
+	#personnal .magic .hobbies img {
+		height: 8em;
+		width: 6em;
+		margin: 0.5em;
+		-webkit-transform: scale(0.5);
+		        transform: scale(0.5);
+	}
+}
 
 /************************* MISE EN PAGE PERSONNAL *************************/
