@@ -94,14 +94,14 @@ svg.hidden {
 	top: 50%;
 	left: 0.5em;
 	-webkit-transform: rotate(-90deg);
-	        transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
 
 .pagenav_button.button_right {
 	top: 50%;
 	right: 0.5em;
 	-webkit-transform: rotate(90deg);
-	        transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 .pagenav_button.button_bottom {
@@ -109,7 +109,7 @@ svg.hidden {
 	bottom: 0.5em;
 	left: 47%;
 	-webkit-transform: rotate(180deg);
-	        transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 .link {
@@ -171,37 +171,37 @@ svg.hidden {
 
 .animate-layer-3 .revealer-animate- .revealer-layer {
 	-webkit-animation: anim-effect-3-1 1.5s cubic-bezier(0.550, 0.055, 0.675, 0.190) forwards;
-	        animation: anim-effect-3-1 1.5s cubic-bezier(0.550, 0.055, 0.675, 0.190) forwards;
+	animation: anim-effect-3-1 1.5s cubic-bezier(0.550, 0.055, 0.675, 0.190) forwards;
 }
 
 .animate-layer-3 .revealer-animate- .revealer-layer:nth-child(2) {
 	-webkit-animation-name: anim-effect-3-2;
-	        animation-name: anim-effect-3-2;
+	animation-name: anim-effect-3-2;
 }
 
 .animate-layer-3 .revealer-animate- .revealer-layer:nth-child(3) {
 	-webkit-animation-name: anim-effect-3-3;
-	        animation-name: anim-effect-3-3;
+	animation-name: anim-effect-3-3;
 }
 
 
 @-webkit-keyframes anim-effect-3-1 {
 	0% {
 		-webkit-transform: translate3d(0, 0, 0);
-		        transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
 	}
 
 	25%,
 	75% {
 		-webkit-transform: translate3d(0, -100%, 0);
-		        transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
 		-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-		        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 	}
 
 	100% {
 		-webkit-transform: translate3d(0, -200%, 0);
-		        transform: translate3d(0, -200%, 0);
+		transform: translate3d(0, -200%, 0);
 	}
 }
 
@@ -209,20 +209,20 @@ svg.hidden {
 @keyframes anim-effect-3-1 {
 	0% {
 		-webkit-transform: translate3d(0, 0, 0);
-		        transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
 	}
 
 	25%,
 	75% {
 		-webkit-transform: translate3d(0, -100%, 0);
-		        transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
 		-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-		        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 	}
 
 	100% {
 		-webkit-transform: translate3d(0, -200%, 0);
-		        transform: translate3d(0, -200%, 0);
+		transform: translate3d(0, -200%, 0);
 	}
 }
 
@@ -232,21 +232,21 @@ svg.hidden {
 	0%,
 	12.5% {
 		-webkit-transform: translate3d(0, 0, 0);
-		        transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
 	}
 
 	37.5%,
 	62.5% {
 		-webkit-transform: translate3d(0, -100%, 0);
-		        transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
 		-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-		        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 	}
 
 	87.5%,
 	100% {
 		-webkit-transform: translate3d(0, -200%, 0);
-		        transform: translate3d(0, -200%, 0);
+		transform: translate3d(0, -200%, 0);
 	}
 }
 
@@ -256,21 +256,21 @@ svg.hidden {
 	0%,
 	12.5% {
 		-webkit-transform: translate3d(0, 0, 0);
-		        transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
 	}
 
 	37.5%,
 	62.5% {
 		-webkit-transform: translate3d(0, -100%, 0);
-		        transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
 		-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-		        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 	}
 
 	87.5%,
 	100% {
 		-webkit-transform: translate3d(0, -200%, 0);
-		        transform: translate3d(0, -200%, 0);
+		transform: translate3d(0, -200%, 0);
 	}
 }
 
@@ -280,15 +280,15 @@ svg.hidden {
 	0%,
 	25% {
 		-webkit-transform: translate3d(0, 0, 0);
-		        transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
 		-webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
-		        animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
 	}
 
 	70%,
 	100% {
 		-webkit-transform: translate3d(0, -200%, 0);
-		        transform: translate3d(0, -200%, 0);
+		transform: translate3d(0, -200%, 0);
 	}
 }
 
@@ -298,15 +298,15 @@ svg.hidden {
 	0%,
 	25% {
 		-webkit-transform: translate3d(0, 0, 0);
-		        transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
 		-webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
-		        animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
 	}
 
 	70%,
 	100% {
 		-webkit-transform: translate3d(0, -200%, 0);
-		        transform: translate3d(0, -200%, 0);
+		transform: translate3d(0, -200%, 0);
 	}
 }
 
@@ -321,10 +321,10 @@ svg.hidden {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
+	flex-wrap: wrap;
 	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 #intro .name h1 {
@@ -334,14 +334,14 @@ svg.hidden {
 	line-height: 3.0em;
 	font-size: 1.45em;
 	-webkit-text-decoration: underline ghostwhite;
-	        text-decoration: underline ghostwhite;
+	text-decoration: underline ghostwhite;
 }
 
 #intro .name .chococard {
 	background: url('img/ClemChococardWeb.png') no-repeat;
 	background-size: contain;
 	-webkit-transform-origin: 50% 50%;
-	        transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
 	width: 100px;
 	height: 100px;
 	margin-top: 1em;
@@ -353,7 +353,7 @@ svg.hidden {
 
 .page-current#intro .name .chococard {
 	-webkit-animation: choco-flip 3.0s ease-out 3.3s;
-	        animation: choco-flip 3.0s ease-out 3.3s;
+	animation: choco-flip 3.0s ease-out 3.3s;
 }
 
 @-webkit-keyframes choco-flip {
@@ -361,7 +361,7 @@ svg.hidden {
 		background: url('img/ClemChococardWeb.png') no-repeat;
 		background-size: contain;
 		-webkit-perspective: 1000px;
-		        perspective: 1000px;
+		perspective: 1000px;
 	}
 
 	50% {
@@ -379,7 +379,7 @@ svg.hidden {
 		background: url('img/ClemChococardWeb.png') no-repeat;
 		background-size: contain;
 		-webkit-transform: rotateY(5turn);
-		        transform: rotateY(5turn);
+		transform: rotateY(5turn);
 		opacity: 1;
 	}
 }
@@ -389,7 +389,7 @@ svg.hidden {
 		background: url('img/ClemChococardWeb.png') no-repeat;
 		background-size: contain;
 		-webkit-perspective: 1000px;
-		        perspective: 1000px;
+		perspective: 1000px;
 	}
 
 	50% {
@@ -407,7 +407,7 @@ svg.hidden {
 		background: url('img/ClemChococardWeb.png') no-repeat;
 		background-size: contain;
 		-webkit-transform: rotateY(5turn);
-		        transform: rotateY(5turn);
+		transform: rotateY(5turn);
 		opacity: 1;
 	}
 }
@@ -416,11 +416,11 @@ svg.hidden {
 	background: url('img/ClemChocobackWeb.png') no-repeat;
 	background-size: contain;
 	-webkit-transform-origin: 50% 50%;
-	        transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
 	width: 100px;
 	height: 100px;
 	-webkit-transform: rotateY(360deg);
-	        transform: rotateY(360deg);
+	transform: rotateY(360deg);
 	-webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
 	transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
 	transition: background 0.4s ease-in, transform 0.4s linear;
@@ -446,29 +446,29 @@ svg.hidden {
 
 #intro h2.ghost.words .char {
 	-webkit-animation: ghost 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-	        animation: ghost 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	animation: ghost 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	-webkit-animation-delay: calc(var(--distance-percent) * 0.125s);
-	        animation-delay: calc(var(--distance-percent) * 0.125s);
+	animation-delay: calc(var(--distance-percent) * 0.125s);
 	-webkit-transform-origin: 50% 100%;
-	        transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
 }
 
 #intro h2.ghost.words .junior .char {
 	-webkit-animation: ghostj 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-	        animation: ghostj 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+	animation: ghostj 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 	-webkit-animation-delay: calc(var(--distance-percent) * 0.125s);
-	        animation-delay: calc(var(--distance-percent) * 0.125s);
+	animation-delay: calc(var(--distance-percent) * 0.125s);
 	-webkit-transform-origin: 50% 100%;
-	        transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
 }
 
 #intro h2.ghost.words .junior .char:after {
 	-webkit-animation: ghostfade 3s ease-in 1.2s;
-	        animation: ghostfade 3s ease-in 1.2s;
+	animation: ghostfade 3s ease-in 1.2s;
 	content: attr(data-char);
 	opacity: 0.5;
 	-webkit-transform-origin: 100% 50%;
-	        transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
 	visibility: visible;
 }
 
@@ -476,32 +476,32 @@ svg.hidden {
 @-webkit-keyframes ghost {
 	40% {
 		-webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
-		        transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+		transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
 	}
 
 	50% {
 		-webkit-transform: translateY(6%);
-		        transform: translateY(6%);
+		transform: translateY(6%);
 	}
 
 	55% {
 		-webkit-transform: translateY(-4%);
-		        transform: translateY(-4%);
+		transform: translateY(-4%);
 	}
 
 	60% {
 		-webkit-transform: translateY(2%);
-		        transform: translateY(2%);
+		transform: translateY(2%);
 	}
 
 	65% {
 		-webkit-transform: translateY(-1%);
-		        transform: translateY(-1%);
+		transform: translateY(-1%);
 	}
 
 	70% {
 		-webkit-transform: translateY(0%);
-		        transform: translateY(0%);
+		transform: translateY(0%);
 	}
 }
 
@@ -509,32 +509,32 @@ svg.hidden {
 @keyframes ghost {
 	40% {
 		-webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
-		        transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+		transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
 	}
 
 	50% {
 		-webkit-transform: translateY(6%);
-		        transform: translateY(6%);
+		transform: translateY(6%);
 	}
 
 	55% {
 		-webkit-transform: translateY(-4%);
-		        transform: translateY(-4%);
+		transform: translateY(-4%);
 	}
 
 	60% {
 		-webkit-transform: translateY(2%);
-		        transform: translateY(2%);
+		transform: translateY(2%);
 	}
 
 	65% {
 		-webkit-transform: translateY(-1%);
-		        transform: translateY(-1%);
+		transform: translateY(-1%);
 	}
 
 	70% {
 		-webkit-transform: translateY(0%);
-		        transform: translateY(0%);
+		transform: translateY(0%);
 	}
 }
 
@@ -545,34 +545,34 @@ svg.hidden {
 
 	40% {
 		-webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
-		        transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+		transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
 	}
 
 	50% {
 		-webkit-transform: translateY(6%);
-		        transform: translateY(6%);
+		transform: translateY(6%);
 
 	}
 
 	55% {
 		-webkit-transform: translateY(-4%);
-		        transform: translateY(-4%);
+		transform: translateY(-4%);
 	}
 
 	60% {
 		-webkit-transform: translateY(2%);
-		        transform: translateY(2%);
+		transform: translateY(2%);
 		color: #f4c200;
 	}
 
 	65% {
 		-webkit-transform: translateY(-1%);
-		        transform: translateY(-1%);
+		transform: translateY(-1%);
 	}
 
 	70% {
 		-webkit-transform: translateY(0%);
-		        transform: translateY(0%);
+		transform: translateY(0%);
 	}
 
 	100% {
@@ -587,34 +587,34 @@ svg.hidden {
 
 	40% {
 		-webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
-		        transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+		transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
 	}
 
 	50% {
 		-webkit-transform: translateY(6%);
-		        transform: translateY(6%);
+		transform: translateY(6%);
 
 	}
 
 	55% {
 		-webkit-transform: translateY(-4%);
-		        transform: translateY(-4%);
+		transform: translateY(-4%);
 	}
 
 	60% {
 		-webkit-transform: translateY(2%);
-		        transform: translateY(2%);
+		transform: translateY(2%);
 		color: #f4c200;
 	}
 
 	65% {
 		-webkit-transform: translateY(-1%);
-		        transform: translateY(-1%);
+		transform: translateY(-1%);
 	}
 
 	70% {
 		-webkit-transform: translateY(0%);
-		        transform: translateY(0%);
+		transform: translateY(0%);
 	}
 
 	100% {
@@ -626,21 +626,21 @@ svg.hidden {
 	8% {
 		opacity: 0;
 		-webkit-transform: translateY(0);
-		        transform: translateY(0);
+		transform: translateY(0);
 		color: #fad092;
 	}
 
 	40% {
 		opacity: 0.6;
 		-webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
-		        transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
+		transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
 	}
 
 	60%,
 	100% {
 		opacity: 0;
 		-webkit-transform: translateY(-200%);
-		        transform: translateY(-200%);
+		transform: translateY(-200%);
 	}
 }
 
@@ -648,21 +648,21 @@ svg.hidden {
 	8% {
 		opacity: 0;
 		-webkit-transform: translateY(0);
-		        transform: translateY(0);
+		transform: translateY(0);
 		color: #fad092;
 	}
 
 	40% {
 		opacity: 0.6;
 		-webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
-		        transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
+		transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
 	}
 
 	60%,
 	100% {
 		opacity: 0;
 		-webkit-transform: translateY(-200%);
-		        transform: translateY(-200%);
+		transform: translateY(-200%);
 	}
 }
 
@@ -687,7 +687,7 @@ svg.hidden {
 #intro .presentation a:focus {
 	text-decoration: underline;
 	-webkit-text-decoration-color: ghostwhite;
-	        text-decoration-color: ghostwhite;
+	text-decoration-color: ghostwhite;
 	outline: none;
 	color: #efe3c6;
 }
@@ -725,7 +725,7 @@ svg.hidden {
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 #intro .skills-d .detail {
@@ -733,11 +733,11 @@ svg.hidden {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
+	flex-wrap: wrap;
 	margin-bottom: 2em;
 	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 
@@ -791,7 +791,7 @@ svg.hidden {
 	overflow: hidden;
 	clip: rect(0, 900px, 0, 0);
 	-webkit-animation: noise-anim 2.1s 4 linear alternate-reverse backwards;
-	        animation: noise-anim 2.1s 4 linear alternate-reverse backwards;
+	animation: noise-anim 2.1s 4 linear alternate-reverse backwards;
 }
 
 .page-current .title h2#::after {
@@ -804,9 +804,9 @@ svg.hidden {
 	overflow: hidden;
 	clip: rect(0, 900px, 0, 0);
 	-webkit-animation: noise-anim 2s 4 linear alternate-reverse backwards;
-	        animation: noise-anim 2s 4 linear alternate-reverse backwards;
+	animation: noise-anim 2s 4 linear alternate-reverse backwards;
 	-webkit-animation-delay: 0.3s;
-	        animation-delay: 0.3s;
+	animation-delay: 0.3s;
 }
 
 @-webkit-keyframes noise-anim {
@@ -1115,7 +1115,7 @@ svg.hidden {
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
+	flex-wrap: wrap;
 	margin-left: 1em;
 }
 
@@ -1161,7 +1161,7 @@ svg.hidden {
 	width: 6em;
 	height: 6em;
 	-webkit-transform-origin: 50% 50%;
-	        transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
 }
 
 /*** LOGO MASK ANIME SVG **/
@@ -1208,21 +1208,21 @@ svg#logo #circle .small_circle {
 svg#logo #mask {
 	opacity: 1;
 	-webkit-transform: rotate(0deg);
-	        transform: rotate(0deg);
+	transform: rotate(0deg);
 	-webkit-transition: 1.8s ease;
 	transition: 1.8s ease;
 	-webkit-transform-origin: 50% 50%;
-	        transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
 }
 
 .on svg#logo #mask {
 	opacity: 0.92;
 	-webkit-transform: rotate(720deg);
-	        transform: rotate(720deg);
+	transform: rotate(720deg);
 	-webkit-transition: 1.8s ease;
 	transition: 1.8s ease;
 	-webkit-transform-origin: 50% 50%;
-	        transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
 }
 
 
@@ -1231,7 +1231,7 @@ svg#logo #mask .cape {
 	stroke-width: 3px;
 	fill: #840a0a;
 	-webkit-perspective: 1000px;
-	        perspective: 1000px;
+	perspective: 1000px;
 }
 
 .on svg#logo #mask .cape {
@@ -1239,7 +1239,7 @@ svg#logo #mask .cape {
 	stroke-width: 3px;
 	fill: #900e0e;
 	-webkit-perspective: 1000px;
-	        perspective: 1000px;
+	perspective: 1000px;
 }
 
 svg#logo #mask .left_eye,
@@ -1281,11 +1281,11 @@ svg#logo #mask .right_eye {
 	background: url('img/ClemChococardWeb.png') no-repeat;
 	background-size: contain;
 	-webkit-transform-origin: 50% 50%;
-	        transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
 	-webkit-transform: rotateY(0deg);
-	        transform: rotateY(0deg);
+	transform: rotateY(0deg);
 	-webkit-perspective: 1000px;
-	        perspective: 1000px;
+	perspective: 1000px;
 	-webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
 	transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
 	transition: background 0.4s ease-in, transform 0.4s linear;
@@ -1296,11 +1296,11 @@ svg#logo #mask .right_eye {
 	background: url('img/ClemChocobackWeb.png') no-repeat;
 	background-size: contain;
 	-webkit-transform-origin: 50% 50%;
-	        transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
 	-webkit-transform: rotateY(360deg);
-	        transform: rotateY(360deg);
+	transform: rotateY(360deg);
 	-webkit-perspective: 1000px;
-	        perspective: 1000px;
+	perspective: 1000px;
 	-webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
 	transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
 	transition: background 0.4s ease-in, transform 0.4s linear;
@@ -1343,7 +1343,7 @@ svg#logo #mask .right_eye {
 #chemist.page-current h2 .break .char {
 	content: attr(data-char);
 	-webkit-animation: break-drop 2s ease 0.4s forwards;
-	        animation: break-drop 2s ease 0.4s forwards;
+	animation: break-drop 2s ease 0.4s forwards;
 	color: transparent;
 	overflow: visible;
 	line-height: 1.0em;
@@ -1351,24 +1351,24 @@ svg#logo #mask .right_eye {
 
 #chemist.page-current h2 .break .char::before {
 	-webkit-animation: break-left 2s linear 0.4s forwards;
-	        animation: break-left 2s linear 0.4s forwards;
+	animation: break-left 2s linear 0.4s forwards;
 	color: ghostwhite;
 	visibility: visible;
 	-webkit-clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0);
-	        clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0);
+	clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0);
 	-webkit-transform-origin: 0 100%;
-	        transform-origin: 0 100%;
+	transform-origin: 0 100%;
 }
 
 #chemist.page-current h2 .break .char::after {
 	-webkit-animation: break-right 2s linear 0.4s forwards;
-	        animation: break-right 2s linear 0.4s forwards;
+	animation: break-right 2s linear 0.4s forwards;
 	color: ghostwhite;
 	visibility: visible;
 	-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%);
-	        clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%);
+	clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%);
 	-webkit-transform-origin: 100% 100%;
-	        transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
 }
 
 @-webkit-keyframes break-drop {
@@ -1376,25 +1376,25 @@ svg#logo #mask .right_eye {
 	0%,
 	20% {
 		-webkit-transform: translateY(-150%);
-		        transform: translateY(-150%);
+		transform: translateY(-150%);
 		opacity: 0;
 	}
 
 	22% {
 		-webkit-transform: translateY(10%);
-		        transform: translateY(10%);
+		transform: translateY(10%);
 		opacity: 1;
 	}
 
 	25% {
 		-webkit-transform: translateY(-5%);
-		        transform: translateY(-5%);
+		transform: translateY(-5%);
 	}
 
 	30%,
 	100% {
 		-webkit-transform: translateY(0);
-		        transform: translateY(0);
+		transform: translateY(0);
 		opacity: 1;
 	}
 }
@@ -1404,25 +1404,25 @@ svg#logo #mask .right_eye {
 	0%,
 	20% {
 		-webkit-transform: translateY(-150%);
-		        transform: translateY(-150%);
+		transform: translateY(-150%);
 		opacity: 0;
 	}
 
 	22% {
 		-webkit-transform: translateY(10%);
-		        transform: translateY(10%);
+		transform: translateY(10%);
 		opacity: 1;
 	}
 
 	25% {
 		-webkit-transform: translateY(-5%);
-		        transform: translateY(-5%);
+		transform: translateY(-5%);
 	}
 
 	30%,
 	100% {
 		-webkit-transform: translateY(0);
-		        transform: translateY(0);
+		transform: translateY(0);
 		opacity: 1;
 	}
 }
@@ -1432,38 +1432,38 @@ svg#logo #mask .right_eye {
 	0%,
 	22% {
 		-webkit-transform: rotate(0);
-		        transform: rotate(0);
+		transform: rotate(0);
 		-webkit-box-shadow: none;
-		        box-shadow: none;
+		box-shadow: none;
 	}
 
 	25% {
 		-webkit-transform: rotate(-8deg);
-		        transform: rotate(-8deg)
+		transform: rotate(-8deg)
 	}
 
 	28% {
 		-webkit-transform: rotate(-10deg);
-		        transform: rotate(-10deg)
+		transform: rotate(-10deg)
 	}
 
 	30% {
 		-webkit-transform: rotate(-0deg);
-		        transform: rotate(-0deg);
+		transform: rotate(-0deg);
 		-webkit-box-shadow: 0px 3px 6px #8e650b;
-		        box-shadow: 0px 3px 6px #8e650b;
+		box-shadow: 0px 3px 6px #8e650b;
 	}
 
 	40% {
 		-webkit-box-shadow: none;
-		        box-shadow: none;
+		box-shadow: none;
 		-webkit-transform: rotate(-7deg);
-		        transform: rotate(-7deg);
+		transform: rotate(-7deg);
 	}
 
 	100% {
 		-webkit-transform: rotate(-7deg);
-		        transform: rotate(-7deg);
+		transform: rotate(-7deg);
 	}
 }
 
@@ -1472,38 +1472,38 @@ svg#logo #mask .right_eye {
 	0%,
 	22% {
 		-webkit-transform: rotate(0);
-		        transform: rotate(0);
+		transform: rotate(0);
 		-webkit-box-shadow: none;
-		        box-shadow: none;
+		box-shadow: none;
 	}
 
 	25% {
 		-webkit-transform: rotate(-8deg);
-		        transform: rotate(-8deg)
+		transform: rotate(-8deg)
 	}
 
 	28% {
 		-webkit-transform: rotate(-10deg);
-		        transform: rotate(-10deg)
+		transform: rotate(-10deg)
 	}
 
 	30% {
 		-webkit-transform: rotate(-0deg);
-		        transform: rotate(-0deg);
+		transform: rotate(-0deg);
 		-webkit-box-shadow: 0px 3px 6px #8e650b;
-		        box-shadow: 0px 3px 6px #8e650b;
+		box-shadow: 0px 3px 6px #8e650b;
 	}
 
 	40% {
 		-webkit-box-shadow: none;
-		        box-shadow: none;
+		box-shadow: none;
 		-webkit-transform: rotate(-7deg);
-		        transform: rotate(-7deg);
+		transform: rotate(-7deg);
 	}
 
 	100% {
 		-webkit-transform: rotate(-7deg);
-		        transform: rotate(-7deg);
+		transform: rotate(-7deg);
 	}
 }
 
@@ -1512,27 +1512,27 @@ svg#logo #mask .right_eye {
 	0%,
 	22% {
 		-webkit-transform: rotate(0);
-		        transform: rotate(0)
+		transform: rotate(0)
 	}
 
 	25% {
 		-webkit-transform: rotate(5deg);
-		        transform: rotate(5deg);
+		transform: rotate(5deg);
 	}
 
 	28% {
 		-webkit-transform: rotate(10deg) translateY(10%);
-		        transform: rotate(10deg) translateY(10%)
+		transform: rotate(10deg) translateY(10%)
 	}
 
 	30% {
 		-webkit-transform: rotate(5deg) translateY(5%);
-		        transform: rotate(5deg) translateY(5%);
+		transform: rotate(5deg) translateY(5%);
 	}
 
 	100% {
 		-webkit-transform: rotate(5deg) translateY(5%);
-		        transform: rotate(5deg) translateY(5%)
+		transform: rotate(5deg) translateY(5%)
 	}
 }
 
@@ -1541,27 +1541,27 @@ svg#logo #mask .right_eye {
 	0%,
 	22% {
 		-webkit-transform: rotate(0);
-		        transform: rotate(0)
+		transform: rotate(0)
 	}
 
 	25% {
 		-webkit-transform: rotate(5deg);
-		        transform: rotate(5deg);
+		transform: rotate(5deg);
 	}
 
 	28% {
 		-webkit-transform: rotate(10deg) translateY(10%);
-		        transform: rotate(10deg) translateY(10%)
+		transform: rotate(10deg) translateY(10%)
 	}
 
 	30% {
 		-webkit-transform: rotate(5deg) translateY(5%);
-		        transform: rotate(5deg) translateY(5%);
+		transform: rotate(5deg) translateY(5%);
 	}
 
 	100% {
 		-webkit-transform: rotate(5deg) translateY(5%);
-		        transform: rotate(5deg) translateY(5%)
+		transform: rotate(5deg) translateY(5%)
 	}
 }
 
@@ -1695,13 +1695,13 @@ svg#logo #mask .right_eye {
 
 #personnal .bounce .word {
 	-webkit-transform: translateX(-200%);
-	        transform: translateX(-200%);
+	transform: translateX(-200%);
 	opacity: 0;
 }
 
 #personnal.page-current .bounce .word {
 	-webkit-transform: translateX(0%);
-	        transform: translateX(0%);
+	transform: translateX(0%);
 	opacity: 1;
 	-webkit-transition: opacity 0.5s ease, -webkit-transform 1.5s ease;
 	transition: opacity 0.5s ease, -webkit-transform 1.5s ease;
@@ -1713,14 +1713,14 @@ svg#logo #mask .right_eye {
 	color: transparent;
 	overflow: visible;
 	-webkit-animation: bounce 1.5s ease;
-	        animation: bounce 1.5s ease;
+	animation: bounce 1.5s ease;
 	-webkit-animation-delay: calc(var(--char-index) * -0.125s);
-	        animation-delay: calc(var(--char-index) * -0.125s)
+	animation-delay: calc(var(--char-index) * -0.125s)
 }
 
 #personnal.page-current .bounce .char::after {
 	-webkit-animation: tumble 1.5s linear 0.3s;
-	        animation: tumble 1.5s linear 0.3s;
+	animation: tumble 1.5s linear 0.3s;
 	color: ghostwhite;
 	visibility: visible;
 	z-index: 95;
@@ -1729,58 +1729,58 @@ svg#logo #mask .right_eye {
 @-webkit-keyframes bounce {
 	25% {
 		-webkit-transform: translateY(-35%);
-		        transform: translateY(-35%)
+		transform: translateY(-35%)
 	}
 
 	50% {
 		-webkit-transform: translateY(0);
-		        transform: translateY(0)
+		transform: translateY(0)
 	}
 
 	75% {
 		-webkit-transform: translateY(-45%);
-		        transform: translateY(-45%)
+		transform: translateY(-45%)
 	}
 }
 
 @keyframes bounce {
 	25% {
 		-webkit-transform: translateY(-35%);
-		        transform: translateY(-35%)
+		transform: translateY(-35%)
 	}
 
 	50% {
 		-webkit-transform: translateY(0);
-		        transform: translateY(0)
+		transform: translateY(0)
 	}
 
 	75% {
 		-webkit-transform: translateY(-45%);
-		        transform: translateY(-45%)
+		transform: translateY(-45%)
 	}
 }
 
 @-webkit-keyframes tumble {
 	60% {
 		-webkit-transform: rotate(180deg);
-		        transform: rotate(180deg)
+		transform: rotate(180deg)
 	}
 
 	100% {
 		-webkit-transform: rotate(360deg);
-		        transform: rotate(360deg)
+		transform: rotate(360deg)
 	}
 }
 
 @keyframes tumble {
 	60% {
 		-webkit-transform: rotate(180deg);
-		        transform: rotate(180deg)
+		transform: rotate(180deg)
 	}
 
 	100% {
 		-webkit-transform: rotate(360deg);
-		        transform: rotate(360deg)
+		transform: rotate(360deg)
 	}
 }
 
@@ -1872,8 +1872,8 @@ svg#logo #mask .right_eye {
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
 	}
 
 	#intro .name h1 {
@@ -1923,8 +1923,8 @@ svg#logo #mask .right_eye {
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
 	}
 
 	#computer .border .fa-laptop-code,
@@ -1998,7 +1998,7 @@ svg#logo #mask .right_eye {
 		width: 10em;
 		height: 10em;
 		-webkit-transform-origin: 50% 50%;
-		        transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
 	}
 
 	/* CHEMIST */
@@ -2153,6 +2153,12 @@ svg#logo #mask .right_eye {
 		-webkit-transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease;
 		transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease;
 	}
+	
+	.page_nav img:hover {
+		transform: scale(1.15);
+		opacity: 0.9;
+		transition: transform 0.4s ease, opacity 0.4s ease;
+	}
 
 	/* INTRO */
 	#intro .name h1 {
@@ -2174,7 +2180,7 @@ svg#logo #mask .right_eye {
 	#intro .name .chococard:hover,
 	.page-current#intro .name .chococard.on:hover {
 		-webkit-transform: translate(5px, 5px);
-		        transform: translate(5px, 5px);
+		transform: translate(5px, 5px);
 		-webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
 		transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
 		transition: background 0.4s ease-in, transform 0.4s linear;
@@ -2265,12 +2271,33 @@ svg#logo #mask .right_eye {
 		height: 13.5em;
 	}
 
+	#computer .experiences .experience figure:hover img, #chemist .experiences .experience figure:hover img{
+		filter: blur(0.3);
+		opacity: 0.76;
+		transform: scale(0.98);
+		transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease;
+	}
+
+	#computer .experiences .experience figure:hover button.website {
+		border: 4px solid #FFA500;
+		background: #f8a817de;
+		padding: 0.7em;
+		transform: scale(1.05);
+		transition: background 0.4s ease, transform 0.4s ease;
+	}
+
+	#computer .experiences .experience figure:hover figcaption {
+		opacity: 0;
+		transition: opacity 0.4s ease;
+	}
+
+
 	#computer .outils .other {
 		display: -webkit-inline-box;
 		display: -ms-inline-flexbox;
 		display: inline-flex;
 		-ms-flex-wrap: wrap;
-		    flex-wrap: wrap;
+		flex-wrap: wrap;
 	}
 
 	#computer .outils .other figure img {
@@ -2320,7 +2347,7 @@ svg#logo #mask .right_eye {
 		width: 6em;
 		margin: 0.5em;
 		-webkit-transform: scale(0.5);
-		        transform: scale(0.5);
+		transform: scale(0.5);
 	}
 }
 
