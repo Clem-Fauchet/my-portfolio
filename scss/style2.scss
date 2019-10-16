@@ -1,0 +1,99 @@
+@import './variables';
+
+body {
+	color: $txtColor;
+	text-align: center;
+}
+
+svg.hidden {
+	display: none;
+	stroke-miterlimit: 10;
+}
+
+.container-fluid {
+	padding-left: 0px;
+	padding-right: 0px;
+	min-height: $sHeight;
+	background: #22292b;
+	overflow: hidden;
+}
+
+/* LAYOUT REVELER */
+@import './layout';
+@import './revealer';
+
+/************** INTRO PAGE ****************/
+@mixin flexCenter ($flex-wrap) {
+	display: flex;
+	flex-wrap: $flex-wrap;
+	justify-content: center;
+}
+
+
+#intro section {
+	padding: 0 2.2em;
+}
+
+#intro section.name {
+	@include flexCenter (wrap);
+	border: 6px double #ffb64a;
+
+	h1 {
+		font-family: $font-title;
+		font-weight: 600;
+		text-transform: uppercase;
+		line-height: 3.0em;
+		font-size: 1.45em;
+		text-decoration: underline $txtColor;
+	}
+
+	.chococard {
+		background: url('img/ClemChococardWeb.png') no-repeat;
+		background-size: contain;
+		transform-origin: 50% 50%;
+		width: 100px;
+		height: 100px;
+		margin-top: 1em;
+		transition: background 0.4s ease-in, transform 0.4s linear;
+	}
+}
+
+.page-current#intro .name .chococard {
+	animation: choco-flip 3.0s ease-out 3.3s;
+
+	.on {
+		background: url('img/ClemChocobackWeb.png') no-repeat;
+		background-size: contain;
+		transform-origin: 50% 50%;
+		width: 100px;
+		height: 100px;
+		transform: rotateY(360deg);
+		transition: background 0.4s ease-in, transform 0.4s linear;
+	}
+}
+
+@keyframes choco-flip {
+	0% {
+		background: url('img/ClemChococardWeb.png') no-repeat;
+		background-size: contain;
+		perspective: 1000px;
+	}
+
+	50% {
+		background: url('img/ClemChocobackWeb.png') no-repeat;
+		background-size: contain;
+	}
+
+	68% {
+		background: url('img/ClemChocobackWeb.png') no-repeat;
+		background-size: contain;
+		opacity: 0.8;
+	}
+
+	100% {
+		background: url('img/ClemChococardWeb.png') no-repeat;
+		background-size: contain;
+		transform: rotateY(5turn);
+		opacity: 1;
+	}
+}
