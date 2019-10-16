@@ -536,15 +536,15 @@ svg.hidden {
 
 /* COMMUN MIXIN PAGES */
 /***************************** WEB EXPERIENCE PAGE ************************/
-#computer section {
+#computer.page-current section {
   padding: 0 2.2em; }
-  #computer section .border {
+  #computer.page-current section .border {
     border: 6px double #ffb64a;
     height: 6em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    #computer section .border h2 {
+    #computer.page-current section .border h2 {
       font-family: "Raleway", sans-serif;
       font-weight: 600;
       text-transform: uppercase;
@@ -553,7 +553,7 @@ svg.hidden {
       margin: auto;
       line-height: 2.6em;
       position: relative; }
-      #computer section .border h2::before {
+      #computer.page-current section .border h2::before {
         content: attr(data-text);
         position: absolute;
         text-shadow: 1px 0px #fc339d;
@@ -562,7 +562,7 @@ svg.hidden {
         clip: rect(0, 900px, 0, 0);
         -webkit-animation: noise-anim 2.1s 4 linear alternate-reverse backwards;
                 animation: noise-anim 2.1s 4 linear alternate-reverse backwards; }
-      #computer section .border h2::after {
+      #computer.page-current section .border h2::after {
         content: attr(data-text);
         position: absolute;
         right: 0em;
@@ -575,7 +575,7 @@ svg.hidden {
                 animation: noise-anim 2s 4 linear alternate-reverse backwards;
         -webkit-animation-delay: 0.3s;
                 animation-delay: 0.3s; }
-    #computer section .border .fa-laptop-code {
+    #computer.page-current section .border .fa-laptop-code {
       width: 20%;
       margin: auto;
       font-size: 1.5em;
@@ -672,8 +672,8 @@ svg.hidden {
     clip: rect(23px, 9999px, 77px, 0); }
   100% {
     clip: rect(92px, 9999px, 8px, 0); } }
-#computer .presentation {
-  width: 88%;
+#computer .presentation p {
+  width: 95%;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
   font-size: 0.85em;
@@ -688,7 +688,7 @@ svg.hidden {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   letter-spacing: 0.1em;
-  font-size: 1.18em;
+  font-size: 1.28em;
   text-transform: capitalize;
   color: #ff7900;
   text-align: left; }
@@ -904,5 +904,374 @@ svg.hidden {
   transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
 
 /***************************** CHEMIST EXPERIENCE PAGE ************************/
+#chemist.page-current section {
+  padding: 0 2.2em; }
+  #chemist.page-current section .border {
+    border: 6px double #f0d773;
+    height: 6em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    #chemist.page-current section .border h2 {
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: ghostwhite;
+      width: 80%;
+      margin: auto;
+      line-height: 2.6em; }
+      #chemist.page-current section .border h2 .break .char {
+        content: attr(data-char);
+        -webkit-animation: break-drop 2s ease 0.4s forwards;
+                animation: break-drop 2s ease 0.4s forwards;
+        color: transparent;
+        overflow: visible;
+        line-height: 1.0em; }
+        #chemist.page-current section .border h2 .break .char::before {
+          -webkit-animation: break-left 2s linear 0.4s forwards;
+                  animation: break-left 2s linear 0.4s forwards;
+          color: ghostwhite;
+          visibility: visible;
+          -webkit-clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0);
+                  clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0); }
+        #chemist.page-current section .border h2 .break .char::after {
+          -webkit-animation: break-right 2s linear 0.4s forwards;
+                  animation: break-right 2s linear 0.4s forwards;
+          color: ghostwhite;
+          visibility: visible;
+          -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%);
+                  clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%); }
+    #chemist.page-current section .border .fa-flask {
+      width: 20%;
+      margin: auto;
+      font-size: 1.5em;
+      color: #22292b; }
+  #chemist.page-current section.presentation p {
+    width: 95%;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 0.85em;
+    color: #cf8617;
+    line-height: 1.54em;
+    letter-spacing: 0.1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin: auto; }
+  #chemist.page-current section h3 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 1.28em;
+    text-transform: capitalize;
+    color: #ff7900;
+    text-align: left; }
+  #chemist.page-current section article {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 0.88em;
+    color: #5e3917;
+    line-height: 1.54em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: left;
+    letter-spacing: 0.1em; }
+    #chemist.page-current section article h4 {
+      text-align: center;
+      color: #a15920; }
+
+@-webkit-keyframes break-drop {
+  0%,
+	20% {
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+    opacity: 0; }
+  22% {
+    -webkit-transform: translateY(10%);
+    transform: translateY(10%);
+    opacity: 1; }
+  25% {
+    -webkit-transform: translateY(-5%);
+    transform: translateY(-5%); }
+  30%,
+	100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes break-drop {
+  0%,
+	20% {
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+    opacity: 0; }
+  22% {
+    -webkit-transform: translateY(10%);
+    transform: translateY(10%);
+    opacity: 1; }
+  25% {
+    -webkit-transform: translateY(-5%);
+    transform: translateY(-5%); }
+  30%,
+	100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+@-webkit-keyframes break-left {
+  0%,
+	22% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  25% {
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg); }
+  28% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg); }
+  30% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-box-shadow: 0px 3px 6px #8e650b;
+    box-shadow: 0px 3px 6px #8e650b; }
+  40% {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg); }
+  100% {
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg); } }
+@keyframes break-left {
+  0%,
+	22% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  25% {
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg); }
+  28% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg); }
+  30% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-box-shadow: 0px 3px 6px #8e650b;
+    box-shadow: 0px 3px 6px #8e650b; }
+  40% {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg); }
+  100% {
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg); } }
+@-webkit-keyframes break-right {
+  0%,
+	22% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  25% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg); }
+  28% {
+    -webkit-transform: rotate(10deg) translateY(10%);
+    transform: rotate(10deg) translateY(10%); }
+  30% {
+    -webkit-transform: rotate(5deg) translateY(5%);
+    transform: rotate(5deg) translateY(5%); }
+  100% {
+    -webkit-transform: rotate(5deg) translateY(5%);
+    transform: rotate(5deg) translateY(5%); } }
+@keyframes break-right {
+  0%,
+	22% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  25% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg); }
+  28% {
+    -webkit-transform: rotate(10deg) translateY(10%);
+    transform: rotate(10deg) translateY(10%); }
+  30% {
+    -webkit-transform: rotate(5deg) translateY(5%);
+    transform: rotate(5deg) translateY(5%); }
+  100% {
+    -webkit-transform: rotate(5deg) translateY(5%);
+    transform: rotate(5deg) translateY(5%); } }
+#chemist .experiences .experience .fa-vial {
+  padding-left: 0.5em;
+  font-size: 1.2em;
+  color: #484025cc; }
+#chemist .experiences .experience .date {
+  font-weight: bolder;
+  font-size: 0.89em;
+  color: #a15918; }
+#chemist .experiences .experience .detail .publi li {
+  margin: 1em; }
+#chemist .experiences .experience .detail .publi a,
+#chemist .experiences .experience .detail .publi a:hover,
+#chemist .experiences .experience .detail .publi a:focus {
+  outline: none;
+  font-size: 0.88em;
+  color: #5e3917; }
+#chemist .experiences .experience .detail .descript {
+  margin: 0.5em 0;
+  font-size: 0.92em; }
+#chemist .experiences .experience .company figure {
+  padding: 0; }
+  #chemist .experiences .experience .company figure img {
+    width: 8em;
+    height: 8em; }
+#chemist .experiences .experience .descript subject {
+  margin: 1em 0; }
+  #chemist .experiences .experience .descript subject .mars {
+    font-style: italic;
+    color: #bc0f0f; }
+#chemist .experiences .experience .descript figure img {
+  width: 10em;
+  height: 10em;
+  opacity: 0.75; }
+
+/***************************** PERSONNAL EXPERIENCE PAGE ************************/
+#personnal h2.bounce .word {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+  opacity: 0; }
+
+#personnal.page-current section {
+  padding: 0 2.2em; }
+  #personnal.page-current section .border {
+    border: 6px double #f0d773;
+    height: 6em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    #personnal.page-current section .border h2 {
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: ghostwhite;
+      width: 80%;
+      margin: auto;
+      line-height: 2.6em; }
+      #personnal.page-current section .border h2.bounce .word {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+        opacity: 1;
+        -webkit-transition: opacity 0.5s ease, -webkit-transform 1.5s ease;
+        transition: opacity 0.5s ease, -webkit-transform 1.5s ease;
+        transition: transform 1.5s ease, opacity 0.5s ease;
+        transition: transform 1.5s ease, opacity 0.5s ease, -webkit-transform 1.5s ease; }
+        #personnal.page-current section .border h2.bounce .word .char {
+          color: transparent;
+          overflow: visible;
+          -webkit-animation: bounce 1.5s ease;
+                  animation: bounce 1.5s ease;
+          -webkit-animation-delay: calc(var(--char-index) * -0.125s);
+                  animation-delay: calc(var(--char-index) * -0.125s); }
+          #personnal.page-current section .border h2.bounce .word .char::after {
+            -webkit-animation: tumble 1.5s linear 0.3s forwards;
+                    animation: tumble 1.5s linear 0.3s forwards;
+            color: ghostwhite;
+            visibility: visible;
+            z-index: 95; }
+  #personnal.page-current section .fa-user-edit {
+    width: 20%;
+    margin: auto;
+    font-size: 1.5em;
+    color: #22292b; }
+#personnal.page-current .presentation p {
+  width: 95%;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.85em;
+  color: #ffbd21;
+  line-height: 1.54em;
+  letter-spacing: 0.1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin: auto; }
+#personnal.page-current h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: 1.28em;
+  text-transform: capitalize;
+  color: #e6c40e;
+  text-align: left; }
+#personnal.page-current article {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.88em;
+  color: #5e3917;
+  line-height: 1.54em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: left;
+  letter-spacing: 0.1em;
+  font-size: 0.78em; }
+  #personnal.page-current article h4 {
+    text-align: center;
+    color: #a15920; }
+
+@-webkit-keyframes bounce {
+  25% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%); }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  75% {
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%); } }
+
+@keyframes bounce {
+  25% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%); }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  75% {
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%); } }
+@-webkit-keyframes tumble {
+  60% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@keyframes tumble {
+  60% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+#personnal .descript .puzzle .fa-puzzle-piece,
+#personnal .descript .magic .fa-hat-wizard,
+#personnal .descript .scroll .fa-scroll,
+#personnal .descript .magic .fa-globe-americas {
+  padding-left: 0.5em;
+  font-size: 1.2em;
+  color: #7b0b0bde; }
+#personnal .descript .piece {
+  text-align: justify; }
+#personnal .descript .magic .hobbies {
+  margin: 0.8em 1em; }
+  #personnal .descript .magic .hobbies img {
+    width: 3.5em;
+    height: 3.5em;
+    background-size: contain;
+    margin: 1em 0; }
+#personnal .descript .scroll ul {
+  margin: 1.5em 0 2.2em 0;
+  color: #310505;
+  text-align: justify; }
 
 /*# sourceMappingURL=style2.css.map */

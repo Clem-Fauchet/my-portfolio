@@ -306,8 +306,8 @@ svg.hidden {
 }
 
 /* COMMUN MIXIN PAGES */
-@mixin border() {
-	border: 6px double #ffb64a;
+@mixin border($border-color) {
+	border: 6px double $border-color;
 	height: 6em;
 	display: flex;
 }
@@ -330,7 +330,7 @@ svg.hidden {
 }
 
 @mixin page-presentation ($color) {
-	width: 88%;
+	width: 95%;
 	font-family: $font-main;
 	font-weight: 700;
 	font-size: 0.85em;
@@ -342,13 +342,13 @@ svg.hidden {
 	margin: auto;
 }
 
-@mixin h3-page () {
+@mixin h3-page ($color) {
 	font-family: $font-title;
 	font-weight: 600;
 	letter-spacing: 0.1em;
-	font-size: 1.18em;
+	font-size: 1.28em;
 	text-transform: capitalize;
-	color: #ff7900;
+	color: $color;
 	text-align: left;
 }
 
@@ -365,11 +365,11 @@ svg.hidden {
 }
 
 /***************************** WEB EXPERIENCE PAGE ************************/
-#computer section {
+#computer.page-current section {
 	padding: 0 2.2em;
 
 	.border {
-		@include border;
+		@include border(#ffb64a);
 
 		h2 {
 			@include h2-page (2.6em);
@@ -495,12 +495,12 @@ svg.hidden {
 	}
 }
 
-#computer .presentation {
+#computer .presentation p {
 	@include page-presentation (#cf8617);
 }
 
 #computer h3 {
-	@include h3-page;
+	@include h3-page(#ff7900);
 }
 
 #computer article {
@@ -673,7 +673,8 @@ svg.hidden {
 		.chococard-c {
 			background: url('img/ClemChococardWeb.png') no-repeat;
 			background-size: contain;
-			transform-origin: 50% 50%;;
+			transform-origin: 50% 50%;
+			;
 			transform: rotateY(0deg);
 			perspective: 1000px;
 			transition: background 0.4s ease-in, transform 0.4s linear;
@@ -686,10 +687,365 @@ svg.hidden {
 				transform-origin: 50% 50%;
 				transform: rotateY(360deg);
 				perspective: 1000px;
-				transition: background 0.4s ease-in, transform 0.4s linear;	
+				transition: background 0.4s ease-in, transform 0.4s linear;
 			}
 		}
 	}
 }
 
 /***************************** CHEMIST EXPERIENCE PAGE ************************/
+#chemist.page-current {
+	section {
+		padding: 0 2.2em;
+
+		.border {
+			@include border(#f0d773);
+
+			h2 {
+				@include h2-page (2.6em);
+
+				.break {
+					.char {
+						content: attr(data-char);
+						animation: break-drop 2s ease 0.4s forwards;
+						color: transparent;
+						overflow: visible;
+						line-height: 1.0em;
+
+						&::before {
+							animation: break-left 2s linear 0.4s forwards;
+							color: $txtColor;
+							visibility: visible;
+							clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0);
+						}
+
+						&::after {
+							animation: break-right 2s linear 0.4s forwards;
+							color: $txtColor;
+							visibility: visible;
+							clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%);
+						}
+					}
+				}
+			}
+
+			.fa-flask {
+				@include page-sticker;
+			}
+		}
+
+		&.presentation p {
+			@include page-presentation (#cf8617);
+		}
+
+		h3 {
+			@include h3-page(#ff7900);
+		}
+
+		article {
+			@include article;
+
+			h4 {
+				text-align: center;
+				color: #a15920;
+			}
+		}
+	}
+}
+
+
+@keyframes break-drop {
+
+	0%,
+	20% {
+		-webkit-transform: translateY(-150%);
+		transform: translateY(-150%);
+		opacity: 0;
+	}
+
+	22% {
+		-webkit-transform: translateY(10%);
+		transform: translateY(10%);
+		opacity: 1;
+	}
+
+	25% {
+		-webkit-transform: translateY(-5%);
+		transform: translateY(-5%);
+	}
+
+	30%,
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes break-left {
+
+	0%,
+	22% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	25% {
+		-webkit-transform: rotate(-8deg);
+		transform: rotate(-8deg)
+	}
+
+	28% {
+		-webkit-transform: rotate(-10deg);
+		transform: rotate(-10deg)
+	}
+
+	30% {
+		-webkit-transform: rotate(-0deg);
+		transform: rotate(-0deg);
+		-webkit-box-shadow: 0px 3px 6px #8e650b;
+		box-shadow: 0px 3px 6px #8e650b;
+	}
+
+	40% {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		-webkit-transform: rotate(-7deg);
+		transform: rotate(-7deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(-7deg);
+		transform: rotate(-7deg);
+	}
+}
+
+@keyframes break-right {
+
+	0%,
+	22% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0)
+	}
+
+	25% {
+		-webkit-transform: rotate(5deg);
+		transform: rotate(5deg);
+	}
+
+	28% {
+		-webkit-transform: rotate(10deg) translateY(10%);
+		transform: rotate(10deg) translateY(10%)
+	}
+
+	30% {
+		-webkit-transform: rotate(5deg) translateY(5%);
+		transform: rotate(5deg) translateY(5%);
+	}
+
+	100% {
+		-webkit-transform: rotate(5deg) translateY(5%);
+		transform: rotate(5deg) translateY(5%)
+	}
+}
+
+#chemist .experiences {
+	.experience {
+		.fa-vial {
+			padding-left: 0.5em;
+			font-size: 1.2em;
+			color: #484025cc;
+		}
+
+		.date {
+			font-weight: bolder;
+			font-size: 0.89em;
+			color: #a15918;
+		}
+
+		.detail {
+
+			.publi {
+				li {
+					margin: 1em;
+				}
+
+				a,
+				a:hover,
+				a:focus {
+					outline: none;
+					font-size: 0.88em;
+					color: #5e3917;
+				}
+			}
+
+			.descript {
+				margin: 0.5em 0;
+				font-size: 0.92em;
+			}
+		}
+
+		.company {
+			figure {
+				padding: 0;
+
+				img {
+					width: 8em;
+					height: 8em;
+				}
+			}
+		}
+
+		.descript {
+			subject {
+				margin: 1em 0;
+
+				.mars {
+					font-style: italic;
+					color: #bc0f0f;
+				}
+			}
+
+			figure {
+				img {
+					width: 10em;
+					height: 10em;
+					opacity: 0.75;
+				}
+			}
+		}
+	}
+}
+
+/***************************** PERSONNAL EXPERIENCE PAGE ************************/
+#personnal {
+	h2.bounce {
+		.word {
+			transform: translateX(-200%);
+			opacity: 0;
+		}
+	}
+}
+
+#personnal.page-current {
+	section {
+		padding: 0 2.2em;
+
+		.border {
+			@include border(#f0d773);
+
+			h2 {
+				@include h2-page (2.6em);
+
+				&.bounce {
+					.word {
+						transform: translateX(0%);
+						opacity: 1;
+						transition: transform 1.5s ease, opacity 0.5s ease;
+
+						.char {
+							color: transparent;
+							overflow: visible;
+							animation: bounce 1.5s ease;
+							animation-delay: calc(var(--char-index) * -0.125s);
+
+							&::after {
+								animation: tumble 1.5s linear 0.3s forwards;
+								color: $txtColor;
+								visibility: visible;
+								z-index: 95;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.fa-user-edit {
+			@include page-sticker;
+		}
+	}
+
+	.presentation p {
+		@include page-presentation (#ffbd21);
+	}
+
+	h3 {
+		@include h3-page(#e6c40e);
+	}
+
+	article {
+		@include article;
+		font-size: 0.78em;
+
+		h4 {
+			text-align: center;
+			color: #a15920;
+		}
+	}
+
+}
+
+@keyframes bounce {
+	25% {
+		transform: translateY(-25%)
+	}
+
+	50% {
+		transform: translateY(0)
+	}
+
+	75% {
+		transform: translateY(-35%)
+	}
+}
+
+@keyframes tumble {
+	60% {
+		transform: rotate(180deg)
+	}
+
+	100% {
+		transform: rotate(360deg)
+	}
+}
+
+#personnal {
+	.descript {
+
+		.puzzle .fa-puzzle-piece,
+		.magic .fa-hat-wizard,
+		.scroll .fa-scroll,
+		.magic .fa-globe-americas {
+			padding-left: 0.5em;
+			font-size: 1.2em;
+			color: #7b0b0bde;
+		}
+
+
+		.piece {
+			text-align: justify;
+		}
+
+		.magic {
+			.hobbies {
+				margin: 0.8em 1em;
+
+				img {
+					width: 3.5em;
+					height: 3.5em;
+					background-size: contain;
+					margin: 1em 0;
+				}
+			}
+		}
+
+		.scroll ul {
+			margin: 1.5em 0 2.2em 0;
+			color: #310505;
+			text-align: justify;
+		}
+	}
+}
