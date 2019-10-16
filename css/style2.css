@@ -96,7 +96,47 @@ svg.hidden {
     height: 3.4em;
     opacity: 0.85; }
 
-/**/
+/***** MEDIA QUERY ***/
+@media screen and (min-width: 576px) {
+  .page_nav .pagenav_button {
+    width: 3.8em;
+    height: 3.8em; }
+  .page_nav .link {
+    top: 92%;
+    right: 1.8em; }
+  .page_nav img {
+    height: 4.0em; } }
+@media screen and (min-width: 768px) {
+  .page_nav .pagenav_button {
+    width: 4.2em;
+    height: 4.2em; }
+  .page_nav .link {
+    right: 2.3em; }
+  .page_nav img {
+    height: 4.5em; } }
+@media screen and (min-width: 992px) {
+  .page_nav .pagenav_button {
+    width: 4.5em;
+    height: 4.5em; }
+    .page_nav .pagenav_button:hover svg.icon {
+      opacity: 0.5;
+      stroke-dasharray: 430 30;
+      stroke-dashoffset: 0;
+      -webkit-transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease;
+      transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease; }
+  .page_nav .link {
+    top: 93%;
+    right: 5em; }
+  .page_nav img {
+    height: 4.8em; }
+    .page_nav img:hover {
+      -webkit-transform: scale(1.15);
+              transform: scale(1.15);
+      opacity: 0.9;
+      -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
+      transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      transition: transform 0.4s ease, opacity 0.4s ease, -webkit-transform 0.4s ease; } }
 /* REVEALER BOX */
 .revealer {
   width: 100vw;
@@ -1273,5 +1313,239 @@ svg.hidden {
   margin: 1.5em 0 2.2em 0;
   color: #310505;
   text-align: justify; }
+
+/***************************** MEDIA QUERIES INTRO ************************/
+@media screen and (min-width: 576px) {
+  #intro,
+  #intro.page-current {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    #intro .name h1,
+    #intro.page-current .name h1 {
+      font-size: 1.58em; }
+    #intro .name .chococard,
+    #intro .name .chococard.on,
+    #intro.page-current .name .chococard,
+    #intro.page-current .name .chococard.on {
+      width: 120px;
+      height: 120px; }
+    #intro .name h3,
+    #intro.page-current .name h3 {
+      font-size: 0.76em; }
+    #intro .presentation,
+    #intro.page-current .presentation {
+      font-size: 0.95em; }
+      #intro .presentation p,
+      #intro.page-current .presentation p {
+        width: 90%; }
+    #intro .skills h2,
+    #intro.page-current .skills h2 {
+      font-size: 1.52em; }
+    #intro .skills h3,
+    #intro.page-current .skills h3 {
+      font-size: 1.26em; }
+    #intro .skills figure img,
+    #intro.page-current .skills figure img {
+      width: 4.8em;
+      height: 4.8em; }
+    #intro .skills figure figcaption,
+    #intro.page-current .skills figure figcaption {
+      font-size: 0.80em; } }
+@media screen and (min-width: 768px) {
+  #intro .name h1,
+  #intro.page-current .name h1 {
+    font-size: 1.75em;
+    line-height: 4em; }
+  #intro .name .chococard,
+  #intro .name .chococard.on,
+  #intro.page-current .name .chococard,
+  #intro.page-current .name .chococard.on {
+    width: 145px;
+    height: 145px; }
+  #intro .name h2,
+  #intro.page-current .name h2 {
+    font-size: 1.59em;
+    margin-top: -1em;
+    text-align: center; }
+  #intro .presentation,
+  #intro.page-current .presentation {
+    font-size: 0.99em; }
+  #intro .skills h2,
+  #intro.page-current .skills h2 {
+    font-size: 1.55em; }
+  #intro .skills h3,
+  #intro.page-current .skills h3 {
+    font-size: 1.32em; }
+  #intro .skills figure img,
+  #intro.page-current .skills figure img {
+    width: 5.5em;
+    height: 5.5em; }
+  #intro .skills figure figcaption,
+  #intro.page-current .skills figure figcaption {
+    font-size: 0.83em; } }
+@media screen and (min-width: 992px) {
+  #intro .name h1,
+  #intro.page-current .name h1 {
+    font-size: 1.95em;
+    line-height: 4em;
+    margin-right: 0; }
+  #intro .name .chococard,
+  #intro .name .chococard.on,
+  #intro.page-current .name .chococard,
+  #intro.page-current .name .chococard.on {
+    width: 155px;
+    height: 155px;
+    margin-left: 4em;
+    pointer-events: stroke; }
+    #intro .name .chococard:hover,
+    #intro .name .chococard.on:hover,
+    #intro.page-current .name .chococard:hover,
+    #intro.page-current .name .chococard.on:hover {
+      -webkit-transform: translate(5px, 5px);
+              transform: translate(5px, 5px);
+      -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
+      transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
+      transition: background 0.4s ease-in, transform 0.4s linear;
+      transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
+  #intro .name h2,
+  #intro.page-current .name h2 {
+    font-size: 1.95em; }
+  #intro .name h3,
+  #intro.page-current .name h3 {
+    font-size: 0.95em; }
+  #intro .presentation,
+  #intro.page-current .presentation {
+    font-size: 1.2em; }
+  #intro .skills h2,
+  #intro.page-current .skills h2 {
+    font-size: 1.62em; }
+  #intro .skills h3,
+  #intro.page-current .skills h3 {
+    font-size: 1.42em; }
+  #intro .skills figure img,
+  #intro.page-current .skills figure img {
+    width: 6.2em;
+    height: 6.2em; }
+  #intro .skills figure figcaption,
+  #intro.page-current .skills figure figcaption {
+    font-size: 1.0em; } }
+/************** WEB CHEMIST PERSONNAL PAGE QUERY *********/
+@media screen and (min-width: 576px) {
+  #computer,
+  #chemist,
+  #personnal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    #computer .border h2,
+    #chemist .border h2,
+    #personnal .border h2 {
+      font-size: 1.65em;
+      line-height: 1.8em; }
+    #computer .border .fa-laptop-code,
+    #computer .border .fa-flask,
+    #computer .border .fa-user-edit,
+    #chemist .border .fa-laptop-code,
+    #chemist .border .fa-flask,
+    #chemist .border .fa-user-edit,
+    #personnal .border .fa-laptop-code,
+    #personnal .border .fa-flask,
+    #personnal .border .fa-user-edit {
+      font-size: 1.65em; }
+    #computer .presentation p,
+    #chemist .presentation p,
+    #personnal .presentation p {
+      width: 90%;
+      font-size: 0.95em; }
+    #computer h3,
+    #chemist h3,
+    #personnal h3 {
+      font-size: 1.52em; }
+    #computer h4,
+    #chemist h4,
+    #personnal h4 {
+      font-size: 1.26em; }
+    #computer .experiences .experience .date,
+    #chemist .experiences .experience .date,
+    #personnal .experiences .experience .date {
+      font-size: 1.0em; }
+    #computer .experiences .experience .detail .descript,
+    #chemist .experiences .experience .detail .descript,
+    #personnal .experiences .experience .detail .descript {
+      margin: 2.5em 0;
+      font-size: 0.98em; }
+    #computer .experiences .experience .detail figure figcaption,
+    #chemist .experiences .experience .detail figure figcaption,
+    #personnal .experiences .experience .detail figure figcaption {
+      font-size: 0.80em; }
+    #computer .experiences .experience .detail button.website,
+    #chemist .experiences .experience .detail button.website,
+    #personnal .experiences .experience .detail button.website {
+      font-size: 0.82em;
+      border: 2px solid #FFA500; }
+    #computer .experiences .experience .partners figure img,
+    #computer .experiences .experience .company figure img,
+    #chemist .experiences .experience .partners figure img,
+    #chemist .experiences .experience .company figure img,
+    #personnal .experiences .experience .partners figure img,
+    #personnal .experiences .experience .company figure img {
+      width: 10em;
+      height: 10em; }
+    #computer .outils .tools .adobe figure img,
+    #chemist .outils .tools .adobe figure img,
+    #personnal .outils .tools .adobe figure img {
+      width: 4.0em;
+      height: 4.0em; }
+    #computer .outils .tools .other figure img,
+    #chemist .outils .tools .other figure img,
+    #personnal .outils .tools .other figure img {
+      width: 4.5em;
+      height: 4.5em; }
+    #computer .outils .tools .magic .hobbies img,
+    #chemist .outils .tools .magic .hobbies img,
+    #personnal .outils .tools .magic .hobbies img {
+      width: 4.5em;
+      height: 4.5em; }
+    #computer .creations svg,
+    #computer .creations .norms,
+    #computer .creations .chococard-c,
+    #chemist .creations svg,
+    #chemist .creations .norms,
+    #chemist .creations .chococard-c,
+    #personnal .creations svg,
+    #personnal .creations .norms,
+    #personnal .creations .chococard-c {
+      width: 10em;
+      height: 10em;
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%; }
+    #computer #personnal article,
+    #chemist #personnal article,
+    #personnal #personnal article {
+      font-size: 0.88em; }
+    #computer #personnal .puzzle .fa-puzzle-piece,
+    #computer #personnal .magic .fa-hat-wizard,
+    #computer #personnal .scroll .fa-scroll,
+    #computer #personnal .magic .fa-globe-americas,
+    #chemist #personnal .puzzle .fa-puzzle-piece,
+    #chemist #personnal .magic .fa-hat-wizard,
+    #chemist #personnal .scroll .fa-scroll,
+    #chemist #personnal .magic .fa-globe-americas,
+    #personnal #personnal .puzzle .fa-puzzle-piece,
+    #personnal #personnal .magic .fa-hat-wizard,
+    #personnal #personnal .scroll .fa-scroll,
+    #personnal #personnal .magic .fa-globe-americas {
+      font-size: 1.35em; } }
 
 /*# sourceMappingURL=style2.css.map */

@@ -1049,3 +1049,292 @@ svg.hidden {
 		}
 	}
 }
+
+/***************************** MEDIA QUERIES INTRO ************************/
+@media screen and (min-width: 576px) {
+
+	#intro,
+	#intro.page-current {
+		@include flexCenter(no-wrap);
+
+		.name {
+			h1 {
+				font-size: 1.58em;
+			}
+
+			.chococard,
+			.chococard.on {
+				width: 120px;
+				height: 120px;
+			}
+
+			h3 {
+				font-size: 0.76em;
+			}
+		}
+
+		.presentation {
+			font-size: 0.95em;
+
+			p {
+				width: 90%;
+			}
+		}
+
+		.skills {
+			h2 {
+				font-size: 1.52em;
+			}
+
+			h3 {
+				font-size: 1.26em;
+			}
+
+			figure {
+				img {
+					width: 4.8em;
+					height: 4.8em;
+				}
+
+				figcaption {
+					font-size: 0.80em;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	#intro,
+	#intro.page-current {
+
+		.name {
+			h1 {
+				font-size: 1.75em;
+				line-height: 4em;
+			}
+
+			.chococard,
+			.chococard.on {
+				width: 145px;
+				height: 145px;
+			}
+
+			h2 {
+				font-size: 1.59em;
+				margin-top: -1em;
+				text-align: center;
+			}
+
+		}
+
+		.presentation {
+			font-size: 0.99em;
+		}
+
+		.skills {
+			h2 {
+				font-size: 1.55em;
+			}
+
+			h3 {
+				font-size: 1.32em;
+			}
+
+			figure {
+				img {
+					width: 5.5em;
+					height: 5.5em;
+				}
+
+				figcaption {
+					font-size: 0.83em;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+
+	#intro,
+	#intro.page-current {
+
+		.name {
+			h1 {
+				font-size: 1.95em;
+				line-height: 4em;
+				margin-right: 0;
+			}
+
+			.chococard,
+			.chococard.on {
+				width: 155px;
+				height: 155px;
+				margin-left: 4em;
+				pointer-events: stroke;
+
+				&:hover {
+					transform: translate(5px, 5px);
+					transition: background 0.4s ease-in, transform 0.4s linear;
+				}
+			}
+
+			h2 {
+				font-size: 1.95em;
+			}
+
+			h3 {
+				font-size: 0.95em;
+			}
+
+		}
+
+		.presentation {
+			font-size: 1.2em;
+		}
+
+		.skills {
+			h2 {
+				font-size: 1.62em;
+			}
+
+			h3 {
+				font-size: 1.42em;
+			}
+
+			figure {
+				img {
+					width: 6.2em;
+					height: 6.2em;
+				}
+
+				figcaption {
+					font-size: 1.0em;
+				}
+			}
+		}
+	}
+}
+
+/************** WEB CHEMIST PERSONNAL PAGE QUERY *********/
+@media screen and (min-width: 576px) {
+
+	#computer,
+	#chemist,
+	#personnal {
+		@include flexCenter(no-wrap);
+
+		.border {
+			h2 {
+				font-size: 1.65em;
+				line-height: 1.8em;
+			}
+
+			.fa-laptop-code,
+			.fa-flask,
+			.fa-user-edit {
+				font-size: 1.65em;
+			}
+
+		}
+
+		.presentation p {
+			width: 90%;
+			font-size: 0.95em;
+		}
+
+		h3 {
+			font-size: 1.52em;
+		}
+
+		h4 {
+			font-size: 1.26em;
+		}
+
+		.experiences {
+			.experience {
+				.date {
+					font-size: 1.0em;
+				}
+
+				.detail {
+					.descript {
+						margin: 2.5em 0;
+						font-size: 0.98em;
+					}
+
+					figure {
+						figcaption {
+							font-size: 0.80em;
+						}
+					}
+
+
+					button.website {
+						font-size: 0.82em;
+						border: 2px solid #FFA500;
+					}
+				}
+
+				.partners,
+				.company {
+					figure img {
+						width: 10em;
+						height: 10em;
+					}
+				}
+			}
+		}
+
+		.outils {
+			.tools {
+				.adobe {
+					figure img {
+						width: 4.0em;
+						height: 4.0em;
+					}
+				}
+
+
+				.other {
+					figure img {
+						width: 4.5em;
+						height: 4.5em;
+					}
+				}
+
+				.magic .hobbies img {
+					width: 4.5em;
+					height: 4.5em;
+				}
+			}
+		}
+
+		.creations {
+
+			svg,
+			.norms,
+			.chococard-c {
+				width: 10em;
+				height: 10em;
+				transform-origin: 50% 50%;
+			}
+		}
+
+		#personnal {
+			article {
+				font-size: 0.88em;
+			}
+
+			.puzzle .fa-puzzle-piece,
+			.magic .fa-hat-wizard,
+			.scroll .fa-scroll,
+			.magic .fa-globe-americas {
+				font-size: 1.35em;
+			}
+		}
+
+	}
+}
