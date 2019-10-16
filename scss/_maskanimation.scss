@@ -1,0 +1,88 @@
+.crea1 {
+	svg#logo {
+		fill: none;
+		stroke-width: 2px;
+
+		#circle {
+			stroke: ghostwhite;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-width: 3.75px;
+
+			.big_circle {
+				stroke-dasharray: 166, 10, 166, 10;
+				transition: 2.8s ease-in-out, stroke 3s linear;
+
+			}
+
+			.small_circle {
+				stroke-dasharray: 90, 40, 90, 40, 90, 296;
+				transition: 2.5s linear, stroke 3.2s linear;
+			}
+		}
+
+		#mask {
+			opacity: 1;
+			transform: rotate(0deg);
+			transition: 1.8s ease;
+			transform-origin: 50% 50%;
+
+			.cape {
+				stroke: #9e0b0b;
+				stroke-width: 3px;
+				fill: #840a0a;
+				perspective: 1000px;
+			}
+
+			.left_eye,
+			.right_eye {
+				stroke: #9e0b0b;
+				fill: #5f0101;
+				transition: opacity 1.5s ease-in;
+			}
+		}
+	}
+
+	&.on {
+		svg#logo {
+			#circle {
+				.big_circle {
+					stroke-dasharray: 166, 0, 166, 0;
+					stroke-dashoffset: -200;
+					stroke: #530f0f;
+					transition: 2.8s ease-in-out, stroke 3s linear;
+
+				}
+
+				.small_circle {
+					stroke: #530f0f;
+					stroke-dasharray: 90, 0, 90, 0, 90, 0;
+					stroke-dashoffset: -230;
+					transition: 2.5s linear, stroke 3.2s linear;
+				}
+			}
+
+			#mask {
+				opacity: 0.92;
+				transform: rotate(720deg);
+				transition: 1.8s ease;
+				transform-origin: 50% 50%;
+
+				.cape {
+					stroke: #800000;
+					stroke-width: 3px;
+					fill: #900e0e;
+					perspective: 1000px;
+				}
+
+				.left_eye,
+				.right_eye {
+					stroke: #820505;
+					fill: #550101;
+					opacity: 0;
+					transition: opacity 1.5s ease-in;
+				}
+			}
+		}
+	}
+}

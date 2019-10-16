@@ -19,8 +19,11 @@ svg.hidden {
 }
 
 /* LAYOUT REVELER */
+
 @import './layout';
 @import './revealer';
+
+/* LAYOUT REVELER */
 
 /************** INTRO PAGE ****************/
 @mixin flexCenter ($flex-wrap) {
@@ -61,7 +64,7 @@ svg.hidden {
 .page-current#intro .name .chococard {
 	animation: choco-flip 3.0s ease-out 3.3s;
 
-	.on {
+	&.on {
 		background: url('img/ClemChocobackWeb.png') no-repeat;
 		background-size: contain;
 		transform-origin: 50% 50%;
@@ -97,3 +100,596 @@ svg.hidden {
 		opacity: 1;
 	}
 }
+
+#intro .name h3 {
+	font-style: italic;
+	font-family: $font-main;
+	font-weight: 700;
+	font-size: 0.70em;
+	color: $txtColor;
+	opacity: 0.8;
+}
+
+#intro .name h2 {
+	font-family: $font-title;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #ff9115;
+	margin: auto;
+
+	&.ghost.words {
+		.char {
+
+			animation: ghost 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			animation-delay: calc(var(--distance-percent) * 0.125s);
+			transform-origin: 50% 100%;
+		}
+
+		.junior {
+			.char {
+				animation: ghostj 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+				animation-delay: calc(var(--distance-percent) * 0.125s);
+				transform-origin: 50% 100%;
+
+				&:after {
+					animation: ghostfade 3s ease-in 1.2s;
+					content: attr(data-char);
+					opacity: 0.5;
+					transform-origin: 100% 50%;
+					visibility: visible;
+				}
+			}
+
+		}
+	}
+}
+
+@keyframes ghost {
+	40% {
+		transform:
+			translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+	}
+
+	50% {
+		transform: translateY(6%);
+	}
+
+	55% {
+		transform: translateY(-4%);
+	}
+
+	60% {
+		transform: translateY(2%);
+	}
+
+	65% {
+		transform: translateY(-1%);
+	}
+
+	70% {
+		transform: translateY(0%);
+	}
+}
+
+@keyframes ghostj {
+	35% {
+		color: #db7c12;
+	}
+
+	40% {
+		transform:
+			translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
+	}
+
+	50% {
+		transform: translateY(6%);
+	}
+
+	55% {
+		transform: translateY(-4%);
+	}
+
+	60% {
+		transform: translateY(2%);
+		color: #f4c200;
+	}
+
+	65% {
+		transform: translateY(-1%);
+	}
+
+	70% {
+		transform: translateY(0%);
+	}
+
+	100% {
+		color: #fdcd13;
+	}
+}
+
+@keyframes ghostfade {
+	8% {
+		opacity: 0;
+		transform: translateY(0);
+		color: #fad092;
+	}
+
+	40% {
+		opacity: 0.6;
+		transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
+	}
+
+	60%,
+	100% {
+		opacity: 0;
+		transform: translateY(-200%);
+	}
+}
+
+#intro .presentation {
+	font-family: $font-main;
+	font-weight: 700;
+	font-size: 0.85em;
+	color: #efe3c6;
+	line-height: 1.54em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	letter-spacing: 0.1em;
+
+	p {
+		width: 88%;
+		margin: auto;
+
+		a,
+		a:hover,
+		a:focus {
+			text-decoration: underline;
+			text-decoration-color: $txtColor;
+			outline: none;
+			color: #efe3c6;
+		}
+
+		.welcome {
+			font-size: 1.65em;
+			color: #d9d490;
+		}
+	}
+}
+
+#intro section.skills {
+	margin-bottom: 2em;
+
+	h2 {
+		font-family: $font-title;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		font-size: 1.4em;
+		text-transform: capitalize;
+		color: #db7c12;
+		text-align: left;
+	}
+
+	h3 {
+		font-family: $font-title;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		font-size: 1.2em;
+		color: #e0b81e;
+		text-align: center;
+	}
+
+	.skills-d {
+		display: inline-flex;
+		flex-wrap: wrap;
+
+		.detail {
+			@include flexCenter (wrap);
+			margin-bottom: 2em;
+		}
+	}
+
+	figure {
+		img {
+			width: 4.5em;
+			height: 4.5em;
+			background-size: contain;
+		}
+
+		figcaption {
+			font-family: $font-title;
+			font-weight: 400;
+			color: #efe3c6;
+			letter-spacing: 0.05em;
+			font-size: 0.7em;
+		}
+	}
+}
+
+/* COMMUN MIXIN PAGES */
+@mixin border() {
+	border: 6px double #ffb64a;
+	height: 6em;
+	display: flex;
+}
+
+@mixin page-sticker () {
+	width: 20%;
+	margin: auto;
+	font-size: 1.5em;
+	color: #22292b;
+}
+
+@mixin h2-page ($line-height) {
+	font-family: $font-title;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: $txtColor;
+	width: 80%;
+	margin: auto;
+	line-height: $line-height;
+}
+
+@mixin page-presentation ($color) {
+	width: 88%;
+	font-family: $font-main;
+	font-weight: 700;
+	font-size: 0.85em;
+	color: $color;
+	line-height: 1.54em;
+	letter-spacing: 0.1em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	margin: auto;
+}
+
+@mixin h3-page () {
+	font-family: $font-title;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	font-size: 1.18em;
+	text-transform: capitalize;
+	color: #ff7900;
+	text-align: left;
+}
+
+@mixin article () {
+	font-family: $font-main;
+	font-weight: 700;
+	font-size: 0.88em;
+	color: #5e3917;
+	line-height: 1.54em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: left;
+	letter-spacing: 0.1em;
+}
+
+/***************************** WEB EXPERIENCE PAGE ************************/
+#computer section {
+	padding: 0 2.2em;
+
+	.border {
+		@include border;
+
+		h2 {
+			@include h2-page (2.6em);
+			position: relative;
+
+			&::before {
+				content: attr(data-text);
+				position: absolute;
+				text-shadow: 1px 0px #fc339d;
+				color: $txtColor;
+				overflow: hidden;
+				clip: rect(0, 900px, 0, 0);
+				animation: noise-anim 2.1s 4 linear alternate-reverse backwards;
+			}
+
+			&::after {
+				content: attr(data-text);
+				position: absolute;
+				right: 0em;
+				width: 100%;
+				text-shadow: -1px 0px #251cfc;
+				color: $txtColor;
+				overflow: hidden;
+				clip: rect(0, 900px, 0, 0);
+				animation: noise-anim 2s 4 linear alternate-reverse backwards;
+				animation-delay: 0.3s;
+			}
+		}
+
+		.fa-laptop-code {
+			@include page-sticker;
+		}
+	}
+}
+
+@keyframes noise-anim {
+	0% {
+		clip: rect(0, 900px, 0, 0)
+	}
+
+	1% {
+		clip: rect(89px, 9999px, 100px, 0)
+	}
+
+	5% {
+		clip: rect(4px, 9999px, 62px, 0)
+	}
+
+	10% {
+		clip: rect(43px, 9999px, 16px, 0)
+	}
+
+	15% {
+		clip: rect(2px, 9999px, 68px, 0)
+	}
+
+	20% {
+		clip: rect(12px, 9999px, 6px, 0)
+	}
+
+	25% {
+		clip: rect(89px, 9999px, 25px, 0)
+	}
+
+	30% {
+		clip: rect(15px, 9999px, 38px, 0)
+	}
+
+	35% {
+		clip: rect(57px, 9999px, 97px, 0)
+	}
+
+	40% {
+		clip: rect(24px, 9999px, 72px, 0)
+	}
+
+	45% {
+		clip: rect(81px, 9999px, 3px, 0)
+	}
+
+	50% {
+		clip: rect(93px, 9999px, 26px, 0)
+	}
+
+	55% {
+		clip: rect(68px, 9999px, 85px, 0)
+	}
+
+	60% {
+		clip: rect(43px, 9999px, 28px, 0)
+	}
+
+	65% {
+		clip: rect(44px, 9999px, 11px, 0)
+	}
+
+	70% {
+		clip: rect(17px, 9999px, 33px, 0)
+	}
+
+	75% {
+		clip: rect(74px, 9999px, 66px, 0)
+	}
+
+	80% {
+		clip: rect(100px, 9999px, 4px, 0)
+	}
+
+	85% {
+		clip: rect(92px, 9999px, 31px, 0)
+	}
+
+	90% {
+		clip: rect(93px, 9999px, 98px, 0)
+	}
+
+	95% {
+		clip: rect(23px, 9999px, 77px, 0)
+	}
+
+	100% {
+		clip: rect(92px, 9999px, 8px, 0)
+	}
+}
+
+#computer .presentation {
+	@include page-presentation (#cf8617);
+}
+
+#computer h3 {
+	@include h3-page;
+}
+
+#computer article {
+	@include article;
+
+	h4 {
+		text-align: center;
+		color: #a15920;
+	}
+}
+
+#computer .experiences {
+	.experience {
+		.fa-terminal {
+			padding-left: 0.5em;
+			color: #484025cc;
+		}
+
+		.date {
+			font-weight: bolder;
+			font-size: 0.89em;
+			color: #a15918;
+		}
+
+		.detail {
+			figure {
+				margin: 1em 0;
+				position: relative;
+
+				img {
+					background-size: contain;
+					width: 100%;
+					height: auto;
+					border-radius: 2.2em;
+				}
+
+				figcaption {
+					position: absolute;
+					text-align: right;
+					color: ghostwhite;
+					font-size: 0.72em;
+					line-height: 1.3em;
+					top: 1em;
+					right: 2em;
+				}
+			}
+
+			button.website {
+				background: none;
+				position: absolute;
+				font-family: $font-main;
+				font-weight: 700;
+				font-size: 0.70em;
+				border: 1px solid #FFA500;
+				border-radius: 15px;
+				padding: 5px;
+				bottom: 40%;
+				right: 10%;
+
+				a,
+				a:hover,
+				a:focus {
+					outline: none;
+					text-decoration: none;
+					color: $txtColor;
+				}
+			}
+
+			.descript {
+				margin: 0.5em 0;
+				font-size: 0.92em;
+			}
+		}
+
+		.partners {
+			figure {
+				padding: 0;
+
+				img {
+					width: 8em;
+					height: 8em;
+				}
+			}
+		}
+	}
+}
+
+#computer .outils {
+	.tools {
+		text-align: center;
+
+		.adobe {
+			display: inline-flex;
+			flex-wrap: wrap;
+			margin-left: 1em;
+
+			figure {
+				img {
+					width: 3.0em;
+					height: 3.0em;
+					background-size: contain;
+					margin-left: 1em;
+					margin-bottom: 0.5em
+				}
+
+				figcaption {
+					visibility: hidden;
+				}
+			}
+		}
+
+		.other {
+			figure {
+
+				img {
+					width: 3.8em;
+					height: 3.8em;
+					margin-bottom: 0;
+					margin-left: -1em;
+				}
+
+				figcaption {
+					visibility: hidden;
+				}
+			}
+		}
+	}
+}
+
+#computer .creations {
+	margin-bottom: 5em;
+
+	.crea1,
+	.crea2,
+	.crea3 {
+		text-align: center;
+	}
+
+	svg,
+	.norms,
+	.chococard-c {
+		width: 6em;
+		height: 6em;
+		transform-origin: 50% 50%;
+	}
+}
+
+@import 'maskanimation';
+
+#computer .creations {
+	.crea2 {
+		.norms {
+			background: url('img/NormsJardinage-web.png') no-repeat;
+			background-size: contain;
+			transition: background 0.4s ease-in;
+		}
+
+		&.on {
+			.norms {
+				background: url('img/NormsComptable-web.png') no-repeat;
+				background-size: contain;
+				transition: background 0.4s ease-in;
+			}
+		}
+	}
+}
+
+#computer .creations {
+	.crea3 {
+		.chococard-c {
+			background: url('img/ClemChococardWeb.png') no-repeat;
+			background-size: contain;
+			transform-origin: 50% 50%;;
+			transform: rotateY(0deg);
+			perspective: 1000px;
+			transition: background 0.4s ease-in, transform 0.4s linear;
+		}
+
+		&.on {
+			.chococard-c {
+				background: url('img/ClemChocobackWeb.png') no-repeat;
+				background-size: contain;
+				transform-origin: 50% 50%;
+				transform: rotateY(360deg);
+				perspective: 1000px;
+				transition: background 0.4s ease-in, transform 0.4s linear;	
+			}
+		}
+	}
+}
+
+/***************************** CHEMIST EXPERIENCE PAGE ************************/
