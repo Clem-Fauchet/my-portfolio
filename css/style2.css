@@ -437,5 +437,4 @@ svg.hidden { display: none; stroke-miterlimit: 10; }
   #computer.page-current section.creations .crea1 .chococard-c, #computer.page-current section.creations .crea2 .chococard-c, #computer.page-current section.creations .crea3 .chococard-c, #chemist.page-current section.creations .crea1 .chococard-c, #chemist.page-current section.creations .crea2 .chococard-c, #chemist.page-current section.creations .crea3 .chococard-c, #personnal.page-current section.creations .crea1 .chococard-c, #personnal.page-current section.creations .crea2 .chococard-c, #personnal.page-current section.creations .crea3 .chococard-c { width: 11em; height: 11em; }
   #personnal .descript .puzzle .fa-puzzle-piece, #personnal .descript .magic .fa-hat-wizard, #personnal .descript .scroll .fa-scroll, #personnal .descript .magic .fa-globe-americas { font-size: 1.75em; }
   #personnal .descript .magic .hobbies img { height: 8em; width: 6em; margin: 0.5em; -webkit-transform: scale(0.5); transform: scale(0.5); } }
-
 /*# sourceMappingURL=style2.css.map */
