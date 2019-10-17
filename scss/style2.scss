@@ -899,7 +899,7 @@ svg.hidden {
 		}
 
 		.descript {
-			subject {
+			.subject {
 				margin: 1em 0;
 
 				.mars {
@@ -1221,120 +1221,383 @@ svg.hidden {
 /************** WEB CHEMIST PERSONNAL PAGE QUERY *********/
 @media screen and (min-width: 576px) {
 
-	#computer,
-	#chemist,
-	#personnal {
+	#computer.page-current,
+	#chemist.page-current,
+	#personnal.page-current {
 		@include flexCenter(no-wrap);
 
-		.border {
-			h2 {
-				font-size: 1.65em;
-				line-height: 1.8em;
-			}
+		section {
 
-			.fa-laptop-code,
-			.fa-flask,
-			.fa-user-edit {
-				font-size: 1.65em;
-			}
-
-		}
-
-		.presentation p {
-			width: 90%;
-			font-size: 0.95em;
-		}
-
-		h3 {
-			font-size: 1.52em;
-		}
-
-		h4 {
-			font-size: 1.26em;
-		}
-
-		.experiences {
-			.experience {
-				.date {
-					font-size: 1.0em;
+			.border {
+				h2 {
+					font-size: 1.65em;
+					line-height: 1.8em;
 				}
 
-				.detail {
-					.descript {
-						margin: 2.5em 0;
-						font-size: 0.98em;
+				.fa-laptop-code,
+				.fa-flask,
+				.fa-user-edit {
+					font-size: 1.65em;
+				}
+
+			}
+
+			&.presentation p {
+				width: 90%;
+				font-size: 0.95em;
+			}
+
+			h3 {
+				font-size: 1.52em;
+			}
+
+			h4 {
+				font-size: 1.26em;
+			}
+
+			&.experiences {
+				.experience {
+					.date {
+						font-size: 1.0em;
 					}
 
-					figure {
-						figcaption {
-							font-size: 0.80em;
+					.detail {
+						.descript {
+							margin: 2.5em 0;
+							font-size: 0.98em;
+						}
+
+						figure {
+							figcaption {
+								font-size: 0.80em;
+							}
+
+							button.website {
+								font-size: 0.82em;
+								border: 2px solid #FFA500;
+							}
+						}
+
+
+
+					}
+
+					.partners,
+					.company {
+						figure img {
+							width: 10em;
+							height: 10em;
+						}
+					}
+				}
+			}
+
+			&.outils {
+				.tools {
+					.adobe {
+						figure img {
+							width: 4.0em;
+							height: 4.0em;
 						}
 					}
 
 
-					button.website {
-						font-size: 0.82em;
-						border: 2px solid #FFA500;
+					.other {
+						figure img {
+							width: 4.5em;
+							height: 4.5em;
+						}
 					}
-				}
 
-				.partners,
-				.company {
-					figure img {
-						width: 10em;
-						height: 10em;
-					}
-				}
-			}
-		}
-
-		.outils {
-			.tools {
-				.adobe {
-					figure img {
-						width: 4.0em;
-						height: 4.0em;
-					}
-				}
-
-
-				.other {
-					figure img {
+					.magic .hobbies img {
 						width: 4.5em;
 						height: 4.5em;
 					}
 				}
+			}
 
-				.magic .hobbies img {
-					width: 4.5em;
-					height: 4.5em;
+			&.creations {
+
+				svg,
+				.norms,
+				.chococard-c {
+					width: 10em;
+					height: 10em;
+					transform-origin: 50% 50%;
 				}
 			}
 		}
+	}
 
-		.creations {
-
-			svg,
-			.norms,
-			.chococard-c {
-				width: 10em;
-				height: 10em;
-				transform-origin: 50% 50%;
-			}
+	#personnal {
+		article {
+			font-size: 0.88em;
 		}
 
-		#personnal {
-			article {
-				font-size: 0.88em;
+		.puzzle .fa-puzzle-piece,
+		.magic .fa-hat-wizard,
+		.scroll .fa-scroll,
+		.magic .fa-globe-americas {
+			font-size: 1.35em;
+		}
+	}
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+	#computer.page-current,
+	#chemist.page-current,
+	#personnal.page-current {
+		section {
+			.border {
+				h2 {
+					font-size: 1.85em;
+					line-height: 1.2em;
+				}
+
+				.fa-laptop-code,
+				.fa-flask,
+				.fa-user-edit {
+					font-size: 1.85em;
+				}
+
 			}
+
+			&.presentation p {
+				font-size: 1.05em;
+			}
+
+			h3 {
+				font-size: 1.59em;
+			}
+
+			h4 {
+				font-size: 1.32em;
+			}
+
+			article {
+				font-size: 1em;
+			}
+
+			&.experiences {
+				.experience {
+					.fa_viall {
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
+	}
+
+	#personnal {
+
+		.puzzle .fa-puzzle-piece,
+		.magic .fa-hat-wizard,
+		.scroll .fa-scroll,
+		.magic .fa-globe-americas {
+			font-size: 1.45em;
+		}
+	}
+
+}
+
+@media screen and (min-width: 992px) {
+
+	#computer.page-current,
+	#chemist.page-current,
+	#personnal.page-current {
+
+		section {
+
+			.border {
+				h2 {
+					font-size: 1.95em;
+				}
+
+				.fa-laptop-code,
+				.fa-flask,
+				.fa-user-edit {
+					font-size: 1.95em;
+				}
+
+			}
+
+			&.presentation p {
+				font-size: 1.02em;
+			}
+
+			h3 {
+				font-size: 1.62em;
+			}
+
+			h4 {
+				font-size: 1.42em;
+			}
+
+			&.experiences {
+				.experience {
+
+					.detail {
+
+						figure {
+							figcaption {
+								font-size: 0.99em;
+								line-height: 1.4em;
+								letter-spacing: 0.2em;
+							}
+
+							button.website {
+								font-size: 0.99em;
+								border: 3px solid #FFA500;
+								padding: 0.7em;
+							}
+
+							&:hover {
+								img {
+									filter: blur(0.3);
+									opacity: 0.76;
+									transform: scale(0.98);
+									transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease;
+								}
+
+								button.website {
+									border: 4px solid #FFA500;
+									background: #f8a817de;
+									padding: 0.7em;
+									transform: scale(1.05);
+									transition: background 0.4s ease, transform 0.4s ease;
+								}
+
+								figcaption {
+									opacity: 0;
+									transition: opacity 0.4s ease;
+								}
+							}
+
+						}
+
+
+
+					}
+
+					.partners,
+					.company {
+						figure {
+
+							img {
+								width: 13.5em;
+								height: 13.5em;
+								opacity: 1;
+							}
+
+							&:hover {
+								transform: scale(1.15);
+								transition: opacity 0.4s ease, transform 0.4s ease;
+
+								img {
+									opacity: 0.95;
+								}
+							}
+						}
+					}
+
+					.descript {
+						figure {
+							img {
+								width: 14em;
+								height: 14em;
+								margin-left: 2em;
+							}
+
+							figcaption {
+								margin-left: 3em;
+							}
+						}
+					}
+				}
+			}
+
+			&.outils {
+				.tools {
+					.adobe {
+						figure img {
+							width: 4.0em;
+							height: 4.0em;
+						}
+					}
+
+
+					.other {
+						display: inline-flex;
+						flex-wrap: wrap;
+
+						figure img {
+							width: 5.2em;
+							height: 5.2em;
+						}
+					}
+
+					.magic .hobbies img {
+						width: 4.5em;
+						height: 4.5em;
+					}
+				}
+			}
+
+			&.creations {
+
+				.crea1,
+				.crea2,
+				.crea3 {
+					text-align: left;
+
+					svg,
+					.norms,
+					.chococard-c {
+						cursor: pointer;
+					}
+
+					.chococard-c {
+						width: 11em;
+						height: 11em;
+					}
+
+				}
+
+			}
+		}
+	}
+
+
+
+	#personnal {
+		.descript {
+
 
 			.puzzle .fa-puzzle-piece,
 			.magic .fa-hat-wizard,
 			.scroll .fa-scroll,
 			.magic .fa-globe-americas {
-				font-size: 1.35em;
+				font-size: 1.75em;
+			}
+
+
+
+
+			.magic {
+				.hobbies {
+					img {
+						height: 8em;
+						width: 6em;
+						margin: 0.5em;
+						transform: scale(0.5);
+					}
+				}
 			}
 		}
-
 	}
+
 }

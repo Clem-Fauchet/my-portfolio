@@ -1,1551 +1,441 @@
-body {
-  color: ghostwhite;
-  text-align: center; }
+body { color: ghostwhite; text-align: center; }
 
-svg.hidden {
-  display: none;
-  stroke-miterlimit: 10; }
+svg.hidden { display: none; stroke-miterlimit: 10; }
 
-.container-fluid {
-  padding-left: 0px;
-  padding-right: 0px;
-  min-height: 100vh;
-  background: #22292b;
-  overflow: hidden; }
+.container-fluid { padding-left: 0px; padding-right: 0px; min-height: 100vh; background: #22292b; overflow: hidden; }
 
 /* LAYOUT REVELER */
 /* PAGES SANS NAV */
-.pages {
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0; }
-  .pages .page {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    visibility: hidden;
-    z-index: 1; }
-  .pages .page-current {
-    visibility: visible;
-    position: relative;
-    min-height: 100vh;
-    height: 100%;
-    overflow-y: auto; }
+.pages { position: relative; overflow: hidden; width: 100vw; height: 100vh; z-index: 0; }
+.pages .page { position: absolute; top: 0; left: 0; height: 100vh; visibility: hidden; z-index: 1; }
+.pages .page-current { visibility: visible; position: relative; min-height: 100vh; height: 100%; overflow-y: auto; }
 
 /* PAGE NAV */
-.no-js .page-nav {
-  display: none; }
+.no-js .page-nav { display: none; }
 
-.page_nav {
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  top: 0.2em;
-  bottom: 0.2em;
-  z-index: 9999; }
-  .page_nav .pagenav_button {
-    padding: 0;
-    margin: 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-    pointer-events: auto;
-    width: 3.2em;
-    height: 3.2em;
-    position: absolute; }
-    .page_nav .pagenav_button:focus {
-      outline: none; }
-    .page_nav .pagenav_button .icon {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-      stroke-dasharray: 0;
-      stroke-dashoffset: 320; }
-    .page_nav .pagenav_button.button_left {
-      top: 50%;
-      left: 0.5em;
-      -webkit-transform: rotate(-90deg);
-              transform: rotate(-90deg); }
-    .page_nav .pagenav_button.button_right {
-      top: 50%;
-      right: 0.5em;
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg); }
-    .page_nav .pagenav_button.button_bottom {
-      top: 95%;
-      bottom: 0.5em;
-      left: 47%;
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg); }
-  .page_nav .link {
-    padding: 0;
-    margin: 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-    pointer-events: auto;
-    width: 3.2em;
-    height: 3.2em;
-    position: absolute;
-    top: 93.5%;
-    right: 1.3em; }
-  .page_nav img {
-    height: 3.4em;
-    opacity: 0.85; }
+.page_nav { pointer-events: none; position: absolute; left: 0; top: 0.2em; bottom: 0.2em; z-index: 9999; }
+.page_nav .pagenav_button { padding: 0; margin: 0; background: none; border: none; cursor: pointer; pointer-events: auto; width: 3.2em; height: 3.2em; position: absolute; }
+.page_nav .pagenav_button:focus { outline: none; }
+.page_nav .pagenav_button .icon { width: 100%; height: 100%; opacity: 1; stroke-dasharray: 0; stroke-dashoffset: 320; }
+.page_nav .pagenav_button.button_left { top: 50%; left: 0.5em; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
+.page_nav .pagenav_button.button_right { top: 50%; right: 0.5em; -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+.page_nav .pagenav_button.button_bottom { top: 95%; bottom: 0.5em; left: 47%; -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.page_nav .link { padding: 0; margin: 0; background: none; border: none; cursor: pointer; pointer-events: auto; width: 3.2em; height: 3.2em; position: absolute; top: 93.5%; right: 1.3em; }
+.page_nav img { height: 3.4em; opacity: 0.85; }
 
 /***** MEDIA QUERY ***/
-@media screen and (min-width: 576px) {
-  .page_nav .pagenav_button {
-    width: 3.8em;
-    height: 3.8em; }
-  .page_nav .link {
-    top: 92%;
-    right: 1.8em; }
-  .page_nav img {
-    height: 4.0em; } }
-@media screen and (min-width: 768px) {
-  .page_nav .pagenav_button {
-    width: 4.2em;
-    height: 4.2em; }
-  .page_nav .link {
-    right: 2.3em; }
-  .page_nav img {
-    height: 4.5em; } }
-@media screen and (min-width: 992px) {
-  .page_nav .pagenav_button {
-    width: 4.5em;
-    height: 4.5em; }
-    .page_nav .pagenav_button:hover svg.icon {
-      opacity: 0.5;
-      stroke-dasharray: 430 30;
-      stroke-dashoffset: 0;
-      -webkit-transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease;
-      transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease; }
-  .page_nav .link {
-    top: 93%;
-    right: 5em; }
-  .page_nav img {
-    height: 4.8em; }
-    .page_nav img:hover {
-      -webkit-transform: scale(1.15);
-              transform: scale(1.15);
-      opacity: 0.9;
-      -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
-      transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
-      transition: transform 0.4s ease, opacity 0.4s ease;
-      transition: transform 0.4s ease, opacity 0.4s ease, -webkit-transform 0.4s ease; } }
+@media screen and (min-width: 576px) { .page_nav .pagenav_button { width: 3.8em; height: 3.8em; }
+  .page_nav .link { top: 92%; right: 1.8em; }
+  .page_nav img { height: 4.0em; } }
+@media screen and (min-width: 768px) { .page_nav .pagenav_button { width: 4.2em; height: 4.2em; }
+  .page_nav .link { right: 2.3em; }
+  .page_nav img { height: 4.5em; } }
+@media screen and (min-width: 992px) { .page_nav .pagenav_button { width: 4.5em; height: 4.5em; }
+  .page_nav .pagenav_button:hover svg.icon { opacity: 0.5; stroke-dasharray: 430 30; stroke-dashoffset: 0; -webkit-transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease; transition: stroke-dashoffset 0.55s ease-in, opacity 0.15s ease; }
+  .page_nav .link { top: 93%; right: 5em; }
+  .page_nav img { height: 4.8em; }
+  .page_nav img:hover { -webkit-transform: scale(1.15); transform: scale(1.15); opacity: 0.9; -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease; transition: opacity 0.4s ease, -webkit-transform 0.4s ease; transition: transform 0.4s ease, opacity 0.4s ease; transition: transform 0.4s ease, opacity 0.4s ease, -webkit-transform 0.4s ease; } }
 /* REVEALER BOX */
-.revealer {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 1000;
-  pointer-events: none; }
-  .revealer.revealer-right, .revealer.revealer-left {
-    top: 50%;
-    left: 50%; }
-  .revealer.revealer-bottom {
-    left: 0;
-    top: 100%; }
+.revealer { width: 100vw; height: 100vh; position: fixed; z-index: 1000; pointer-events: none; }
+.revealer.revealer-right, .revealer.revealer-left { top: 50%; left: 50%; }
+.revealer.revealer-bottom { left: 0; top: 100%; }
 
-.revealer-layer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #ddd; }
+.revealer-layer { position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: #ddd; }
 
 /* 3 LAYERS ANIMATION */
-.animate-layer-3 .page:nth-child(2) {
-  background: #dd6c00; }
+.animate-layer-3 .page:nth-child(2) { background: #dd6c00; }
 
-.animate-layer-3 .page:nth-child(3) {
-  background: #f7e132; }
+.animate-layer-3 .page:nth-child(3) { background: #f7e132; }
 
-.animate-layer-3 .page:nth-child(4) {
-  background: #f1b021; }
+.animate-layer-3 .page:nth-child(4) { background: #f1b021; }
 
-.animate-layer-3 .revealer-animate- .revealer-layer {
-  -webkit-animation: anim-effect-3-1 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
-          animation: anim-effect-3-1 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards; }
+.animate-layer-3 .revealer-animate- .revealer-layer { -webkit-animation: anim-effect-3-1 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards; animation: anim-effect-3-1 1.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards; }
 
-.animate-layer-3 .revealer-animate- .revealer-layer:nth-child(2) {
-  -webkit-animation-name: anim-effect-3-2;
-          animation-name: anim-effect-3-2; }
+.animate-layer-3 .revealer-animate- .revealer-layer:nth-child(2) { -webkit-animation-name: anim-effect-3-2; animation-name: anim-effect-3-2; }
 
-.animate-layer-3 .revealer-animate- .revealer-layer:nth-child(3) {
-  -webkit-animation-name: anim-effect-3-3;
-          animation-name: anim-effect-3-3; }
+.animate-layer-3 .revealer-animate- .revealer-layer:nth-child(3) { -webkit-animation-name: anim-effect-3-3; animation-name: anim-effect-3-3; }
 
-@-webkit-keyframes anim-effect-3-1 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
+@-webkit-keyframes anim-effect-3-1 { 0% { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
   25%,
-	75% {
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  100% {
-    -webkit-transform: translate3d(0, -200%, 0);
-            transform: translate3d(0, -200%, 0); } }
+	75% { -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  100% { -webkit-transform: translate3d(0, -200%, 0); transform: translate3d(0, -200%, 0); } }
 
-@keyframes anim-effect-3-1 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
+@keyframes anim-effect-3-1 { 0% { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
   25%,
-	75% {
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-  100% {
-    -webkit-transform: translate3d(0, -200%, 0);
-            transform: translate3d(0, -200%, 0); } }
-@-webkit-keyframes anim-effect-3-2 {
-  0%,
-	12.5% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
+	75% { -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  100% { -webkit-transform: translate3d(0, -200%, 0); transform: translate3d(0, -200%, 0); } }
+@-webkit-keyframes anim-effect-3-2 { 0%,
+	12.5% { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
   37.5%,
-	62.5% {
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+	62.5% { -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   87.5%,
-	100% {
-    -webkit-transform: translate3d(0, -200%, 0);
-            transform: translate3d(0, -200%, 0); } }
-@keyframes anim-effect-3-2 {
-  0%,
-	12.5% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
+	100% { -webkit-transform: translate3d(0, -200%, 0); transform: translate3d(0, -200%, 0); } }
+@keyframes anim-effect-3-2 { 0%,
+	12.5% { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
   37.5%,
-	62.5% {
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+	62.5% { -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   87.5%,
-	100% {
-    -webkit-transform: translate3d(0, -200%, 0);
-            transform: translate3d(0, -200%, 0); } }
-@-webkit-keyframes anim-effect-3-3 {
-  0%,
-	25% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-            animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); }
+	100% { -webkit-transform: translate3d(0, -200%, 0); transform: translate3d(0, -200%, 0); } }
+@-webkit-keyframes anim-effect-3-3 { 0%,
+	25% { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); }
   70%,
-	100% {
-    -webkit-transform: translate3d(0, -200%, 0);
-            transform: translate3d(0, -200%, 0); } }
-@keyframes anim-effect-3-3 {
-  0%,
-	25% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-            animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); }
+	100% { -webkit-transform: translate3d(0, -200%, 0); transform: translate3d(0, -200%, 0); } }
+@keyframes anim-effect-3-3 { 0%,
+	25% { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); }
   70%,
-	100% {
-    -webkit-transform: translate3d(0, -200%, 0);
-            transform: translate3d(0, -200%, 0); } }
+	100% { -webkit-transform: translate3d(0, -200%, 0); transform: translate3d(0, -200%, 0); } }
 /* LAYOUT REVELER */
 /************** INTRO PAGE ****************/
-#intro section {
-  padding: 0 2.2em; }
+#intro section { padding: 0 2.2em; }
 
-#intro section.name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: 6px double #ffb64a; }
-  #intro section.name h1 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 3.0em;
-    font-size: 1.45em;
-    -webkit-text-decoration: underline ghostwhite;
-            text-decoration: underline ghostwhite; }
-  #intro section.name .chococard {
-    background: url("img/ClemChococardWeb.png") no-repeat;
-    background-size: contain;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    width: 100px;
-    height: 100px;
-    margin-top: 1em;
-    -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
-    transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
-    transition: background 0.4s ease-in, transform 0.4s linear;
-    transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
+#intro section.name { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; border: 6px double #ffb64a; }
+#intro section.name h1 { font-family: "Raleway", sans-serif; font-weight: 600; text-transform: uppercase; line-height: 3.0em; font-size: 1.45em; -webkit-text-decoration: underline ghostwhite; text-decoration: underline ghostwhite; }
+#intro section.name .chococard { background: url("img/ClemChococardWeb.png") no-repeat; background-size: contain; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; width: 100px; height: 100px; margin-top: 1em; -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
 
-.page-current#intro .name .chococard {
-  -webkit-animation: choco-flip 3.0s ease-out 3.3s;
-          animation: choco-flip 3.0s ease-out 3.3s; }
-  .page-current#intro .name .chococard.on {
-    background: url("img/ClemChocobackWeb.png") no-repeat;
-    background-size: contain;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    width: 100px;
-    height: 100px;
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-    -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
-    transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
-    transition: background 0.4s ease-in, transform 0.4s linear;
-    transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
+.page-current#intro .name .chococard { -webkit-animation: choco-flip 3.0s ease-out 3.3s; animation: choco-flip 3.0s ease-out 3.3s; }
+.page-current#intro .name .chococard.on { background: url("img/ClemChocobackWeb.png") no-repeat; background-size: contain; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; width: 100px; height: 100px; -webkit-transform: rotateY(360deg); transform: rotateY(360deg); -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
 
-@-webkit-keyframes choco-flip {
-  0% {
-    background: url("img/ClemChococardWeb.png") no-repeat;
-    background-size: contain;
-    -webkit-perspective: 1000px;
-            perspective: 1000px; }
-  50% {
-    background: url("img/ClemChocobackWeb.png") no-repeat;
-    background-size: contain; }
-  68% {
-    background: url("img/ClemChocobackWeb.png") no-repeat;
-    background-size: contain;
-    opacity: 0.8; }
-  100% {
-    background: url("img/ClemChococardWeb.png") no-repeat;
-    background-size: contain;
-    -webkit-transform: rotateY(5turn);
-            transform: rotateY(5turn);
-    opacity: 1; } }
+@-webkit-keyframes choco-flip { 0% { background: url("img/ClemChococardWeb.png") no-repeat; background-size: contain; -webkit-perspective: 1000px; perspective: 1000px; }
+  50% { background: url("img/ClemChocobackWeb.png") no-repeat; background-size: contain; }
+  68% { background: url("img/ClemChocobackWeb.png") no-repeat; background-size: contain; opacity: 0.8; }
+  100% { background: url("img/ClemChococardWeb.png") no-repeat; background-size: contain; -webkit-transform: rotateY(5turn); transform: rotateY(5turn); opacity: 1; } }
 
-@keyframes choco-flip {
-  0% {
-    background: url("img/ClemChococardWeb.png") no-repeat;
-    background-size: contain;
-    -webkit-perspective: 1000px;
-            perspective: 1000px; }
-  50% {
-    background: url("img/ClemChocobackWeb.png") no-repeat;
-    background-size: contain; }
-  68% {
-    background: url("img/ClemChocobackWeb.png") no-repeat;
-    background-size: contain;
-    opacity: 0.8; }
-  100% {
-    background: url("img/ClemChococardWeb.png") no-repeat;
-    background-size: contain;
-    -webkit-transform: rotateY(5turn);
-            transform: rotateY(5turn);
-    opacity: 1; } }
-#intro .name h3 {
-  font-style: italic;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
-  font-size: 0.70em;
-  color: ghostwhite;
-  opacity: 0.8; }
+@keyframes choco-flip { 0% { background: url("img/ClemChococardWeb.png") no-repeat; background-size: contain; -webkit-perspective: 1000px; perspective: 1000px; }
+  50% { background: url("img/ClemChocobackWeb.png") no-repeat; background-size: contain; }
+  68% { background: url("img/ClemChocobackWeb.png") no-repeat; background-size: contain; opacity: 0.8; }
+  100% { background: url("img/ClemChococardWeb.png") no-repeat; background-size: contain; -webkit-transform: rotateY(5turn); transform: rotateY(5turn); opacity: 1; } }
+#intro .name h3 { font-style: italic; font-family: "Josefin Sans", sans-serif; font-weight: 700; font-size: 0.70em; color: ghostwhite; opacity: 0.8; }
 
-#intro .name h2 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #ff9115;
-  margin: auto; }
-  #intro .name h2.ghost.words .char {
-    -webkit-animation: ghost 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            animation: ghost 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    -webkit-animation-delay: calc(var(--distance-percent) * 0.125s);
-            animation-delay: calc(var(--distance-percent) * 0.125s);
-    -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%; }
-  #intro .name h2.ghost.words .junior .char {
-    -webkit-animation: ghostj 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-            animation: ghostj 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    -webkit-animation-delay: calc(var(--distance-percent) * 0.125s);
-            animation-delay: calc(var(--distance-percent) * 0.125s);
-    -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%; }
-    #intro .name h2.ghost.words .junior .char:after {
-      -webkit-animation: ghostfade 3s ease-in 1.2s;
-              animation: ghostfade 3s ease-in 1.2s;
-      content: attr(data-char);
-      opacity: 0.5;
-      -webkit-transform-origin: 100% 50%;
-              transform-origin: 100% 50%;
-      visibility: visible; }
+#intro .name h2 { font-family: "Raleway", sans-serif; font-weight: 700; text-transform: uppercase; color: #ff9115; margin: auto; }
+#intro .name h2.ghost.words .char { -webkit-animation: ghost 6s cubic-bezier(0.25, 0.46, 0.45, 0.94); animation: ghost 6s cubic-bezier(0.25, 0.46, 0.45, 0.94); -webkit-animation-delay: calc(var(--distance-percent) * 0.125s); animation-delay: calc(var(--distance-percent) * 0.125s); -webkit-transform-origin: 50% 100%; transform-origin: 50% 100%; }
+#intro .name h2.ghost.words .junior .char { -webkit-animation: ghostj 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; animation: ghostj 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; -webkit-animation-delay: calc(var(--distance-percent) * 0.125s); animation-delay: calc(var(--distance-percent) * 0.125s); -webkit-transform-origin: 50% 100%; transform-origin: 50% 100%; }
+#intro .name h2.ghost.words .junior .char:after { -webkit-animation: ghostfade 3s ease-in 1.2s; animation: ghostfade 3s ease-in 1.2s; content: attr(data-char); opacity: 0.5; -webkit-transform-origin: 100% 50%; transform-origin: 100% 50%; visibility: visible; }
 
-@-webkit-keyframes ghost {
-  40% {
-    -webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
-            transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg)); }
-  50% {
-    -webkit-transform: translateY(6%);
-            transform: translateY(6%); }
-  55% {
-    -webkit-transform: translateY(-4%);
-            transform: translateY(-4%); }
-  60% {
-    -webkit-transform: translateY(2%);
-            transform: translateY(2%); }
-  65% {
-    -webkit-transform: translateY(-1%);
-            transform: translateY(-1%); }
-  70% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%); } }
+@-webkit-keyframes ghost { 40% { -webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg)); transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg)); }
+  50% { -webkit-transform: translateY(6%); transform: translateY(6%); }
+  55% { -webkit-transform: translateY(-4%); transform: translateY(-4%); }
+  60% { -webkit-transform: translateY(2%); transform: translateY(2%); }
+  65% { -webkit-transform: translateY(-1%); transform: translateY(-1%); }
+  70% { -webkit-transform: translateY(0%); transform: translateY(0%); } }
 
-@keyframes ghost {
-  40% {
-    -webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
-            transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg)); }
-  50% {
-    -webkit-transform: translateY(6%);
-            transform: translateY(6%); }
-  55% {
-    -webkit-transform: translateY(-4%);
-            transform: translateY(-4%); }
-  60% {
-    -webkit-transform: translateY(2%);
-            transform: translateY(2%); }
-  65% {
-    -webkit-transform: translateY(-1%);
-            transform: translateY(-1%); }
-  70% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%); } }
-@-webkit-keyframes ghostj {
-  35% {
-    color: #db7c12; }
-  40% {
-    -webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
-            transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg)); }
-  50% {
-    -webkit-transform: translateY(6%);
-            transform: translateY(6%); }
-  55% {
-    -webkit-transform: translateY(-4%);
-            transform: translateY(-4%); }
-  60% {
-    -webkit-transform: translateY(2%);
-            transform: translateY(2%);
-    color: #f4c200; }
-  65% {
-    -webkit-transform: translateY(-1%);
-            transform: translateY(-1%); }
-  70% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%); }
-  100% {
-    color: #fdcd13; } }
-@keyframes ghostj {
-  35% {
-    color: #db7c12; }
-  40% {
-    -webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg));
-            transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg)); }
-  50% {
-    -webkit-transform: translateY(6%);
-            transform: translateY(6%); }
-  55% {
-    -webkit-transform: translateY(-4%);
-            transform: translateY(-4%); }
-  60% {
-    -webkit-transform: translateY(2%);
-            transform: translateY(2%);
-    color: #f4c200; }
-  65% {
-    -webkit-transform: translateY(-1%);
-            transform: translateY(-1%); }
-  70% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%); }
-  100% {
-    color: #fdcd13; } }
-@-webkit-keyframes ghostfade {
-  8% {
-    opacity: 0;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    color: #fad092; }
-  40% {
-    opacity: 0.6;
-    -webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
-            transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg)); }
+@keyframes ghost { 40% { -webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg)); transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg)); }
+  50% { -webkit-transform: translateY(6%); transform: translateY(6%); }
+  55% { -webkit-transform: translateY(-4%); transform: translateY(-4%); }
+  60% { -webkit-transform: translateY(2%); transform: translateY(2%); }
+  65% { -webkit-transform: translateY(-1%); transform: translateY(-1%); }
+  70% { -webkit-transform: translateY(0%); transform: translateY(0%); } }
+@-webkit-keyframes ghostj { 35% { color: #db7c12; }
+  40% { -webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg)); transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg)); }
+  50% { -webkit-transform: translateY(6%); transform: translateY(6%); }
+  55% { -webkit-transform: translateY(-4%); transform: translateY(-4%); }
+  60% { -webkit-transform: translateY(2%); transform: translateY(2%); color: #f4c200; }
+  65% { -webkit-transform: translateY(-1%); transform: translateY(-1%); }
+  70% { -webkit-transform: translateY(0%); transform: translateY(0%); }
+  100% { color: #fdcd13; } }
+@keyframes ghostj { 35% { color: #db7c12; }
+  40% { -webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg)); transform: translateY(-40%) rotate(calc(var(--distance-sine) * 10deg)); }
+  50% { -webkit-transform: translateY(6%); transform: translateY(6%); }
+  55% { -webkit-transform: translateY(-4%); transform: translateY(-4%); }
+  60% { -webkit-transform: translateY(2%); transform: translateY(2%); color: #f4c200; }
+  65% { -webkit-transform: translateY(-1%); transform: translateY(-1%); }
+  70% { -webkit-transform: translateY(0%); transform: translateY(0%); }
+  100% { color: #fdcd13; } }
+@-webkit-keyframes ghostfade { 8% { opacity: 0; -webkit-transform: translateY(0); transform: translateY(0); color: #fad092; }
+  40% { opacity: 0.6; -webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg)); transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg)); }
   60%,
-	100% {
-    opacity: 0;
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%); } }
-@keyframes ghostfade {
-  8% {
-    opacity: 0;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    color: #fad092; }
-  40% {
-    opacity: 0.6;
-    -webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg));
-            transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg)); }
+	100% { opacity: 0; -webkit-transform: translateY(-200%); transform: translateY(-200%); } }
+@keyframes ghostfade { 8% { opacity: 0; -webkit-transform: translateY(0); transform: translateY(0); color: #fad092; }
+  40% { opacity: 0.6; -webkit-transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg)); transform: translateY(-40%) rotate(calc(var(--distance-sine) * -10deg)); }
   60%,
-	100% {
-    opacity: 0;
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%); } }
-#intro .presentation {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
-  font-size: 0.85em;
-  color: #efe3c6;
-  line-height: 1.54em;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  letter-spacing: 0.1em; }
-  #intro .presentation p {
-    width: 88%;
-    margin: auto; }
-    #intro .presentation p a,
-    #intro .presentation p a:hover,
-    #intro .presentation p a:focus {
-      text-decoration: underline;
-      -webkit-text-decoration-color: ghostwhite;
-              text-decoration-color: ghostwhite;
-      outline: none;
-      color: #efe3c6; }
-    #intro .presentation p .welcome {
-      font-size: 1.65em;
-      color: #d9d490; }
+	100% { opacity: 0; -webkit-transform: translateY(-200%); transform: translateY(-200%); } }
+#intro .presentation { font-family: "Josefin Sans", sans-serif; font-weight: 700; font-size: 0.85em; color: #efe3c6; line-height: 1.54em; margin-top: 2em; margin-bottom: 2em; letter-spacing: 0.1em; }
+#intro .presentation p { width: 88%; margin: auto; }
+#intro .presentation p a, #intro .presentation p a:hover, #intro .presentation p a:focus { text-decoration: underline; -webkit-text-decoration-color: ghostwhite; text-decoration-color: ghostwhite; outline: none; color: #efe3c6; }
+#intro .presentation p .welcome { font-size: 1.65em; color: #d9d490; }
 
-#intro section.skills {
-  margin-bottom: 2em; }
-  #intro section.skills h2 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    font-size: 1.4em;
-    text-transform: capitalize;
-    color: #db7c12;
-    text-align: left; }
-  #intro section.skills h3 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    font-size: 1.2em;
-    color: #e0b81e;
-    text-align: center; }
-  #intro section.skills .skills-d {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    #intro section.skills .skills-d .detail {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      margin-bottom: 2em; }
-  #intro section.skills figure img {
-    width: 4.5em;
-    height: 4.5em;
-    background-size: contain; }
-  #intro section.skills figure figcaption {
-    font-family: "Raleway", sans-serif;
-    font-weight: 400;
-    color: #efe3c6;
-    letter-spacing: 0.05em;
-    font-size: 0.7em; }
+#intro section.skills { margin-bottom: 2em; }
+#intro section.skills h2 { font-family: "Raleway", sans-serif; font-weight: 600; letter-spacing: 0.1em; font-size: 1.4em; text-transform: capitalize; color: #db7c12; text-align: left; }
+#intro section.skills h3 { font-family: "Raleway", sans-serif; font-weight: 600; letter-spacing: 0.05em; font-size: 1.2em; color: #e0b81e; text-align: center; }
+#intro section.skills .skills-d { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+#intro section.skills .skills-d .detail { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 2em; }
+#intro section.skills figure img { width: 4.5em; height: 4.5em; background-size: contain; }
+#intro section.skills figure figcaption { font-family: "Raleway", sans-serif; font-weight: 400; color: #efe3c6; letter-spacing: 0.05em; font-size: 0.7em; }
 
 /* COMMUN MIXIN PAGES */
 /***************************** WEB EXPERIENCE PAGE ************************/
-#computer.page-current section {
-  padding: 0 2.2em; }
-  #computer.page-current section .border {
-    border: 6px double #ffb64a;
-    height: 6em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    #computer.page-current section .border h2 {
-      font-family: "Raleway", sans-serif;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: ghostwhite;
-      width: 80%;
-      margin: auto;
-      line-height: 2.6em;
-      position: relative; }
-      #computer.page-current section .border h2::before {
-        content: attr(data-text);
-        position: absolute;
-        text-shadow: 1px 0px #fc339d;
-        color: ghostwhite;
-        overflow: hidden;
-        clip: rect(0, 900px, 0, 0);
-        -webkit-animation: noise-anim 2.1s 4 linear alternate-reverse backwards;
-                animation: noise-anim 2.1s 4 linear alternate-reverse backwards; }
-      #computer.page-current section .border h2::after {
-        content: attr(data-text);
-        position: absolute;
-        right: 0em;
-        width: 100%;
-        text-shadow: -1px 0px #251cfc;
-        color: ghostwhite;
-        overflow: hidden;
-        clip: rect(0, 900px, 0, 0);
-        -webkit-animation: noise-anim 2s 4 linear alternate-reverse backwards;
-                animation: noise-anim 2s 4 linear alternate-reverse backwards;
-        -webkit-animation-delay: 0.3s;
-                animation-delay: 0.3s; }
-    #computer.page-current section .border .fa-laptop-code {
-      width: 20%;
-      margin: auto;
-      font-size: 1.5em;
-      color: #22292b; }
+#computer.page-current section { padding: 0 2.2em; }
+#computer.page-current section .border { border: 6px double #ffb64a; height: 6em; display: -webkit-box; display: -ms-flexbox; display: flex; }
+#computer.page-current section .border h2 { font-family: "Raleway", sans-serif; font-weight: 600; text-transform: uppercase; color: ghostwhite; width: 80%; margin: auto; line-height: 2.6em; position: relative; }
+#computer.page-current section .border h2::before { content: attr(data-text); position: absolute; text-shadow: 1px 0px #fc339d; color: ghostwhite; overflow: hidden; clip: rect(0, 900px, 0, 0); -webkit-animation: noise-anim 2.1s 4 linear alternate-reverse backwards; animation: noise-anim 2.1s 4 linear alternate-reverse backwards; }
+#computer.page-current section .border h2::after { content: attr(data-text); position: absolute; right: 0em; width: 100%; text-shadow: -1px 0px #251cfc; color: ghostwhite; overflow: hidden; clip: rect(0, 900px, 0, 0); -webkit-animation: noise-anim 2s 4 linear alternate-reverse backwards; animation: noise-anim 2s 4 linear alternate-reverse backwards; -webkit-animation-delay: 0.3s; animation-delay: 0.3s; }
+#computer.page-current section .border .fa-laptop-code { width: 20%; margin: auto; font-size: 1.5em; color: #22292b; }
 
-@-webkit-keyframes noise-anim {
-  0% {
-    clip: rect(0, 900px, 0, 0); }
-  1% {
-    clip: rect(89px, 9999px, 100px, 0); }
-  5% {
-    clip: rect(4px, 9999px, 62px, 0); }
-  10% {
-    clip: rect(43px, 9999px, 16px, 0); }
-  15% {
-    clip: rect(2px, 9999px, 68px, 0); }
-  20% {
-    clip: rect(12px, 9999px, 6px, 0); }
-  25% {
-    clip: rect(89px, 9999px, 25px, 0); }
-  30% {
-    clip: rect(15px, 9999px, 38px, 0); }
-  35% {
-    clip: rect(57px, 9999px, 97px, 0); }
-  40% {
-    clip: rect(24px, 9999px, 72px, 0); }
-  45% {
-    clip: rect(81px, 9999px, 3px, 0); }
-  50% {
-    clip: rect(93px, 9999px, 26px, 0); }
-  55% {
-    clip: rect(68px, 9999px, 85px, 0); }
-  60% {
-    clip: rect(43px, 9999px, 28px, 0); }
-  65% {
-    clip: rect(44px, 9999px, 11px, 0); }
-  70% {
-    clip: rect(17px, 9999px, 33px, 0); }
-  75% {
-    clip: rect(74px, 9999px, 66px, 0); }
-  80% {
-    clip: rect(100px, 9999px, 4px, 0); }
-  85% {
-    clip: rect(92px, 9999px, 31px, 0); }
-  90% {
-    clip: rect(93px, 9999px, 98px, 0); }
-  95% {
-    clip: rect(23px, 9999px, 77px, 0); }
-  100% {
-    clip: rect(92px, 9999px, 8px, 0); } }
+@-webkit-keyframes noise-anim { 0% { clip: rect(0, 900px, 0, 0); }
+  1% { clip: rect(89px, 9999px, 100px, 0); }
+  5% { clip: rect(4px, 9999px, 62px, 0); }
+  10% { clip: rect(43px, 9999px, 16px, 0); }
+  15% { clip: rect(2px, 9999px, 68px, 0); }
+  20% { clip: rect(12px, 9999px, 6px, 0); }
+  25% { clip: rect(89px, 9999px, 25px, 0); }
+  30% { clip: rect(15px, 9999px, 38px, 0); }
+  35% { clip: rect(57px, 9999px, 97px, 0); }
+  40% { clip: rect(24px, 9999px, 72px, 0); }
+  45% { clip: rect(81px, 9999px, 3px, 0); }
+  50% { clip: rect(93px, 9999px, 26px, 0); }
+  55% { clip: rect(68px, 9999px, 85px, 0); }
+  60% { clip: rect(43px, 9999px, 28px, 0); }
+  65% { clip: rect(44px, 9999px, 11px, 0); }
+  70% { clip: rect(17px, 9999px, 33px, 0); }
+  75% { clip: rect(74px, 9999px, 66px, 0); }
+  80% { clip: rect(100px, 9999px, 4px, 0); }
+  85% { clip: rect(92px, 9999px, 31px, 0); }
+  90% { clip: rect(93px, 9999px, 98px, 0); }
+  95% { clip: rect(23px, 9999px, 77px, 0); }
+  100% { clip: rect(92px, 9999px, 8px, 0); } }
 
-@keyframes noise-anim {
-  0% {
-    clip: rect(0, 900px, 0, 0); }
-  1% {
-    clip: rect(89px, 9999px, 100px, 0); }
-  5% {
-    clip: rect(4px, 9999px, 62px, 0); }
-  10% {
-    clip: rect(43px, 9999px, 16px, 0); }
-  15% {
-    clip: rect(2px, 9999px, 68px, 0); }
-  20% {
-    clip: rect(12px, 9999px, 6px, 0); }
-  25% {
-    clip: rect(89px, 9999px, 25px, 0); }
-  30% {
-    clip: rect(15px, 9999px, 38px, 0); }
-  35% {
-    clip: rect(57px, 9999px, 97px, 0); }
-  40% {
-    clip: rect(24px, 9999px, 72px, 0); }
-  45% {
-    clip: rect(81px, 9999px, 3px, 0); }
-  50% {
-    clip: rect(93px, 9999px, 26px, 0); }
-  55% {
-    clip: rect(68px, 9999px, 85px, 0); }
-  60% {
-    clip: rect(43px, 9999px, 28px, 0); }
-  65% {
-    clip: rect(44px, 9999px, 11px, 0); }
-  70% {
-    clip: rect(17px, 9999px, 33px, 0); }
-  75% {
-    clip: rect(74px, 9999px, 66px, 0); }
-  80% {
-    clip: rect(100px, 9999px, 4px, 0); }
-  85% {
-    clip: rect(92px, 9999px, 31px, 0); }
-  90% {
-    clip: rect(93px, 9999px, 98px, 0); }
-  95% {
-    clip: rect(23px, 9999px, 77px, 0); }
-  100% {
-    clip: rect(92px, 9999px, 8px, 0); } }
-#computer .presentation p {
-  width: 95%;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
-  font-size: 0.85em;
-  color: #cf8617;
-  line-height: 1.54em;
-  letter-spacing: 0.1em;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  margin: auto; }
+@keyframes noise-anim { 0% { clip: rect(0, 900px, 0, 0); }
+  1% { clip: rect(89px, 9999px, 100px, 0); }
+  5% { clip: rect(4px, 9999px, 62px, 0); }
+  10% { clip: rect(43px, 9999px, 16px, 0); }
+  15% { clip: rect(2px, 9999px, 68px, 0); }
+  20% { clip: rect(12px, 9999px, 6px, 0); }
+  25% { clip: rect(89px, 9999px, 25px, 0); }
+  30% { clip: rect(15px, 9999px, 38px, 0); }
+  35% { clip: rect(57px, 9999px, 97px, 0); }
+  40% { clip: rect(24px, 9999px, 72px, 0); }
+  45% { clip: rect(81px, 9999px, 3px, 0); }
+  50% { clip: rect(93px, 9999px, 26px, 0); }
+  55% { clip: rect(68px, 9999px, 85px, 0); }
+  60% { clip: rect(43px, 9999px, 28px, 0); }
+  65% { clip: rect(44px, 9999px, 11px, 0); }
+  70% { clip: rect(17px, 9999px, 33px, 0); }
+  75% { clip: rect(74px, 9999px, 66px, 0); }
+  80% { clip: rect(100px, 9999px, 4px, 0); }
+  85% { clip: rect(92px, 9999px, 31px, 0); }
+  90% { clip: rect(93px, 9999px, 98px, 0); }
+  95% { clip: rect(23px, 9999px, 77px, 0); }
+  100% { clip: rect(92px, 9999px, 8px, 0); } }
+#computer .presentation p { width: 95%; font-family: "Josefin Sans", sans-serif; font-weight: 700; font-size: 0.85em; color: #cf8617; line-height: 1.54em; letter-spacing: 0.1em; padding-top: 2em; padding-bottom: 2em; margin: auto; }
 
-#computer h3 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: 1.28em;
-  text-transform: capitalize;
-  color: #ff7900;
-  text-align: left; }
+#computer h3 { font-family: "Raleway", sans-serif; font-weight: 600; letter-spacing: 0.1em; font-size: 1.28em; text-transform: capitalize; color: #ff7900; text-align: left; }
 
-#computer article {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
-  font-size: 0.88em;
-  color: #5e3917;
-  line-height: 1.54em;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  text-align: left;
-  letter-spacing: 0.1em; }
-  #computer article h4 {
-    text-align: center;
-    color: #a15920; }
+#computer article { font-family: "Josefin Sans", sans-serif; font-weight: 700; font-size: 0.88em; color: #5e3917; line-height: 1.54em; margin-top: 2em; margin-bottom: 2em; text-align: left; letter-spacing: 0.1em; }
+#computer article h4 { text-align: center; color: #a15920; }
 
-#computer .experiences .experience .fa-terminal {
-  padding-left: 0.5em;
-  color: #484025cc; }
-#computer .experiences .experience .date {
-  font-weight: bolder;
-  font-size: 0.89em;
-  color: #a15918; }
-#computer .experiences .experience .detail figure {
-  margin: 1em 0;
-  position: relative; }
-  #computer .experiences .experience .detail figure img {
-    background-size: contain;
-    width: 100%;
-    height: auto;
-    border-radius: 2.2em; }
-  #computer .experiences .experience .detail figure figcaption {
-    position: absolute;
-    text-align: right;
-    color: ghostwhite;
-    font-size: 0.72em;
-    line-height: 1.3em;
-    top: 1em;
-    right: 2em; }
-#computer .experiences .experience .detail button.website {
-  background: none;
-  position: absolute;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
-  font-size: 0.70em;
-  border: 1px solid #FFA500;
-  border-radius: 15px;
-  padding: 5px;
-  bottom: 40%;
-  right: 10%; }
-  #computer .experiences .experience .detail button.website a,
-  #computer .experiences .experience .detail button.website a:hover,
-  #computer .experiences .experience .detail button.website a:focus {
-    outline: none;
-    text-decoration: none;
-    color: ghostwhite; }
-#computer .experiences .experience .detail .descript {
-  margin: 0.5em 0;
-  font-size: 0.92em; }
-#computer .experiences .experience .partners figure {
-  padding: 0; }
-  #computer .experiences .experience .partners figure img {
-    width: 8em;
-    height: 8em; }
+#computer .experiences .experience .fa-terminal { padding-left: 0.5em; color: #484025cc; }
+#computer .experiences .experience .date { font-weight: bolder; font-size: 0.89em; color: #a15918; }
+#computer .experiences .experience .detail figure { margin: 1em 0; position: relative; }
+#computer .experiences .experience .detail figure img { background-size: contain; width: 100%; height: auto; border-radius: 2.2em; }
+#computer .experiences .experience .detail figure figcaption { position: absolute; text-align: right; color: ghostwhite; font-size: 0.72em; line-height: 1.3em; top: 1em; right: 2em; }
+#computer .experiences .experience .detail button.website { background: none; position: absolute; font-family: "Josefin Sans", sans-serif; font-weight: 700; font-size: 0.70em; border: 1px solid #FFA500; border-radius: 15px; padding: 5px; bottom: 40%; right: 10%; }
+#computer .experiences .experience .detail button.website a, #computer .experiences .experience .detail button.website a:hover, #computer .experiences .experience .detail button.website a:focus { outline: none; text-decoration: none; color: ghostwhite; }
+#computer .experiences .experience .detail .descript { margin: 0.5em 0; font-size: 0.92em; }
+#computer .experiences .experience .partners figure { padding: 0; }
+#computer .experiences .experience .partners figure img { width: 8em; height: 8em; }
 
-#computer .outils .tools {
-  text-align: center; }
-  #computer .outils .tools .adobe {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-left: 1em; }
-    #computer .outils .tools .adobe figure img {
-      width: 3.0em;
-      height: 3.0em;
-      background-size: contain;
-      margin-left: 1em;
-      margin-bottom: 0.5em; }
-    #computer .outils .tools .adobe figure figcaption {
-      visibility: hidden; }
-  #computer .outils .tools .other figure img {
-    width: 3.8em;
-    height: 3.8em;
-    margin-bottom: 0;
-    margin-left: -1em; }
-  #computer .outils .tools .other figure figcaption {
-    visibility: hidden; }
+#computer .outils .tools { text-align: center; }
+#computer .outils .tools .adobe { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-left: 1em; }
+#computer .outils .tools .adobe figure img { width: 3.0em; height: 3.0em; background-size: contain; margin-left: 1em; margin-bottom: 0.5em; }
+#computer .outils .tools .adobe figure figcaption { visibility: hidden; }
+#computer .outils .tools .other figure img { width: 3.8em; height: 3.8em; margin-bottom: 0; margin-left: -1em; }
+#computer .outils .tools .other figure figcaption { visibility: hidden; }
 
-#computer .creations {
-  margin-bottom: 5em; }
-  #computer .creations .crea1,
-  #computer .creations .crea2,
-  #computer .creations .crea3 {
-    text-align: center; }
-  #computer .creations svg,
-  #computer .creations .norms,
-  #computer .creations .chococard-c {
-    width: 6em;
-    height: 6em;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%; }
+#computer .creations { margin-bottom: 5em; }
+#computer .creations .crea1, #computer .creations .crea2, #computer .creations .crea3 { text-align: center; }
+#computer .creations svg, #computer .creations .norms, #computer .creations .chococard-c { width: 6em; height: 6em; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; }
 
-.crea1 svg#logo {
-  fill: none;
-  stroke-width: 2px; }
-  .crea1 svg#logo #circle {
-    stroke: ghostwhite;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 3.75px; }
-    .crea1 svg#logo #circle .big_circle {
-      stroke-dasharray: 166, 10, 166, 10;
-      -webkit-transition: 2.8s ease-in-out, stroke 3s linear;
-      transition: 2.8s ease-in-out, stroke 3s linear; }
-    .crea1 svg#logo #circle .small_circle {
-      stroke-dasharray: 90, 40, 90, 40, 90, 296;
-      -webkit-transition: 2.5s linear, stroke 3.2s linear;
-      transition: 2.5s linear, stroke 3.2s linear; }
-  .crea1 svg#logo #mask {
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    -webkit-transition: 1.8s ease;
-    transition: 1.8s ease;
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%; }
-    .crea1 svg#logo #mask .cape {
-      stroke: #9e0b0b;
-      stroke-width: 3px;
-      fill: #840a0a;
-      -webkit-perspective: 1000px;
-              perspective: 1000px; }
-    .crea1 svg#logo #mask .left_eye,
-    .crea1 svg#logo #mask .right_eye {
-      stroke: #9e0b0b;
-      fill: #5f0101;
-      -webkit-transition: opacity 1.5s ease-in;
-      transition: opacity 1.5s ease-in; }
-.crea1.on svg#logo #circle .big_circle {
-  stroke-dasharray: 166, 0, 166, 0;
-  stroke-dashoffset: -200;
-  stroke: #530f0f;
-  -webkit-transition: 2.8s ease-in-out, stroke 3s linear;
-  transition: 2.8s ease-in-out, stroke 3s linear; }
-.crea1.on svg#logo #circle .small_circle {
-  stroke: #530f0f;
-  stroke-dasharray: 90, 0, 90, 0, 90, 0;
-  stroke-dashoffset: -230;
-  -webkit-transition: 2.5s linear, stroke 3.2s linear;
-  transition: 2.5s linear, stroke 3.2s linear; }
-.crea1.on svg#logo #mask {
-  opacity: 0.92;
-  -webkit-transform: rotate(720deg);
-          transform: rotate(720deg);
-  -webkit-transition: 1.8s ease;
-  transition: 1.8s ease;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%; }
-  .crea1.on svg#logo #mask .cape {
-    stroke: #800000;
-    stroke-width: 3px;
-    fill: #900e0e;
-    -webkit-perspective: 1000px;
-            perspective: 1000px; }
-  .crea1.on svg#logo #mask .left_eye,
-  .crea1.on svg#logo #mask .right_eye {
-    stroke: #820505;
-    fill: #550101;
-    opacity: 0;
-    -webkit-transition: opacity 1.5s ease-in;
-    transition: opacity 1.5s ease-in; }
+.crea1 svg#logo { fill: none; stroke-width: 2px; }
+.crea1 svg#logo #circle { stroke: ghostwhite; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3.75px; }
+.crea1 svg#logo #circle .big_circle { stroke-dasharray: 166, 10, 166, 10; -webkit-transition: 2.8s ease-in-out, stroke 3s linear; transition: 2.8s ease-in-out, stroke 3s linear; }
+.crea1 svg#logo #circle .small_circle { stroke-dasharray: 90, 40, 90, 40, 90, 296; -webkit-transition: 2.5s linear, stroke 3.2s linear; transition: 2.5s linear, stroke 3.2s linear; }
+.crea1 svg#logo #mask { opacity: 1; -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: 1.8s ease; transition: 1.8s ease; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; }
+.crea1 svg#logo #mask .cape { stroke: #9e0b0b; stroke-width: 3px; fill: #840a0a; -webkit-perspective: 1000px; perspective: 1000px; }
+.crea1 svg#logo #mask .left_eye, .crea1 svg#logo #mask .right_eye { stroke: #9e0b0b; fill: #5f0101; -webkit-transition: opacity 1.5s ease-in; transition: opacity 1.5s ease-in; }
+.crea1.on svg#logo #circle .big_circle { stroke-dasharray: 166, 0, 166, 0; stroke-dashoffset: -200; stroke: #530f0f; -webkit-transition: 2.8s ease-in-out, stroke 3s linear; transition: 2.8s ease-in-out, stroke 3s linear; }
+.crea1.on svg#logo #circle .small_circle { stroke: #530f0f; stroke-dasharray: 90, 0, 90, 0, 90, 0; stroke-dashoffset: -230; -webkit-transition: 2.5s linear, stroke 3.2s linear; transition: 2.5s linear, stroke 3.2s linear; }
+.crea1.on svg#logo #mask { opacity: 0.92; -webkit-transform: rotate(720deg); transform: rotate(720deg); -webkit-transition: 1.8s ease; transition: 1.8s ease; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; }
+.crea1.on svg#logo #mask .cape { stroke: #800000; stroke-width: 3px; fill: #900e0e; -webkit-perspective: 1000px; perspective: 1000px; }
+.crea1.on svg#logo #mask .left_eye, .crea1.on svg#logo #mask .right_eye { stroke: #820505; fill: #550101; opacity: 0; -webkit-transition: opacity 1.5s ease-in; transition: opacity 1.5s ease-in; }
 
-#computer .creations .crea2 .norms {
-  background: url("img/NormsJardinage-web.png") no-repeat;
-  background-size: contain;
-  -webkit-transition: background 0.4s ease-in;
-  transition: background 0.4s ease-in; }
-#computer .creations .crea2.on .norms {
-  background: url("img/NormsComptable-web.png") no-repeat;
-  background-size: contain;
-  -webkit-transition: background 0.4s ease-in;
-  transition: background 0.4s ease-in; }
+#computer .creations .crea2 .norms { background: url("img/NormsJardinage-web.png") no-repeat; background-size: contain; -webkit-transition: background 0.4s ease-in; transition: background 0.4s ease-in; }
+#computer .creations .crea2.on .norms { background: url("img/NormsComptable-web.png") no-repeat; background-size: contain; -webkit-transition: background 0.4s ease-in; transition: background 0.4s ease-in; }
 
-#computer .creations .crea3 .chococard-c {
-  background: url("img/ClemChococardWeb.png") no-repeat;
-  background-size: contain;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
-  transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
-  transition: background 0.4s ease-in, transform 0.4s linear;
-  transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
-#computer .creations .crea3.on .chococard-c {
-  background: url("img/ClemChocobackWeb.png") no-repeat;
-  background-size: contain;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transform: rotateY(360deg);
-          transform: rotateY(360deg);
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
-  transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
-  transition: background 0.4s ease-in, transform 0.4s linear;
-  transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
+#computer .creations .crea3 .chococard-c { background: url("img/ClemChococardWeb.png") no-repeat; background-size: contain; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transform: rotateY(0deg); transform: rotateY(0deg); -webkit-perspective: 1000px; perspective: 1000px; -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
+#computer .creations .crea3.on .chococard-c { background: url("img/ClemChocobackWeb.png") no-repeat; background-size: contain; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transform: rotateY(360deg); transform: rotateY(360deg); -webkit-perspective: 1000px; perspective: 1000px; -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
 
 /***************************** CHEMIST EXPERIENCE PAGE ************************/
-#chemist.page-current section {
-  padding: 0 2.2em; }
-  #chemist.page-current section .border {
-    border: 6px double #f0d773;
-    height: 6em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    #chemist.page-current section .border h2 {
-      font-family: "Raleway", sans-serif;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: ghostwhite;
-      width: 80%;
-      margin: auto;
-      line-height: 2.6em; }
-      #chemist.page-current section .border h2 .break .char {
-        content: attr(data-char);
-        -webkit-animation: break-drop 2s ease 0.4s forwards;
-                animation: break-drop 2s ease 0.4s forwards;
-        color: transparent;
-        overflow: visible;
-        line-height: 1.0em; }
-        #chemist.page-current section .border h2 .break .char::before {
-          -webkit-animation: break-left 2s linear 0.4s forwards;
-                  animation: break-left 2s linear 0.4s forwards;
-          color: ghostwhite;
-          visibility: visible;
-          -webkit-clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0);
-                  clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0); }
-        #chemist.page-current section .border h2 .break .char::after {
-          -webkit-animation: break-right 2s linear 0.4s forwards;
-                  animation: break-right 2s linear 0.4s forwards;
-          color: ghostwhite;
-          visibility: visible;
-          -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%);
-                  clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%); }
-    #chemist.page-current section .border .fa-flask {
-      width: 20%;
-      margin: auto;
-      font-size: 1.5em;
-      color: #22292b; }
-  #chemist.page-current section.presentation p {
-    width: 95%;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 700;
-    font-size: 0.85em;
-    color: #cf8617;
-    line-height: 1.54em;
-    letter-spacing: 0.1em;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    margin: auto; }
-  #chemist.page-current section h3 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    font-size: 1.28em;
-    text-transform: capitalize;
-    color: #ff7900;
-    text-align: left; }
-  #chemist.page-current section article {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 700;
-    font-size: 0.88em;
-    color: #5e3917;
-    line-height: 1.54em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    text-align: left;
-    letter-spacing: 0.1em; }
-    #chemist.page-current section article h4 {
-      text-align: center;
-      color: #a15920; }
+#chemist.page-current section { padding: 0 2.2em; }
+#chemist.page-current section .border { border: 6px double #f0d773; height: 6em; display: -webkit-box; display: -ms-flexbox; display: flex; }
+#chemist.page-current section .border h2 { font-family: "Raleway", sans-serif; font-weight: 600; text-transform: uppercase; color: ghostwhite; width: 80%; margin: auto; line-height: 2.6em; }
+#chemist.page-current section .border h2 .break .char { content: attr(data-char); -webkit-animation: break-drop 2s ease 0.4s forwards; animation: break-drop 2s ease 0.4s forwards; color: transparent; overflow: visible; line-height: 1.0em; }
+#chemist.page-current section .border h2 .break .char::before { -webkit-animation: break-left 2s linear 0.4s forwards; animation: break-left 2s linear 0.4s forwards; color: ghostwhite; visibility: visible; -webkit-clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0); clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0); }
+#chemist.page-current section .border h2 .break .char::after { -webkit-animation: break-right 2s linear 0.4s forwards; animation: break-right 2s linear 0.4s forwards; color: ghostwhite; visibility: visible; -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%); clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%); }
+#chemist.page-current section .border .fa-flask { width: 20%; margin: auto; font-size: 1.5em; color: #22292b; }
+#chemist.page-current section.presentation p { width: 95%; font-family: "Josefin Sans", sans-serif; font-weight: 700; font-size: 0.85em; color: #cf8617; line-height: 1.54em; letter-spacing: 0.1em; padding-top: 2em; padding-bottom: 2em; margin: auto; }
+#chemist.page-current section h3 { font-family: "Raleway", sans-serif; font-weight: 600; letter-spacing: 0.1em; font-size: 1.28em; text-transform: capitalize; color: #ff7900; text-align: left; }
+#chemist.page-current section article { font-family: "Josefin Sans", sans-serif; font-weight: 700; font-size: 0.88em; color: #5e3917; line-height: 1.54em; margin-top: 2em; margin-bottom: 2em; text-align: left; letter-spacing: 0.1em; }
+#chemist.page-current section article h4 { text-align: center; color: #a15920; }
 
-@-webkit-keyframes break-drop {
-  0%,
-	20% {
-    -webkit-transform: translateY(-150%);
-    transform: translateY(-150%);
-    opacity: 0; }
-  22% {
-    -webkit-transform: translateY(10%);
-    transform: translateY(10%);
-    opacity: 1; }
-  25% {
-    -webkit-transform: translateY(-5%);
-    transform: translateY(-5%); }
+@-webkit-keyframes break-drop { 0%,
+	20% { -webkit-transform: translateY(-150%); transform: translateY(-150%); opacity: 0; }
+  22% { -webkit-transform: translateY(10%); transform: translateY(10%); opacity: 1; }
+  25% { -webkit-transform: translateY(-5%); transform: translateY(-5%); }
   30%,
-	100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1; } }
+	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; } }
 
-@keyframes break-drop {
-  0%,
-	20% {
-    -webkit-transform: translateY(-150%);
-    transform: translateY(-150%);
-    opacity: 0; }
-  22% {
-    -webkit-transform: translateY(10%);
-    transform: translateY(10%);
-    opacity: 1; }
-  25% {
-    -webkit-transform: translateY(-5%);
-    transform: translateY(-5%); }
+@keyframes break-drop { 0%,
+	20% { -webkit-transform: translateY(-150%); transform: translateY(-150%); opacity: 0; }
+  22% { -webkit-transform: translateY(10%); transform: translateY(10%); opacity: 1; }
+  25% { -webkit-transform: translateY(-5%); transform: translateY(-5%); }
   30%,
-	100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1; } }
-@-webkit-keyframes break-left {
-  0%,
-	22% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-  25% {
-    -webkit-transform: rotate(-8deg);
-    transform: rotate(-8deg); }
-  28% {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg); }
-  30% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-box-shadow: 0px 3px 6px #8e650b;
-    box-shadow: 0px 3px 6px #8e650b; }
-  40% {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -webkit-transform: rotate(-7deg);
-    transform: rotate(-7deg); }
-  100% {
-    -webkit-transform: rotate(-7deg);
-    transform: rotate(-7deg); } }
-@keyframes break-left {
-  0%,
-	22% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-  25% {
-    -webkit-transform: rotate(-8deg);
-    transform: rotate(-8deg); }
-  28% {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg); }
-  30% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-box-shadow: 0px 3px 6px #8e650b;
-    box-shadow: 0px 3px 6px #8e650b; }
-  40% {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -webkit-transform: rotate(-7deg);
-    transform: rotate(-7deg); }
-  100% {
-    -webkit-transform: rotate(-7deg);
-    transform: rotate(-7deg); } }
-@-webkit-keyframes break-right {
-  0%,
-	22% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0); }
-  25% {
-    -webkit-transform: rotate(5deg);
-    transform: rotate(5deg); }
-  28% {
-    -webkit-transform: rotate(10deg) translateY(10%);
-    transform: rotate(10deg) translateY(10%); }
-  30% {
-    -webkit-transform: rotate(5deg) translateY(5%);
-    transform: rotate(5deg) translateY(5%); }
-  100% {
-    -webkit-transform: rotate(5deg) translateY(5%);
-    transform: rotate(5deg) translateY(5%); } }
-@keyframes break-right {
-  0%,
-	22% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0); }
-  25% {
-    -webkit-transform: rotate(5deg);
-    transform: rotate(5deg); }
-  28% {
-    -webkit-transform: rotate(10deg) translateY(10%);
-    transform: rotate(10deg) translateY(10%); }
-  30% {
-    -webkit-transform: rotate(5deg) translateY(5%);
-    transform: rotate(5deg) translateY(5%); }
-  100% {
-    -webkit-transform: rotate(5deg) translateY(5%);
-    transform: rotate(5deg) translateY(5%); } }
-#chemist .experiences .experience .fa-vial {
-  padding-left: 0.5em;
-  font-size: 1.2em;
-  color: #484025cc; }
-#chemist .experiences .experience .date {
-  font-weight: bolder;
-  font-size: 0.89em;
-  color: #a15918; }
-#chemist .experiences .experience .detail .publi li {
-  margin: 1em; }
-#chemist .experiences .experience .detail .publi a,
-#chemist .experiences .experience .detail .publi a:hover,
-#chemist .experiences .experience .detail .publi a:focus {
-  outline: none;
-  font-size: 0.88em;
-  color: #5e3917; }
-#chemist .experiences .experience .detail .descript {
-  margin: 0.5em 0;
-  font-size: 0.92em; }
-#chemist .experiences .experience .company figure {
-  padding: 0; }
-  #chemist .experiences .experience .company figure img {
-    width: 8em;
-    height: 8em; }
-#chemist .experiences .experience .descript subject {
-  margin: 1em 0; }
-  #chemist .experiences .experience .descript subject .mars {
-    font-style: italic;
-    color: #bc0f0f; }
-#chemist .experiences .experience .descript figure img {
-  width: 10em;
-  height: 10em;
-  opacity: 0.75; }
+	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; } }
+@-webkit-keyframes break-left { 0%,
+	22% { -webkit-transform: rotate(0); transform: rotate(0); -webkit-box-shadow: none; box-shadow: none; }
+  25% { -webkit-transform: rotate(-8deg); transform: rotate(-8deg); }
+  28% { -webkit-transform: rotate(-10deg); transform: rotate(-10deg); }
+  30% { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-box-shadow: 0px 3px 6px #8e650b; box-shadow: 0px 3px 6px #8e650b; }
+  40% { -webkit-box-shadow: none; box-shadow: none; -webkit-transform: rotate(-7deg); transform: rotate(-7deg); }
+  100% { -webkit-transform: rotate(-7deg); transform: rotate(-7deg); } }
+@keyframes break-left { 0%,
+	22% { -webkit-transform: rotate(0); transform: rotate(0); -webkit-box-shadow: none; box-shadow: none; }
+  25% { -webkit-transform: rotate(-8deg); transform: rotate(-8deg); }
+  28% { -webkit-transform: rotate(-10deg); transform: rotate(-10deg); }
+  30% { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-box-shadow: 0px 3px 6px #8e650b; box-shadow: 0px 3px 6px #8e650b; }
+  40% { -webkit-box-shadow: none; box-shadow: none; -webkit-transform: rotate(-7deg); transform: rotate(-7deg); }
+  100% { -webkit-transform: rotate(-7deg); transform: rotate(-7deg); } }
+@-webkit-keyframes break-right { 0%,
+	22% { -webkit-transform: rotate(0); transform: rotate(0); }
+  25% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  28% { -webkit-transform: rotate(10deg) translateY(10%); transform: rotate(10deg) translateY(10%); }
+  30% { -webkit-transform: rotate(5deg) translateY(5%); transform: rotate(5deg) translateY(5%); }
+  100% { -webkit-transform: rotate(5deg) translateY(5%); transform: rotate(5deg) translateY(5%); } }
+@keyframes break-right { 0%,
+	22% { -webkit-transform: rotate(0); transform: rotate(0); }
+  25% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  28% { -webkit-transform: rotate(10deg) translateY(10%); transform: rotate(10deg) translateY(10%); }
+  30% { -webkit-transform: rotate(5deg) translateY(5%); transform: rotate(5deg) translateY(5%); }
+  100% { -webkit-transform: rotate(5deg) translateY(5%); transform: rotate(5deg) translateY(5%); } }
+#chemist .experiences .experience .fa-vial { padding-left: 0.5em; font-size: 1.2em; color: #484025cc; }
+#chemist .experiences .experience .date { font-weight: bolder; font-size: 0.89em; color: #a15918; }
+#chemist .experiences .experience .detail .publi li { margin: 1em; }
+#chemist .experiences .experience .detail .publi a, #chemist .experiences .experience .detail .publi a:hover, #chemist .experiences .experience .detail .publi a:focus { outline: none; font-size: 0.88em; color: #5e3917; }
+#chemist .experiences .experience .detail .descript { margin: 0.5em 0; font-size: 0.92em; }
+#chemist .experiences .experience .company figure { padding: 0; }
+#chemist .experiences .experience .company figure img { width: 8em; height: 8em; }
+#chemist .experiences .experience .descript .subject { margin: 1em 0; }
+#chemist .experiences .experience .descript .subject .mars { font-style: italic; color: #bc0f0f; }
+#chemist .experiences .experience .descript figure img { width: 10em; height: 10em; opacity: 0.75; }
 
 /***************************** PERSONNAL EXPERIENCE PAGE ************************/
-#personnal h2.bounce .word {
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
-  opacity: 0; }
+#personnal h2.bounce .word { -webkit-transform: translateX(-200%); transform: translateX(-200%); opacity: 0; }
 
-#personnal.page-current section {
-  padding: 0 2.2em; }
-  #personnal.page-current section .border {
-    border: 6px double #f0d773;
-    height: 6em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    #personnal.page-current section .border h2 {
-      font-family: "Raleway", sans-serif;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: ghostwhite;
-      width: 80%;
-      margin: auto;
-      line-height: 2.6em; }
-      #personnal.page-current section .border h2.bounce .word {
-        -webkit-transform: translateX(0%);
-                transform: translateX(0%);
-        opacity: 1;
-        -webkit-transition: opacity 0.5s ease, -webkit-transform 1.5s ease;
-        transition: opacity 0.5s ease, -webkit-transform 1.5s ease;
-        transition: transform 1.5s ease, opacity 0.5s ease;
-        transition: transform 1.5s ease, opacity 0.5s ease, -webkit-transform 1.5s ease; }
-        #personnal.page-current section .border h2.bounce .word .char {
-          color: transparent;
-          overflow: visible;
-          -webkit-animation: bounce 1.5s ease;
-                  animation: bounce 1.5s ease;
-          -webkit-animation-delay: calc(var(--char-index) * -0.125s);
-                  animation-delay: calc(var(--char-index) * -0.125s); }
-          #personnal.page-current section .border h2.bounce .word .char::after {
-            -webkit-animation: tumble 1.5s linear 0.3s forwards;
-                    animation: tumble 1.5s linear 0.3s forwards;
-            color: ghostwhite;
-            visibility: visible;
-            z-index: 95; }
-  #personnal.page-current section .fa-user-edit {
-    width: 20%;
-    margin: auto;
-    font-size: 1.5em;
-    color: #22292b; }
-#personnal.page-current .presentation p {
-  width: 95%;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
-  font-size: 0.85em;
-  color: #ffbd21;
-  line-height: 1.54em;
-  letter-spacing: 0.1em;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  margin: auto; }
-#personnal.page-current h3 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  font-size: 1.28em;
-  text-transform: capitalize;
-  color: #e6c40e;
-  text-align: left; }
-#personnal.page-current article {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
-  font-size: 0.88em;
-  color: #5e3917;
-  line-height: 1.54em;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  text-align: left;
-  letter-spacing: 0.1em;
-  font-size: 0.78em; }
-  #personnal.page-current article h4 {
-    text-align: center;
-    color: #a15920; }
+#personnal.page-current section { padding: 0 2.2em; }
+#personnal.page-current section .border { border: 6px double #f0d773; height: 6em; display: -webkit-box; display: -ms-flexbox; display: flex; }
+#personnal.page-current section .border h2 { font-family: "Raleway", sans-serif; font-weight: 600; text-transform: uppercase; color: ghostwhite; width: 80%; margin: auto; line-height: 2.6em; }
+#personnal.page-current section .border h2.bounce .word { -webkit-transform: translateX(0%); transform: translateX(0%); opacity: 1; -webkit-transition: opacity 0.5s ease, -webkit-transform 1.5s ease; transition: opacity 0.5s ease, -webkit-transform 1.5s ease; transition: transform 1.5s ease, opacity 0.5s ease; transition: transform 1.5s ease, opacity 0.5s ease, -webkit-transform 1.5s ease; }
+#personnal.page-current section .border h2.bounce .word .char { color: transparent; overflow: visible; -webkit-animation: bounce 1.5s ease; animation: bounce 1.5s ease; -webkit-animation-delay: calc(var(--char-index) * -0.125s); animation-delay: calc(var(--char-index) * -0.125s); }
+#personnal.page-current section .border h2.bounce .word .char::after { -webkit-animation: tumble 1.5s linear 0.3s forwards; animation: tumble 1.5s linear 0.3s forwards; color: ghostwhite; visibility: visible; z-index: 95; }
+#personnal.page-current section .fa-user-edit { width: 20%; margin: auto; font-size: 1.5em; color: #22292b; }
+#personnal.page-current .presentation p { width: 95%; font-family: "Josefin Sans", sans-serif; font-weight: 700; font-size: 0.85em; color: #ffbd21; line-height: 1.54em; letter-spacing: 0.1em; padding-top: 2em; padding-bottom: 2em; margin: auto; }
+#personnal.page-current h3 { font-family: "Raleway", sans-serif; font-weight: 600; letter-spacing: 0.1em; font-size: 1.28em; text-transform: capitalize; color: #e6c40e; text-align: left; }
+#personnal.page-current article { font-family: "Josefin Sans", sans-serif; font-weight: 700; font-size: 0.88em; color: #5e3917; line-height: 1.54em; margin-top: 2em; margin-bottom: 2em; text-align: left; letter-spacing: 0.1em; font-size: 0.78em; }
+#personnal.page-current article h4 { text-align: center; color: #a15920; }
 
-@-webkit-keyframes bounce {
-  25% {
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%); }
-  50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
-  75% {
-    -webkit-transform: translateY(-35%);
-            transform: translateY(-35%); } }
+@-webkit-keyframes bounce { 25% { -webkit-transform: translateY(-25%); transform: translateY(-25%); }
+  50% { -webkit-transform: translateY(0); transform: translateY(0); }
+  75% { -webkit-transform: translateY(-35%); transform: translateY(-35%); } }
 
-@keyframes bounce {
-  25% {
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%); }
-  50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
-  75% {
-    -webkit-transform: translateY(-35%);
-            transform: translateY(-35%); } }
-@-webkit-keyframes tumble {
-  60% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-@keyframes tumble {
-  60% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-#personnal .descript .puzzle .fa-puzzle-piece,
-#personnal .descript .magic .fa-hat-wizard,
-#personnal .descript .scroll .fa-scroll,
-#personnal .descript .magic .fa-globe-americas {
-  padding-left: 0.5em;
-  font-size: 1.2em;
-  color: #7b0b0bde; }
-#personnal .descript .piece {
-  text-align: justify; }
-#personnal .descript .magic .hobbies {
-  margin: 0.8em 1em; }
-  #personnal .descript .magic .hobbies img {
-    width: 3.5em;
-    height: 3.5em;
-    background-size: contain;
-    margin: 1em 0; }
-#personnal .descript .scroll ul {
-  margin: 1.5em 0 2.2em 0;
-  color: #310505;
-  text-align: justify; }
+@keyframes bounce { 25% { -webkit-transform: translateY(-25%); transform: translateY(-25%); }
+  50% { -webkit-transform: translateY(0); transform: translateY(0); }
+  75% { -webkit-transform: translateY(-35%); transform: translateY(-35%); } }
+@-webkit-keyframes tumble { 60% { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+@keyframes tumble { 60% { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+#personnal .descript .puzzle .fa-puzzle-piece, #personnal .descript .magic .fa-hat-wizard, #personnal .descript .scroll .fa-scroll, #personnal .descript .magic .fa-globe-americas { padding-left: 0.5em; font-size: 1.2em; color: #7b0b0bde; }
+#personnal .descript .piece { text-align: justify; }
+#personnal .descript .magic .hobbies { margin: 0.8em 1em; }
+#personnal .descript .magic .hobbies img { width: 3.5em; height: 3.5em; background-size: contain; margin: 1em 0; }
+#personnal .descript .scroll ul { margin: 1.5em 0 2.2em 0; color: #310505; text-align: justify; }
 
 /***************************** MEDIA QUERIES INTRO ************************/
-@media screen and (min-width: 576px) {
-  #intro,
-  #intro.page-current {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: no-wrap;
-        flex-wrap: no-wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    #intro .name h1,
-    #intro.page-current .name h1 {
-      font-size: 1.58em; }
-    #intro .name .chococard,
-    #intro .name .chococard.on,
-    #intro.page-current .name .chococard,
-    #intro.page-current .name .chococard.on {
-      width: 120px;
-      height: 120px; }
-    #intro .name h3,
-    #intro.page-current .name h3 {
-      font-size: 0.76em; }
-    #intro .presentation,
-    #intro.page-current .presentation {
-      font-size: 0.95em; }
-      #intro .presentation p,
-      #intro.page-current .presentation p {
-        width: 90%; }
-    #intro .skills h2,
-    #intro.page-current .skills h2 {
-      font-size: 1.52em; }
-    #intro .skills h3,
-    #intro.page-current .skills h3 {
-      font-size: 1.26em; }
-    #intro .skills figure img,
-    #intro.page-current .skills figure img {
-      width: 4.8em;
-      height: 4.8em; }
-    #intro .skills figure figcaption,
-    #intro.page-current .skills figure figcaption {
-      font-size: 0.80em; } }
-@media screen and (min-width: 768px) {
-  #intro .name h1,
-  #intro.page-current .name h1 {
-    font-size: 1.75em;
-    line-height: 4em; }
-  #intro .name .chococard,
-  #intro .name .chococard.on,
-  #intro.page-current .name .chococard,
-  #intro.page-current .name .chococard.on {
-    width: 145px;
-    height: 145px; }
-  #intro .name h2,
-  #intro.page-current .name h2 {
-    font-size: 1.59em;
-    margin-top: -1em;
-    text-align: center; }
-  #intro .presentation,
-  #intro.page-current .presentation {
-    font-size: 0.99em; }
-  #intro .skills h2,
-  #intro.page-current .skills h2 {
-    font-size: 1.55em; }
-  #intro .skills h3,
-  #intro.page-current .skills h3 {
-    font-size: 1.32em; }
-  #intro .skills figure img,
-  #intro.page-current .skills figure img {
-    width: 5.5em;
-    height: 5.5em; }
-  #intro .skills figure figcaption,
-  #intro.page-current .skills figure figcaption {
-    font-size: 0.83em; } }
-@media screen and (min-width: 992px) {
-  #intro .name h1,
-  #intro.page-current .name h1 {
-    font-size: 1.95em;
-    line-height: 4em;
-    margin-right: 0; }
-  #intro .name .chococard,
-  #intro .name .chococard.on,
-  #intro.page-current .name .chococard,
-  #intro.page-current .name .chococard.on {
-    width: 155px;
-    height: 155px;
-    margin-left: 4em;
-    pointer-events: stroke; }
-    #intro .name .chococard:hover,
-    #intro .name .chococard.on:hover,
-    #intro.page-current .name .chococard:hover,
-    #intro.page-current .name .chococard.on:hover {
-      -webkit-transform: translate(5px, 5px);
-              transform: translate(5px, 5px);
-      -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
-      transition: background 0.4s ease-in, -webkit-transform 0.4s linear;
-      transition: background 0.4s ease-in, transform 0.4s linear;
-      transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
-  #intro .name h2,
-  #intro.page-current .name h2 {
-    font-size: 1.95em; }
-  #intro .name h3,
-  #intro.page-current .name h3 {
-    font-size: 0.95em; }
-  #intro .presentation,
-  #intro.page-current .presentation {
-    font-size: 1.2em; }
-  #intro .skills h2,
-  #intro.page-current .skills h2 {
-    font-size: 1.62em; }
-  #intro .skills h3,
-  #intro.page-current .skills h3 {
-    font-size: 1.42em; }
-  #intro .skills figure img,
-  #intro.page-current .skills figure img {
-    width: 6.2em;
-    height: 6.2em; }
-  #intro .skills figure figcaption,
-  #intro.page-current .skills figure figcaption {
-    font-size: 1.0em; } }
+@media screen and (min-width: 576px) { #intro, #intro.page-current { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: no-wrap; flex-wrap: no-wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  #intro .name h1, #intro.page-current .name h1 { font-size: 1.58em; }
+  #intro .name .chococard, #intro .name .chococard.on, #intro.page-current .name .chococard, #intro.page-current .name .chococard.on { width: 120px; height: 120px; }
+  #intro .name h3, #intro.page-current .name h3 { font-size: 0.76em; }
+  #intro .presentation, #intro.page-current .presentation { font-size: 0.95em; }
+  #intro .presentation p, #intro.page-current .presentation p { width: 90%; }
+  #intro .skills h2, #intro.page-current .skills h2 { font-size: 1.52em; }
+  #intro .skills h3, #intro.page-current .skills h3 { font-size: 1.26em; }
+  #intro .skills figure img, #intro.page-current .skills figure img { width: 4.8em; height: 4.8em; }
+  #intro .skills figure figcaption, #intro.page-current .skills figure figcaption { font-size: 0.80em; } }
+@media screen and (min-width: 768px) { #intro .name h1, #intro.page-current .name h1 { font-size: 1.75em; line-height: 4em; }
+  #intro .name .chococard, #intro .name .chococard.on, #intro.page-current .name .chococard, #intro.page-current .name .chococard.on { width: 145px; height: 145px; }
+  #intro .name h2, #intro.page-current .name h2 { font-size: 1.59em; margin-top: -1em; text-align: center; }
+  #intro .presentation, #intro.page-current .presentation { font-size: 0.99em; }
+  #intro .skills h2, #intro.page-current .skills h2 { font-size: 1.55em; }
+  #intro .skills h3, #intro.page-current .skills h3 { font-size: 1.32em; }
+  #intro .skills figure img, #intro.page-current .skills figure img { width: 5.5em; height: 5.5em; }
+  #intro .skills figure figcaption, #intro.page-current .skills figure figcaption { font-size: 0.83em; } }
+@media screen and (min-width: 992px) { #intro .name h1, #intro.page-current .name h1 { font-size: 1.95em; line-height: 4em; margin-right: 0; }
+  #intro .name .chococard, #intro .name .chococard.on, #intro.page-current .name .chococard, #intro.page-current .name .chococard.on { width: 155px; height: 155px; margin-left: 4em; pointer-events: stroke; }
+  #intro .name .chococard:hover, #intro .name .chococard.on:hover, #intro.page-current .name .chococard:hover, #intro.page-current .name .chococard.on:hover { -webkit-transform: translate(5px, 5px); transform: translate(5px, 5px); -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
+  #intro .name h2, #intro.page-current .name h2 { font-size: 1.95em; }
+  #intro .name h3, #intro.page-current .name h3 { font-size: 0.95em; }
+  #intro .presentation, #intro.page-current .presentation { font-size: 1.2em; }
+  #intro .skills h2, #intro.page-current .skills h2 { font-size: 1.62em; }
+  #intro .skills h3, #intro.page-current .skills h3 { font-size: 1.42em; }
+  #intro .skills figure img, #intro.page-current .skills figure img { width: 6.2em; height: 6.2em; }
+  #intro .skills figure figcaption, #intro.page-current .skills figure figcaption { font-size: 1.0em; } }
 /************** WEB CHEMIST PERSONNAL PAGE QUERY *********/
-@media screen and (min-width: 576px) {
-  #computer,
-  #chemist,
-  #personnal {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: no-wrap;
-        flex-wrap: no-wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    #computer .border h2,
-    #chemist .border h2,
-    #personnal .border h2 {
-      font-size: 1.65em;
-      line-height: 1.8em; }
-    #computer .border .fa-laptop-code,
-    #computer .border .fa-flask,
-    #computer .border .fa-user-edit,
-    #chemist .border .fa-laptop-code,
-    #chemist .border .fa-flask,
-    #chemist .border .fa-user-edit,
-    #personnal .border .fa-laptop-code,
-    #personnal .border .fa-flask,
-    #personnal .border .fa-user-edit {
-      font-size: 1.65em; }
-    #computer .presentation p,
-    #chemist .presentation p,
-    #personnal .presentation p {
-      width: 90%;
-      font-size: 0.95em; }
-    #computer h3,
-    #chemist h3,
-    #personnal h3 {
-      font-size: 1.52em; }
-    #computer h4,
-    #chemist h4,
-    #personnal h4 {
-      font-size: 1.26em; }
-    #computer .experiences .experience .date,
-    #chemist .experiences .experience .date,
-    #personnal .experiences .experience .date {
-      font-size: 1.0em; }
-    #computer .experiences .experience .detail .descript,
-    #chemist .experiences .experience .detail .descript,
-    #personnal .experiences .experience .detail .descript {
-      margin: 2.5em 0;
-      font-size: 0.98em; }
-    #computer .experiences .experience .detail figure figcaption,
-    #chemist .experiences .experience .detail figure figcaption,
-    #personnal .experiences .experience .detail figure figcaption {
-      font-size: 0.80em; }
-    #computer .experiences .experience .detail button.website,
-    #chemist .experiences .experience .detail button.website,
-    #personnal .experiences .experience .detail button.website {
-      font-size: 0.82em;
-      border: 2px solid #FFA500; }
-    #computer .experiences .experience .partners figure img,
-    #computer .experiences .experience .company figure img,
-    #chemist .experiences .experience .partners figure img,
-    #chemist .experiences .experience .company figure img,
-    #personnal .experiences .experience .partners figure img,
-    #personnal .experiences .experience .company figure img {
-      width: 10em;
-      height: 10em; }
-    #computer .outils .tools .adobe figure img,
-    #chemist .outils .tools .adobe figure img,
-    #personnal .outils .tools .adobe figure img {
-      width: 4.0em;
-      height: 4.0em; }
-    #computer .outils .tools .other figure img,
-    #chemist .outils .tools .other figure img,
-    #personnal .outils .tools .other figure img {
-      width: 4.5em;
-      height: 4.5em; }
-    #computer .outils .tools .magic .hobbies img,
-    #chemist .outils .tools .magic .hobbies img,
-    #personnal .outils .tools .magic .hobbies img {
-      width: 4.5em;
-      height: 4.5em; }
-    #computer .creations svg,
-    #computer .creations .norms,
-    #computer .creations .chococard-c,
-    #chemist .creations svg,
-    #chemist .creations .norms,
-    #chemist .creations .chococard-c,
-    #personnal .creations svg,
-    #personnal .creations .norms,
-    #personnal .creations .chococard-c {
-      width: 10em;
-      height: 10em;
-      -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%; }
-    #computer #personnal article,
-    #chemist #personnal article,
-    #personnal #personnal article {
-      font-size: 0.88em; }
-    #computer #personnal .puzzle .fa-puzzle-piece,
-    #computer #personnal .magic .fa-hat-wizard,
-    #computer #personnal .scroll .fa-scroll,
-    #computer #personnal .magic .fa-globe-americas,
-    #chemist #personnal .puzzle .fa-puzzle-piece,
-    #chemist #personnal .magic .fa-hat-wizard,
-    #chemist #personnal .scroll .fa-scroll,
-    #chemist #personnal .magic .fa-globe-americas,
-    #personnal #personnal .puzzle .fa-puzzle-piece,
-    #personnal #personnal .magic .fa-hat-wizard,
-    #personnal #personnal .scroll .fa-scroll,
-    #personnal #personnal .magic .fa-globe-americas {
-      font-size: 1.35em; } }
+@media screen and (min-width: 576px) { #computer.page-current, #chemist.page-current, #personnal.page-current { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: no-wrap; flex-wrap: no-wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  #computer.page-current section .border h2, #chemist.page-current section .border h2, #personnal.page-current section .border h2 { font-size: 1.65em; line-height: 1.8em; }
+  #computer.page-current section .border .fa-laptop-code, #computer.page-current section .border .fa-flask, #computer.page-current section .border .fa-user-edit, #chemist.page-current section .border .fa-laptop-code, #chemist.page-current section .border .fa-flask, #chemist.page-current section .border .fa-user-edit, #personnal.page-current section .border .fa-laptop-code, #personnal.page-current section .border .fa-flask, #personnal.page-current section .border .fa-user-edit { font-size: 1.65em; }
+  #computer.page-current section.presentation p, #chemist.page-current section.presentation p, #personnal.page-current section.presentation p { width: 90%; font-size: 0.95em; }
+  #computer.page-current section h3, #chemist.page-current section h3, #personnal.page-current section h3 { font-size: 1.52em; }
+  #computer.page-current section h4, #chemist.page-current section h4, #personnal.page-current section h4 { font-size: 1.26em; }
+  #computer.page-current section.experiences .experience .date, #chemist.page-current section.experiences .experience .date, #personnal.page-current section.experiences .experience .date { font-size: 1.0em; }
+  #computer.page-current section.experiences .experience .detail .descript, #chemist.page-current section.experiences .experience .detail .descript, #personnal.page-current section.experiences .experience .detail .descript { margin: 2.5em 0; font-size: 0.98em; }
+  #computer.page-current section.experiences .experience .detail figure figcaption, #chemist.page-current section.experiences .experience .detail figure figcaption, #personnal.page-current section.experiences .experience .detail figure figcaption { font-size: 0.80em; }
+  #computer.page-current section.experiences .experience .detail figure button.website, #chemist.page-current section.experiences .experience .detail figure button.website, #personnal.page-current section.experiences .experience .detail figure button.website { font-size: 0.82em; border: 2px solid #FFA500; }
+  #computer.page-current section.experiences .experience .partners figure img, #computer.page-current section.experiences .experience .company figure img, #chemist.page-current section.experiences .experience .partners figure img, #chemist.page-current section.experiences .experience .company figure img, #personnal.page-current section.experiences .experience .partners figure img, #personnal.page-current section.experiences .experience .company figure img { width: 10em; height: 10em; }
+  #computer.page-current section.outils .tools .adobe figure img, #chemist.page-current section.outils .tools .adobe figure img, #personnal.page-current section.outils .tools .adobe figure img { width: 4.0em; height: 4.0em; }
+  #computer.page-current section.outils .tools .other figure img, #chemist.page-current section.outils .tools .other figure img, #personnal.page-current section.outils .tools .other figure img { width: 4.5em; height: 4.5em; }
+  #computer.page-current section.outils .tools .magic .hobbies img, #chemist.page-current section.outils .tools .magic .hobbies img, #personnal.page-current section.outils .tools .magic .hobbies img { width: 4.5em; height: 4.5em; }
+  #computer.page-current section.creations svg, #computer.page-current section.creations .norms, #computer.page-current section.creations .chococard-c, #chemist.page-current section.creations svg, #chemist.page-current section.creations .norms, #chemist.page-current section.creations .chococard-c, #personnal.page-current section.creations svg, #personnal.page-current section.creations .norms, #personnal.page-current section.creations .chococard-c { width: 10em; height: 10em; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; }
+  #personnal article { font-size: 0.88em; }
+  #personnal .puzzle .fa-puzzle-piece, #personnal .magic .fa-hat-wizard, #personnal .scroll .fa-scroll, #personnal .magic .fa-globe-americas { font-size: 1.35em; } }
+@media screen and (min-width: 768px) { #computer.page-current section .border h2, #chemist.page-current section .border h2, #personnal.page-current section .border h2 { font-size: 1.85em; line-height: 1.2em; }
+  #computer.page-current section .border .fa-laptop-code, #computer.page-current section .border .fa-flask, #computer.page-current section .border .fa-user-edit, #chemist.page-current section .border .fa-laptop-code, #chemist.page-current section .border .fa-flask, #chemist.page-current section .border .fa-user-edit, #personnal.page-current section .border .fa-laptop-code, #personnal.page-current section .border .fa-flask, #personnal.page-current section .border .fa-user-edit { font-size: 1.85em; }
+  #computer.page-current section.presentation p, #chemist.page-current section.presentation p, #personnal.page-current section.presentation p { font-size: 1.05em; }
+  #computer.page-current section h3, #chemist.page-current section h3, #personnal.page-current section h3 { font-size: 1.59em; }
+  #computer.page-current section h4, #chemist.page-current section h4, #personnal.page-current section h4 { font-size: 1.32em; }
+  #computer.page-current section article, #chemist.page-current section article, #personnal.page-current section article { font-size: 1em; }
+  #computer.page-current section.experiences .experience .fa_viall, #chemist.page-current section.experiences .experience .fa_viall, #personnal.page-current section.experiences .experience .fa_viall { font-size: 1.2em; }
+  #personnal .puzzle .fa-puzzle-piece, #personnal .magic .fa-hat-wizard, #personnal .scroll .fa-scroll, #personnal .magic .fa-globe-americas { font-size: 1.45em; } }
+@media screen and (min-width: 992px) { #computer.page-current section .border h2, #chemist.page-current section .border h2, #personnal.page-current section .border h2 { font-size: 1.95em; }
+  #computer.page-current section .border .fa-laptop-code, #computer.page-current section .border .fa-flask, #computer.page-current section .border .fa-user-edit, #chemist.page-current section .border .fa-laptop-code, #chemist.page-current section .border .fa-flask, #chemist.page-current section .border .fa-user-edit, #personnal.page-current section .border .fa-laptop-code, #personnal.page-current section .border .fa-flask, #personnal.page-current section .border .fa-user-edit { font-size: 1.95em; }
+  #computer.page-current section.presentation p, #chemist.page-current section.presentation p, #personnal.page-current section.presentation p { font-size: 1.02em; }
+  #computer.page-current section h3, #chemist.page-current section h3, #personnal.page-current section h3 { font-size: 1.62em; }
+  #computer.page-current section h4, #chemist.page-current section h4, #personnal.page-current section h4 { font-size: 1.42em; }
+  #computer.page-current section.experiences .experience .detail figure figcaption, #chemist.page-current section.experiences .experience .detail figure figcaption, #personnal.page-current section.experiences .experience .detail figure figcaption { font-size: 0.99em; line-height: 1.4em; letter-spacing: 0.2em; }
+  #computer.page-current section.experiences .experience .detail figure button.website, #chemist.page-current section.experiences .experience .detail figure button.website, #personnal.page-current section.experiences .experience .detail figure button.website { font-size: 0.99em; border: 3px solid #FFA500; padding: 0.7em; }
+  #computer.page-current section.experiences .experience .detail figure:hover img, #chemist.page-current section.experiences .experience .detail figure:hover img, #personnal.page-current section.experiences .experience .detail figure:hover img { -webkit-filter: blur(0.3); filter: blur(0.3); opacity: 0.76; -webkit-transform: scale(0.98); transform: scale(0.98); -webkit-transition: opacity 0.4s ease, -webkit-filter 0.4s ease, -webkit-transform 0.4s ease; transition: opacity 0.4s ease, -webkit-filter 0.4s ease, -webkit-transform 0.4s ease; transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease; transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease, -webkit-filter 0.4s ease, -webkit-transform 0.4s ease; }
+  #computer.page-current section.experiences .experience .detail figure:hover button.website, #chemist.page-current section.experiences .experience .detail figure:hover button.website, #personnal.page-current section.experiences .experience .detail figure:hover button.website { border: 4px solid #FFA500; background: #f8a817de; padding: 0.7em; -webkit-transform: scale(1.05); transform: scale(1.05); -webkit-transition: background 0.4s ease, -webkit-transform 0.4s ease; transition: background 0.4s ease, -webkit-transform 0.4s ease; transition: background 0.4s ease, transform 0.4s ease; transition: background 0.4s ease, transform 0.4s ease, -webkit-transform 0.4s ease; }
+  #computer.page-current section.experiences .experience .detail figure:hover figcaption, #chemist.page-current section.experiences .experience .detail figure:hover figcaption, #personnal.page-current section.experiences .experience .detail figure:hover figcaption { opacity: 0; -webkit-transition: opacity 0.4s ease; transition: opacity 0.4s ease; }
+  #computer.page-current section.experiences .experience .partners figure img, #computer.page-current section.experiences .experience .company figure img, #chemist.page-current section.experiences .experience .partners figure img, #chemist.page-current section.experiences .experience .company figure img, #personnal.page-current section.experiences .experience .partners figure img, #personnal.page-current section.experiences .experience .company figure img { width: 13.5em; height: 13.5em; opacity: 1; }
+  #computer.page-current section.experiences .experience .partners figure:hover, #computer.page-current section.experiences .experience .company figure:hover, #chemist.page-current section.experiences .experience .partners figure:hover, #chemist.page-current section.experiences .experience .company figure:hover, #personnal.page-current section.experiences .experience .partners figure:hover, #personnal.page-current section.experiences .experience .company figure:hover { -webkit-transform: scale(1.15); transform: scale(1.15); -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease; transition: opacity 0.4s ease, -webkit-transform 0.4s ease; transition: opacity 0.4s ease, transform 0.4s ease; transition: opacity 0.4s ease, transform 0.4s ease, -webkit-transform 0.4s ease; }
+  #computer.page-current section.experiences .experience .partners figure:hover img, #computer.page-current section.experiences .experience .company figure:hover img, #chemist.page-current section.experiences .experience .partners figure:hover img, #chemist.page-current section.experiences .experience .company figure:hover img, #personnal.page-current section.experiences .experience .partners figure:hover img, #personnal.page-current section.experiences .experience .company figure:hover img { opacity: 0.95; }
+  #computer.page-current section.experiences .experience .descript figure img, #chemist.page-current section.experiences .experience .descript figure img, #personnal.page-current section.experiences .experience .descript figure img { width: 14em; height: 14em; margin-left: 2em; }
+  #computer.page-current section.experiences .experience .descript figure figcaption, #chemist.page-current section.experiences .experience .descript figure figcaption, #personnal.page-current section.experiences .experience .descript figure figcaption { margin-left: 3em; }
+  #computer.page-current section.outils .tools .adobe figure img, #chemist.page-current section.outils .tools .adobe figure img, #personnal.page-current section.outils .tools .adobe figure img { width: 4.0em; height: 4.0em; }
+  #computer.page-current section.outils .tools .other, #chemist.page-current section.outils .tools .other, #personnal.page-current section.outils .tools .other { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  #computer.page-current section.outils .tools .other figure img, #chemist.page-current section.outils .tools .other figure img, #personnal.page-current section.outils .tools .other figure img { width: 5.2em; height: 5.2em; }
+  #computer.page-current section.outils .tools .magic .hobbies img, #chemist.page-current section.outils .tools .magic .hobbies img, #personnal.page-current section.outils .tools .magic .hobbies img { width: 4.5em; height: 4.5em; }
+  #computer.page-current section.creations .crea1, #computer.page-current section.creations .crea2, #computer.page-current section.creations .crea3, #chemist.page-current section.creations .crea1, #chemist.page-current section.creations .crea2, #chemist.page-current section.creations .crea3, #personnal.page-current section.creations .crea1, #personnal.page-current section.creations .crea2, #personnal.page-current section.creations .crea3 { text-align: left; }
+  #computer.page-current section.creations .crea1 svg, #computer.page-current section.creations .crea1 .norms, #computer.page-current section.creations .crea1 .chococard-c, #computer.page-current section.creations .crea2 svg, #computer.page-current section.creations .crea2 .norms, #computer.page-current section.creations .crea2 .chococard-c, #computer.page-current section.creations .crea3 svg, #computer.page-current section.creations .crea3 .norms, #computer.page-current section.creations .crea3 .chococard-c, #chemist.page-current section.creations .crea1 svg, #chemist.page-current section.creations .crea1 .norms, #chemist.page-current section.creations .crea1 .chococard-c, #chemist.page-current section.creations .crea2 svg, #chemist.page-current section.creations .crea2 .norms, #chemist.page-current section.creations .crea2 .chococard-c, #chemist.page-current section.creations .crea3 svg, #chemist.page-current section.creations .crea3 .norms, #chemist.page-current section.creations .crea3 .chococard-c, #personnal.page-current section.creations .crea1 svg, #personnal.page-current section.creations .crea1 .norms, #personnal.page-current section.creations .crea1 .chococard-c, #personnal.page-current section.creations .crea2 svg, #personnal.page-current section.creations .crea2 .norms, #personnal.page-current section.creations .crea2 .chococard-c, #personnal.page-current section.creations .crea3 svg, #personnal.page-current section.creations .crea3 .norms, #personnal.page-current section.creations .crea3 .chococard-c { cursor: pointer; }
+  #computer.page-current section.creations .crea1 .chococard-c, #computer.page-current section.creations .crea2 .chococard-c, #computer.page-current section.creations .crea3 .chococard-c, #chemist.page-current section.creations .crea1 .chococard-c, #chemist.page-current section.creations .crea2 .chococard-c, #chemist.page-current section.creations .crea3 .chococard-c, #personnal.page-current section.creations .crea1 .chococard-c, #personnal.page-current section.creations .crea2 .chococard-c, #personnal.page-current section.creations .crea3 .chococard-c { width: 11em; height: 11em; }
+  #personnal .descript .puzzle .fa-puzzle-piece, #personnal .descript .magic .fa-hat-wizard, #personnal .descript .scroll .fa-scroll, #personnal .descript .magic .fa-globe-americas { font-size: 1.75em; }
+  #personnal .descript .magic .hobbies img { height: 8em; width: 6em; margin: 0.5em; -webkit-transform: scale(0.5); transform: scale(0.5); } }
 
 /*# sourceMappingURL=style2.css.map */
