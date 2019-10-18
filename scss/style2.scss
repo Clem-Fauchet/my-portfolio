@@ -48,7 +48,7 @@ svg.hidden {
 		font-weight: 600;
 		text-transform: uppercase;
 		line-height: 3.0em;
-		font-size: 1.45em;
+		font-size: 1.30em;
 		text-decoration: underline $txtColor;
 	}
 
@@ -56,8 +56,8 @@ svg.hidden {
 		background: url('img/ClemChococardWeb.png') no-repeat;
 		background-size: contain;
 		transform-origin: 50% 50%;
-		width: 100px;
-		height: 100px;
+		width: 90px;
+		height: 90px;
 		margin-top: 1em;
 		transition: background 0.4s ease-in, transform 0.4s linear;
 	}
@@ -70,8 +70,8 @@ svg.hidden {
 		background: url('img/ClemChocobackWeb.png') no-repeat;
 		background-size: contain;
 		transform-origin: 50% 50%;
-		width: 100px;
-		height: 100px;
+		width: 90px;
+		height: 90px;
 		transform: rotateY(360deg);
 		transition: background 0.4s ease-in, transform 0.4s linear;
 	}
@@ -544,7 +544,7 @@ svg.hidden {
 					position: absolute;
 					text-align: right;
 					color: ghostwhite;
-					font-size: 0.72em;
+					font-size: 0.60em;
 					line-height: 1.3em;
 					top: 1em;
 					right: 2em;
@@ -560,7 +560,7 @@ svg.hidden {
 				border: 1px solid #FFA500;
 				border-radius: 15px;
 				padding: 5px;
-				bottom: 40%;
+				bottom: 48%;
 				right: 10%;
 
 				a,
@@ -581,10 +581,11 @@ svg.hidden {
 		.partners {
 			figure {
 				padding: 0;
+				margin: 0.5em;
 
 				img {
-					width: 8em;
-					height: 8em;
+					width: 7.4em;
+					height: 7.4em;
 				}
 			}
 		}
@@ -617,6 +618,7 @@ svg.hidden {
 
 		.other {
 			figure {
+				text-align: left;
 
 				img {
 					width: 3.8em;

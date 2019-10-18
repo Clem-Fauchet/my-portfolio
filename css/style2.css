@@ -89,11 +89,11 @@ svg.hidden { display: none; stroke-miterlimit: 10; }
 #intro section { padding: 0 2.2em; }
 
 #intro section.name { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; border: 6px double #ffb64a; }
-#intro section.name h1 { font-family: "Raleway", sans-serif; font-weight: 600; text-transform: uppercase; line-height: 3.0em; font-size: 1.45em; -webkit-text-decoration: underline ghostwhite; text-decoration: underline ghostwhite; }
-#intro section.name .chococard { background: url("img/ClemChococardWeb.png") no-repeat; background-size: contain; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; width: 100px; height: 100px; margin-top: 1em; -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
+#intro section.name h1 { font-family: "Raleway", sans-serif; font-weight: 600; text-transform: uppercase; line-height: 3.0em; font-size: 1.30em; -webkit-text-decoration: underline ghostwhite; text-decoration: underline ghostwhite; }
+#intro section.name .chococard { background: url("img/ClemChococardWeb.png") no-repeat; background-size: contain; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; width: 90px; height: 90px; margin-top: 1em; -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
 
 .page-current#intro .name .chococard { -webkit-animation: choco-flip 3.0s ease-out 3.3s; animation: choco-flip 3.0s ease-out 3.3s; }
-.page-current#intro .name .chococard.on { background: url("img/ClemChocobackWeb.png") no-repeat; background-size: contain; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; width: 100px; height: 100px; -webkit-transform: rotateY(360deg); transform: rotateY(360deg); -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
+.page-current#intro .name .chococard.on { background: url("img/ClemChocobackWeb.png") no-repeat; background-size: contain; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; width: 90px; height: 90px; -webkit-transform: rotateY(360deg); transform: rotateY(360deg); -webkit-transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, -webkit-transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear; transition: background 0.4s ease-in, transform 0.4s linear, -webkit-transform 0.4s linear; }
 
 @-webkit-keyframes choco-flip { 0% { background: url("img/ClemChococardWeb.png") no-repeat; background-size: contain; -webkit-perspective: 1000px; perspective: 1000px; }
   50% { background: url("img/ClemChocobackWeb.png") no-repeat; background-size: contain; }
@@ -226,17 +226,18 @@ svg.hidden { display: none; stroke-miterlimit: 10; }
 #computer .experiences .experience .date { font-weight: bolder; font-size: 0.89em; color: #a15918; }
 #computer .experiences .experience .detail figure { margin: 1em 0; position: relative; }
 #computer .experiences .experience .detail figure img { background-size: contain; width: 100%; height: auto; border-radius: 2.2em; }
-#computer .experiences .experience .detail figure figcaption { position: absolute; text-align: right; color: ghostwhite; font-size: 0.72em; line-height: 1.3em; top: 1em; right: 2em; }
-#computer .experiences .experience .detail button.website { background: none; position: absolute; font-family: "Josefin Sans", sans-serif; font-weight: 700; font-size: 0.70em; border: 1px solid #FFA500; border-radius: 15px; padding: 5px; bottom: 40%; right: 10%; }
+#computer .experiences .experience .detail figure figcaption { position: absolute; text-align: right; color: ghostwhite; font-size: 0.60em; line-height: 1.3em; top: 1em; right: 2em; }
+#computer .experiences .experience .detail button.website { background: none; position: absolute; font-family: "Josefin Sans", sans-serif; font-weight: 700; font-size: 0.70em; border: 1px solid #FFA500; border-radius: 15px; padding: 5px; bottom: 48%; right: 10%; }
 #computer .experiences .experience .detail button.website a, #computer .experiences .experience .detail button.website a:hover, #computer .experiences .experience .detail button.website a:focus { outline: none; text-decoration: none; color: ghostwhite; }
 #computer .experiences .experience .detail .descript { margin: 0.5em 0; font-size: 0.92em; }
-#computer .experiences .experience .partners figure { padding: 0; }
-#computer .experiences .experience .partners figure img { width: 8em; height: 8em; }
+#computer .experiences .experience .partners figure { padding: 0; margin: 0.5em; }
+#computer .experiences .experience .partners figure img { width: 7.4em; height: 7.4em; }
 
 #computer .outils .tools { text-align: center; }
 #computer .outils .tools .adobe { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-left: 1em; }
 #computer .outils .tools .adobe figure img { width: 3.0em; height: 3.0em; background-size: contain; margin-left: 1em; margin-bottom: 0.5em; }
 #computer .outils .tools .adobe figure figcaption { visibility: hidden; }
+#computer .outils .tools .other figure { text-align: left; }
 #computer .outils .tools .other figure img { width: 3.8em; height: 3.8em; margin-bottom: 0; margin-left: -1em; }
 #computer .outils .tools .other figure figcaption { visibility: hidden; }
 
