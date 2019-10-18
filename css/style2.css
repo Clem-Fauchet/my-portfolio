@@ -2,7 +2,7 @@ body { color: ghostwhite; text-align: center; }
 
 svg.hidden { display: none; stroke-miterlimit: 10; }
 
-.container-fluid { padding-left: 0px; padding-right: 0px; min-height: 100vh; background: #22292b; overflow: hidden; }
+.container-fluid { padding-left: 0px; padding-right: 0px; min-height: 100vh; background: #22292b; overflow: hidden; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
 /* LAYOUT REVELER */
 /* PAGES SANS NAV */
@@ -359,7 +359,7 @@ svg.hidden { display: none; stroke-miterlimit: 10; }
 #personnal .descript .scroll ul { margin: 1.5em 0 2.2em 0; color: #310505; text-align: justify; }
 
 /***************************** MEDIA QUERIES INTRO ************************/
-@media screen and (min-width: 576px) { #intro, #intro.page-current { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: no-wrap; flex-wrap: no-wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+@media screen and (min-width: 576px) { #intro, #intro.page-current { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   #intro .name h1, #intro.page-current .name h1 { font-size: 1.58em; }
   #intro .name .chococard, #intro .name .chococard.on, #intro.page-current .name .chococard, #intro.page-current .name .chococard.on { width: 120px; height: 120px; }
   #intro .name h3, #intro.page-current .name h3 { font-size: 0.76em; }
@@ -388,7 +388,7 @@ svg.hidden { display: none; stroke-miterlimit: 10; }
   #intro .skills figure img, #intro.page-current .skills figure img { width: 6.2em; height: 6.2em; }
   #intro .skills figure figcaption, #intro.page-current .skills figure figcaption { font-size: 1.0em; } }
 /************** WEB CHEMIST PERSONNAL PAGE QUERY *********/
-@media screen and (min-width: 576px) { #computer.page-current, #chemist.page-current, #personnal.page-current { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: no-wrap; flex-wrap: no-wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+@media screen and (min-width: 576px) { #computer.page-current, #chemist.page-current, #personnal.page-current { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   #computer.page-current section .border h2, #chemist.page-current section .border h2, #personnal.page-current section .border h2 { font-size: 1.65em; line-height: 1.8em; }
   #computer.page-current section .border .fa-laptop-code, #computer.page-current section .border .fa-flask, #computer.page-current section .border .fa-user-edit, #chemist.page-current section .border .fa-laptop-code, #chemist.page-current section .border .fa-flask, #chemist.page-current section .border .fa-user-edit, #personnal.page-current section .border .fa-laptop-code, #personnal.page-current section .border .fa-flask, #personnal.page-current section .border .fa-user-edit { font-size: 1.65em; }
   #computer.page-current section.presentation p, #chemist.page-current section.presentation p, #personnal.page-current section.presentation p { width: 90%; font-size: 0.95em; }
@@ -437,4 +437,5 @@ svg.hidden { display: none; stroke-miterlimit: 10; }
   #computer.page-current section.creations .crea1 .chococard-c, #computer.page-current section.creations .crea2 .chococard-c, #computer.page-current section.creations .crea3 .chococard-c, #chemist.page-current section.creations .crea1 .chococard-c, #chemist.page-current section.creations .crea2 .chococard-c, #chemist.page-current section.creations .crea3 .chococard-c, #personnal.page-current section.creations .crea1 .chococard-c, #personnal.page-current section.creations .crea2 .chococard-c, #personnal.page-current section.creations .crea3 .chococard-c { width: 11em; height: 11em; }
   #personnal .descript .puzzle .fa-puzzle-piece, #personnal .descript .magic .fa-hat-wizard, #personnal .descript .scroll .fa-scroll, #personnal .descript .magic .fa-globe-americas { font-size: 1.75em; }
   #personnal .descript .magic .hobbies img { height: 8em; width: 6em; margin: 0.5em; -webkit-transform: scale(0.5); transform: scale(0.5); } }
+
 /*# sourceMappingURL=style2.css.map */

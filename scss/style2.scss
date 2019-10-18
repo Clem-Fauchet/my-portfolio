@@ -16,6 +16,8 @@ svg.hidden {
 	min-height: $sHeight;
 	background: #22292b;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 }
 
 /* LAYOUT REVELER */
@@ -1055,7 +1057,7 @@ svg.hidden {
 
 	#intro,
 	#intro.page-current {
-		@include flexCenter(no-wrap);
+		@include flexCenter(wrap);
 
 		.name {
 			h1 {
@@ -1224,7 +1226,7 @@ svg.hidden {
 	#computer.page-current,
 	#chemist.page-current,
 	#personnal.page-current {
-		@include flexCenter(no-wrap);
+		@include flexCenter(wrap);
 
 		section {
 
