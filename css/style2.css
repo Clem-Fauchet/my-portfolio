@@ -355,7 +355,7 @@ svg.hidden { display: none; stroke-miterlimit: 10; }
 #personnal .descript .puzzle .fa-puzzle-piece, #personnal .descript .magic .fa-hat-wizard, #personnal .descript .scroll .fa-scroll, #personnal .descript .magic .fa-globe-americas { padding-left: 0.5em; font-size: 1.2em; color: #7b0b0bde; }
 #personnal .descript .piece { text-align: justify; }
 #personnal .descript .magic .hobbies { margin: 0.8em 1em; }
-#personnal .descript .magic .hobbies img { width: 3.5em; height: 3.5em; background-size: contain; margin: 1em 0; }
+#personnal .descript .magic .hobbies img { width: 3.0em; height: 3.0em; background-size: contain; margin: 1em 0; }
 #personnal .descript .scroll ul { margin: 1.5em 0 2.2em 0; color: #310505; text-align: justify; }
 
 /***************************** MEDIA QUERIES INTRO ************************/
