@@ -165,7 +165,7 @@ svg.hidden { display: none; stroke-miterlimit: 10; }
 /***************************** WEB EXPERIENCE PAGE ************************/
 #computer.page-current section { padding: 0 2.2em; }
 #computer.page-current section .border { border: 6px double #ffb64a; height: 6em; display: -webkit-box; display: -ms-flexbox; display: flex; }
-#computer.page-current section .border h2 { font-family: "Raleway", sans-serif; font-weight: 600; text-transform: uppercase; color: ghostwhite; width: 80%; margin: auto; line-height: 2.6em; position: relative; }
+#computer.page-current section .border h2 { font-family: "Raleway", sans-serif; font-weight: 600; text-transform: uppercase; color: ghostwhite; width: 80%; margin: auto; line-height: 2.6em; font-size: 1.2em; position: relative; }
 #computer.page-current section .border h2::before { content: attr(data-text); position: absolute; text-shadow: 1px 0px #fc339d; color: ghostwhite; overflow: hidden; clip: rect(0, 900px, 0, 0); -webkit-animation: noise-anim 2.1s 4 linear alternate-reverse backwards; animation: noise-anim 2.1s 4 linear alternate-reverse backwards; }
 #computer.page-current section .border h2::after { content: attr(data-text); position: absolute; right: 0em; width: 100%; text-shadow: -1px 0px #251cfc; color: ghostwhite; overflow: hidden; clip: rect(0, 900px, 0, 0); -webkit-animation: noise-anim 2s 4 linear alternate-reverse backwards; animation: noise-anim 2s 4 linear alternate-reverse backwards; -webkit-animation-delay: 0.3s; animation-delay: 0.3s; }
 #computer.page-current section .border .fa-laptop-code { width: 20%; margin: auto; font-size: 1.5em; color: #22292b; }
@@ -266,7 +266,7 @@ svg.hidden { display: none; stroke-miterlimit: 10; }
 /***************************** CHEMIST EXPERIENCE PAGE ************************/
 #chemist.page-current section { padding: 0 2.2em; }
 #chemist.page-current section .border { border: 6px double #f0d773; height: 6em; display: -webkit-box; display: -ms-flexbox; display: flex; }
-#chemist.page-current section .border h2 { font-family: "Raleway", sans-serif; font-weight: 600; text-transform: uppercase; color: ghostwhite; width: 80%; margin: auto; line-height: 2.6em; }
+#chemist.page-current section .border h2 { font-family: "Raleway", sans-serif; font-weight: 600; text-transform: uppercase; color: ghostwhite; width: 80%; margin: auto; line-height: 2.6em; font-size: 1.2em; }
 #chemist.page-current section .border h2 .break .char { content: attr(data-char); -webkit-animation: break-drop 2s ease 0.4s forwards; animation: break-drop 2s ease 0.4s forwards; color: transparent; overflow: visible; line-height: 1.0em; }
 #chemist.page-current section .border h2 .break .char::before { -webkit-animation: break-left 2s linear 0.4s forwards; animation: break-left 2s linear 0.4s forwards; color: ghostwhite; visibility: visible; -webkit-clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0); clip-path: polygon(55% 0, 50% 25%, 55% 60%, 50% 120%, 0 100%, 0 0); }
 #chemist.page-current section .border h2 .break .char::after { -webkit-animation: break-right 2s linear 0.4s forwards; animation: break-right 2s linear 0.4s forwards; color: ghostwhite; visibility: visible; -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%); clip-path: polygon(50% 0%, 100% 0, 100% 100%, 44% 120%, 53% 68%, 46% 22%); }
@@ -331,7 +331,7 @@ svg.hidden { display: none; stroke-miterlimit: 10; }
 
 #personnal.page-current section { padding: 0 2.2em; }
 #personnal.page-current section .border { border: 6px double #f0d773; height: 6em; display: -webkit-box; display: -ms-flexbox; display: flex; }
-#personnal.page-current section .border h2 { font-family: "Raleway", sans-serif; font-weight: 600; text-transform: uppercase; color: ghostwhite; width: 80%; margin: auto; line-height: 2.6em; }
+#personnal.page-current section .border h2 { font-family: "Raleway", sans-serif; font-weight: 600; text-transform: uppercase; color: ghostwhite; width: 80%; margin: auto; line-height: 2.6em; font-size: 1.2em; }
 #personnal.page-current section .border h2.bounce .word { -webkit-transform: translateX(0%); transform: translateX(0%); opacity: 1; -webkit-transition: opacity 0.5s ease, -webkit-transform 1.5s ease; transition: opacity 0.5s ease, -webkit-transform 1.5s ease; transition: transform 1.5s ease, opacity 0.5s ease; transition: transform 1.5s ease, opacity 0.5s ease, -webkit-transform 1.5s ease; }
 #personnal.page-current section .border h2.bounce .word .char { color: transparent; overflow: visible; -webkit-animation: bounce 1.5s ease; animation: bounce 1.5s ease; -webkit-animation-delay: calc(var(--char-index) * -0.125s); animation-delay: calc(var(--char-index) * -0.125s); }
 #personnal.page-current section .border h2.bounce .word .char::after { -webkit-animation: tumble 1.5s linear 0.3s forwards; animation: tumble 1.5s linear 0.3s forwards; color: ghostwhite; visibility: visible; z-index: 95; }
@@ -389,7 +389,7 @@ svg.hidden { display: none; stroke-miterlimit: 10; }
   #intro .skills figure figcaption, #intro.page-current .skills figure figcaption { font-size: 1.0em; } }
 /************** WEB CHEMIST PERSONNAL PAGE QUERY *********/
 @media screen and (min-width: 576px) { #computer.page-current, #chemist.page-current, #personnal.page-current { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
-  #computer.page-current section .border h2, #chemist.page-current section .border h2, #personnal.page-current section .border h2 { font-size: 1.65em; line-height: 1.8em; }
+  #computer.page-current section .border h2, #chemist.page-current section .border h2, #personnal.page-current section .border h2 { font-size: 1.45em; line-height: 1.8em; }
   #computer.page-current section .border .fa-laptop-code, #computer.page-current section .border .fa-flask, #computer.page-current section .border .fa-user-edit, #chemist.page-current section .border .fa-laptop-code, #chemist.page-current section .border .fa-flask, #chemist.page-current section .border .fa-user-edit, #personnal.page-current section .border .fa-laptop-code, #personnal.page-current section .border .fa-flask, #personnal.page-current section .border .fa-user-edit { font-size: 1.65em; }
   #computer.page-current section.presentation p, #chemist.page-current section.presentation p, #personnal.page-current section.presentation p { width: 90%; font-size: 0.95em; }
   #computer.page-current section h3, #chemist.page-current section h3, #personnal.page-current section h3 { font-size: 1.52em; }
@@ -405,7 +405,7 @@ svg.hidden { display: none; stroke-miterlimit: 10; }
   #computer.page-current section.creations svg, #computer.page-current section.creations .norms, #computer.page-current section.creations .chococard-c, #chemist.page-current section.creations svg, #chemist.page-current section.creations .norms, #chemist.page-current section.creations .chococard-c, #personnal.page-current section.creations svg, #personnal.page-current section.creations .norms, #personnal.page-current section.creations .chococard-c { width: 10em; height: 10em; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; }
   #personnal article { font-size: 0.88em; }
   #personnal .puzzle .fa-puzzle-piece, #personnal .magic .fa-hat-wizard, #personnal .scroll .fa-scroll, #personnal .magic .fa-globe-americas { font-size: 1.35em; } }
-@media screen and (min-width: 768px) { #computer.page-current section .border h2, #chemist.page-current section .border h2, #personnal.page-current section .border h2 { font-size: 1.85em; line-height: 1.2em; }
+@media screen and (min-width: 768px) { #computer.page-current section .border h2, #chemist.page-current section .border h2, #personnal.page-current section .border h2 { font-size: 1.70em; line-height: 1.2em; }
   #computer.page-current section .border .fa-laptop-code, #computer.page-current section .border .fa-flask, #computer.page-current section .border .fa-user-edit, #chemist.page-current section .border .fa-laptop-code, #chemist.page-current section .border .fa-flask, #chemist.page-current section .border .fa-user-edit, #personnal.page-current section .border .fa-laptop-code, #personnal.page-current section .border .fa-flask, #personnal.page-current section .border .fa-user-edit { font-size: 1.85em; }
   #computer.page-current section.presentation p, #chemist.page-current section.presentation p, #personnal.page-current section.presentation p { font-size: 1.05em; }
   #computer.page-current section h3, #chemist.page-current section h3, #personnal.page-current section h3 { font-size: 1.59em; }

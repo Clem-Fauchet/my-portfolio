@@ -329,6 +329,7 @@ svg.hidden {
 	width: 80%;
 	margin: auto;
 	line-height: $line-height;
+	font-size: 1.2em;
 }
 
 @mixin page-presentation ($color) {
@@ -1232,7 +1233,7 @@ svg.hidden {
 
 			.border {
 				h2 {
-					font-size: 1.65em;
+					font-size: 1.45em;
 					line-height: 1.8em;
 				}
 
@@ -1356,7 +1357,7 @@ svg.hidden {
 		section {
 			.border {
 				h2 {
-					font-size: 1.85em;
+					font-size: 1.70em;
 					line-height: 1.2em;
 				}
 
